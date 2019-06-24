@@ -95,10 +95,73 @@ for (j in 1:(dim(baseline)[1])){
     baseline$activproBis[j] = "C"
   else if (baseline$Adm12a[j] == "NNN7" & baseline$Adm11[j] == 2 & baseline$Adm12[j] == "NNNNNN" & baseline$Adm10[j] %in% c(86,74,77))
     baseline$activproBis[j] = "R"
-
+  else if (baseline$Adm12a[j] == "NNN7" & baseline$Adm11[j] == 3 & baseline$Adm12[j] == "N5NNNN" & baseline$Adm10[j] == 95)
+    baseline$activproBis[j] = "C"
+  else if (baseline$Adm12a[j] == "NNN7" & baseline$Adm11[j] == 3 & baseline$Adm12[j] == "NNNNNN" & baseline$Adm10[j] %in% c(95,96))
+    baseline$activproBis[j] = "C"
+  else if (baseline$Adm12a[j] == "NNN7" & baseline$Adm11[j] == 3 & baseline$Adm12[j] == "NNNNNN" & baseline$Adm10[j] %in% c(86,77))
+    baseline$activproBis[j] = "R"
+  else if (baseline$Adm12a[j] == "NNN7" & baseline$Adm11[j] == 4 & baseline$Adm12[j] == "N5NNNN" & baseline$Adm10[j] %in% c(95,93))
+    baseline$activproBis[j] = "C"
+  else if (baseline$Adm12a[j] == "NNN7" & baseline$Adm11[j] == 4 & baseline$Adm12[j] == "NNNNNN" & baseline$Adm10[j] %in% c(95,96,93))
+    baseline$activproBis[j] = "C"
+  else if (baseline$Adm12a[j] == "NNN7" & baseline$Adm11[j] == 4 & baseline$Adm12[j] == "NNNNNN" & baseline$Adm10[j] %in% c(85,86))
+    baseline$activproBis[j] = "R"
+  else if (baseline$Adm12a[j] == "NNN7" & baseline$Adm11[j] == 4 & baseline$Adm12[j] == "NNNNNN" & baseline$Adm10[j] == 54)
+    baseline$activproBis[j] = "NSP"
+  
+  ## 8
+  else if (baseline$Adm12a[j] == "NNNN" & baseline$Adm11[j] == 0 & baseline$Adm12[j] == "NNNNNN" & !(baseline$Adm10[j] %in% c(95,96,85,86,88)))
+    baseline$activproBis[j] = "T"
+  else if (baseline$Adm12a[j] == "NNNN" & baseline$Adm11[j] == 0 & baseline$Adm12[j] == "NNNNNN" & baseline$Adm10[j] %in% c(95,96))
+    baseline$activproBis[j] = "C"
+  else if (baseline$Adm12a[j] == "NNNN" & baseline$Adm11[j] == 0 & baseline$Adm12[j] == "NNNNNN" & baseline$Adm10[j] %in% c(85,86,88))
+    baseline$activproBis[j] = "NSP"
+  else if (baseline$Adm12a[j] == "NNNN" & baseline$Adm11[j] == 0 & baseline$Adm12[j] != "6NNNNN")
+    baseline$activproBis[j] = "C"
+  else if (baseline$Adm12a[j] == "NNNN" & baseline$Adm11[j] == 0 & baseline$Adm12[j] == "6NNNNN" & baseline$Adm10[j] %in% c(95,96))
+    baseline$activproBis[j] = "C"
+  else if (baseline$Adm12a[j] == "NNNN" & baseline$Adm11[j] == 0 & baseline$Adm12[j] == "6NNNNN" & !(baseline$Adm10[j] %in% c(95,96)))
+    baseline$activproBis[j] = "T"
+  
+  
+  else if (baseline$Adm12a[j] == "NNNN" & baseline$Adm11[j] == 1 & baseline$Adm12[j] == "NNNNNN" & baseline$Adm10[j] %in% c(95,96))
+    baseline$activproBis[j] = "C"
+  else if (baseline$Adm12a[j] == "NNNN" & baseline$Adm11[j] == 1 & baseline$Adm12[j] == "NNNNNN" & baseline$Adm10[j] == 86)
+    baseline$activproBis[j] = "I"
+  else if (baseline$Adm12a[j] == "NNNN" & baseline$Adm11[j] == 1 & baseline$Adm12[j] == "6NNNNN" & baseline$Adm10[j] %in% c(95,96))
+    baseline$activproBis[j] = "C"
+  else if (baseline$Adm12a[j] == "NNNN" & baseline$Adm11[j] == 1 & baseline$Adm12[j] == "6NNNNN" & baseline$Adm10[j] %in% c(36,61,66))
+    baseline$activproBis[j] = "T"
+  else if (baseline$Adm12a[j] == "NNNN" & baseline$Adm11[j] == 1 & !(baseline$Adm12[j] %in% c("NNNNNN", "6NNNNN")))
+    baseline$activproBis[j] = "C"
+  else if (baseline$Adm12a[j] == "NNNN" & baseline$Adm11[j] == 2 & baseline$Adm12[j] == "NNNNNN" & baseline$Adm10[j] %in% c(95,96))
+    baseline$activproBis[j] = "C"
+  else if (baseline$Adm12a[j] == "NNNN" & baseline$Adm11[j] == 2 & baseline$Adm12[j] == "NNNNNN" & baseline$Adm10[j] == 86)
+    baseline$activproBis[j] = "I"
+  else if (baseline$Adm12a[j] == "NNNN" & baseline$Adm11[j] == 2 & baseline$Adm12[j] != "NNNNNN")
+    baseline$activproBis[j] = "C" 
+}
+```
+  
+  else if (baseline$Adm12a[j] == "NNNN" & baseline$Adm11[j] == 3 & baseline$Adm12[j] == "NNNNNN" & baseline$Adm10[j] %in% c(93,95,96))
+    baseline$activproBis[j] = "C" 
+  else if (baseline$Adm12a[j] == "NNNN" & baseline$Adm11[j] == 3 & baseline$Adm12[j] == "NNNNNN" & baseline$Adm10[j] == 74)
+    baseline$activproBis[j] = "R"
+  else if (baseline$Adm12a[j] == "NNNN" & baseline$Adm11[j] == 3 & baseline$Adm12[j] == "NNNNNN" & baseline$Adm10[j] == 56)
+    baseline$activproBis[j] = "NSP"
+  else if (baseline$Adm12a[j] == "NNNN" & baseline$Adm11[j] == 3 & baseline$Adm12[j] %in% c("NNN3NN","N5NNNN","N5N3NN")) 
+    baseline$activproBis[j] = "C"
+  else if (baseline$Adm12a[j] == "NNNN" & baseline$Adm11[j] == 3 & baseline$Adm12[j] == "6NNNNN" & baseline$Adm10[j] == 95)
+    baseline$activproBis[j] = "C"
+  else if (baseline$Adm12a[j] == "NNNN" & baseline$Adm11[j] == 3 & baseline$Adm12[j] == "6NNNNN" & baseline$Adm10[j] == 95)
+    baseline$activproBis[j] = "C"
+  
   
 
-}
+
+```{r}
+summary(baseline$Adm10[which(baseline$Adm12a == "NNNN" & baseline$Adm11 == 1 & baseline$Adm12 == "6NNNNN")])
 ```
 
 
