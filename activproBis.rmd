@@ -1,0 +1,48 @@
+##Codage activproBis
+
+```{r}
+baseline$activproBis = 0
+
+for (j in 1:(dim(baseline)[1])){
+  
+  ## 1
+  if (baseline$Adm12a[j] == "JNNN" & baseline$Adm11[j] == 0)
+    baseline$activproBis[j] = "T"
+  else if (baseline$Adm12a[j] == "JNNN" & baseline$Adm11[j] == 1 & baseline$Adm12[j] == "6NNNNN" & baseline$Adm10[j] == 54)
+    baseline$activproBis[j] = "T"
+  else if (baseline$Adm12a[j] == "JNNN" & baseline$Adm11[j] == 4 & baseline$Adm12[j] == "NNNNNN" & baseline$Adm10[j] == 85)
+    baseline$activproBis[j] = "I"
+  
+   ## 2
+  else if (baseline$Adm12a[j] == "N98N" & baseline$Adm11[j] == 0 & baseline$Adm12[j] == "NNNNNN" & baseline$Adm10[j] == 77)
+    baseline$activproBis[j] = "NSP"
+  else if (baseline$Adm12a[j] == "N98N" & baseline$Adm11[j] == 3 & baseline$Adm12[j] == "NNNNNN" & baseline$Adm10[j] == 77)
+    baseline$activproBis[j] = "R"
+  else if (baseline$Adm12a[j] == "N98N" & baseline$Adm11[j] == 4 & baseline$Adm12[j] == "NNNNNN" & baseline$Adm10[j] %in% c(85,74))
+    baseline$activproBis[j] = "R"
+  else if (baseline$Adm12a[j] == "N98N" & baseline$Adm11[j] == 4 & baseline$Adm12[j] == "NNN3NN" & baseline$Adm10[j] == 85)
+    baseline$activproBis[j] = "NSP"
+  else if (baseline$Adm12a[j] == "N98N" & baseline$Adm11[j] == 5 & baseline$Adm12[j] == "NNNNNN" & baseline$Adm10[j] == 85)
+    baseline$activproBis[j] = "I"
+  
+  ## 3
+  else if(baseline$Adm12a[j] == "N9N7")
+    baseline$activproBis[j] = "R"
+  
+  ## 4
+  else if (baseline$Adm12a[j] == "N9NN" & baseline$Adm11[j] == 0)
+    baseline$activproBis[j] = 76
+  else if (baseline$Adm12a[j] == "N9NN" & baseline$Adm11[j] == 1 & baseline$Adm12[j] == "NNN3NN" & baseline$Adm10[j] == 86)
+    baseline$activproBis[j] = "C"
+  else if (baseline$Adm12a[j] == "N9NN" & baseline$Adm11[j] == 1 & baseline$Adm12[j] == "NNNNNN" & baseline$Adm10[j] %in% c(85,86))
+    baseline$activproBis[j] = "I"
+  else if (baseline$Adm12a[j] == "N9NN" & baseline$Adm11[j] == 2 & baseline$Adm12[j] == "NNNNNN" & baseline$Adm10[j] %in% c(85,86))
+    baseline$activproBis[j] = "I"
+  
+}
+```
+
+```{r}
+summary(as.factor(baseline$activproBis))
+```
+
