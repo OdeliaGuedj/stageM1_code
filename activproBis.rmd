@@ -12,7 +12,7 @@ for (j in 1:(dim(baseline)[1])){
     baseline$activproBis[j] = "T"
   else if (baseline$Adm12a[j] == "JNNN" & baseline$Adm11[j] == 4 & baseline$Adm12[j] == "NNNNNN" & baseline$Adm10[j] == 85)
     baseline$activproBis[j] = "I"
-  
+
    ## 2
   else if (baseline$Adm12a[j] == "N98N" & baseline$Adm11[j] == 0 & baseline$Adm12[j] == "NNNNNN" & baseline$Adm10[j] == 77)
     baseline$activproBis[j] = "NSP"
@@ -31,18 +31,49 @@ for (j in 1:(dim(baseline)[1])){
   
   ## 4
   else if (baseline$Adm12a[j] == "N9NN" & baseline$Adm11[j] == 0)
-    baseline$activproBis[j] = 76
+    baseline$activproBis[j] = "NSP"
   else if (baseline$Adm12a[j] == "N9NN" & baseline$Adm11[j] == 1 & baseline$Adm12[j] == "NNN3NN" & baseline$Adm10[j] == 86)
     baseline$activproBis[j] = "C"
   else if (baseline$Adm12a[j] == "N9NN" & baseline$Adm11[j] == 1 & baseline$Adm12[j] == "NNNNNN" & baseline$Adm10[j] %in% c(85,86))
     baseline$activproBis[j] = "I"
   else if (baseline$Adm12a[j] == "N9NN" & baseline$Adm11[j] == 2 & baseline$Adm12[j] == "NNNNNN" & baseline$Adm10[j] %in% c(85,86))
     baseline$activproBis[j] = "I"
+  else if (baseline$Adm12a[j] == "N9NN" & baseline$Adm11[j] == 2 & baseline$Adm12[j] %in% c("N5N3NN", "N5NNNN") & baseline$Adm10[j] %in% c(85,96))
+    baseline$activproBis[j] = "C"
+  else if (baseline$Adm12a[j] == "N9NN" & baseline$Adm11[j] == 3 & baseline$Adm12[j] == "NNNNNN" & baseline$Adm10[j] %in% c(85,86))
+    baseline$activproBis[j] = "I"
+  else if (baseline$Adm12a[j] == "N9NN" & baseline$Adm11[j] == 4 & baseline$Adm12[j] == "N5NNNN" & baseline$Adm10[j] == 95)
+    baseline$activproBis[j] = "C"
+  else if (baseline$Adm12a[j] == "N9NN" & baseline$Adm11[j] == 4 & baseline$Adm12[j] == "NNNNNN" & baseline$Adm10[j] %in% c(85,86))
+    baseline$activproBis[j] = "I"
+  else if (baseline$Adm12a[j] == "N9NN" & baseline$Adm11[j] == 4 & baseline$Adm12[j] == "NNNNNN" & (baseline$Adm10[j] %in% c(54,74,77) | is.na(baseline$Adm10[j])))
+    baseline$activproBis[j] = "R"
+  else if (baseline$Adm12a[j] == "N9NN" & baseline$Adm11[j] == 5)
+    baseline$activproBis[j] = "I"
+  
+  ## 5
+  else if (baseline$Adm12a[j] == "NN87" & baseline$Adm11[j] == 0)
+    baseline$activproBis[j] = "NSP"
+   else if (baseline$Adm12a[j] == "NN87" & baseline$Adm11[j] == 3)
+    baseline$activproBis[j] = "R"
+
+   ## 6
+   else if (baseline$Adm12a[j] == "NN8N" & baseline$Adm11[j] == 0)
+     baseline$activproBis[j] = "T"
+  else if (baseline$Adm12a[j] == "NN8N" & baseline$Adm11[j] == 1 & baseline$Adm12[j] == "NNNNNN" & (baseline$Adm10[j] %in% c(74,75,77,78) | is.na(baseline$Adm10[j])))
+    baseline$activproBis[j] = "R"
   
 }
 ```
 
+
+
+
 ```{r}
 summary(as.factor(baseline$activproBis))
 ```
+```{r}
+cumsum(table(as.factor(baseline$activproBis)))
+```
+
 

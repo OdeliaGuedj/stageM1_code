@@ -7,18 +7,6 @@ output: html_notebook
 library(ggplot2)
 library(FactoMineR)
 ```
-
-##Changement de type
-
-```{r}
-baseline$Adm10 = as.factor(baseline$Adm10)
-baseline$Adm11 = as.factor(baseline$Adm11)
-baseline$Adm12 = as.factor(baseline$Adm12)
-baseline$Adm12a = as.factor(baseline$Adm12a)
-```
-```
-
-
 ## Data
 ```{r}
 getwd()
@@ -32,6 +20,14 @@ baseline = read.csv(file = "C:/Users/odeli/Desktop/data/inclusion/Baseline.csv",
 #suivi_4 = read.csv(file = "W:/Odélia/srh_retraite/data/4_ans/suivi4.csv", header = TRUE, row.names = NULL, sep = ";")
 ```
 
+##Changement de type
+
+```{r}
+baseline$Adm10 = as.factor(baseline$Adm10)
+baseline$Adm11 = as.factor(baseline$Adm11)
+baseline$Adm12 = as.factor(baseline$Adm12)
+baseline$Adm12a = as.factor(baseline$Adm12a)
+```
 
 
 ## Data intermediaires

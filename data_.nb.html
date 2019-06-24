@@ -248,9 +248,37 @@ $(document).ready(function () {
 <h2>Library</h2>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShnZ3Bsb3QyKVxubGlicmFyeShGYWN0b01pbmVSKVxuYGBgIn0= -->
-<pre class="r"><code>library(ggplot2)
-library(FactoMineR)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShnZ3Bsb3QyKVxuYGBgIn0= -->
+<pre class="r"><code>library(ggplot2)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoibGUgcGFja2FnZSDjpLzjuLFnZ3Bsb3Qy46S847iyIGEg5pS847i5dOaUvOO4uSBjb21waWzmlLzjuLkgYXZlYyBsYSB2ZXJzaW9uIFIgMy41LjNcbiJ9 -->
+<pre><code>le package 㤼㸱ggplot2㤼㸲 a 攼㸹t攼㸹 compil攼㸹 avec la version R 3.5.3</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShGYWN0b01pbmVSKVxuYGBgIn0= -->
+<pre class="r"><code>library(FactoMineR)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoibGUgcGFja2FnZSDjpLzjuLFGYWN0b01pbmVS46S847iyIGEg5pS847i5dOaUvOO4uSBjb21waWzmlLzjuLkgYXZlYyBsYSB2ZXJzaW9uIFIgMy41LjNcbiJ9 -->
+<pre><code>le package 㤼㸱FactoMineR㤼㸲 a 攼㸹t攼㸹 compil攼㸹 avec la version R 3.5.3</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="data" class="section level2">
+<h2>Data</h2>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZ2V0d2QoKVxuYGBgIn0= -->
+<pre class="r"><code>getwd()</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiQzovVXNlcnMvb2RlbGkvRGVza3RvcC90bXAvc3RhZ2VNMVwiXG4ifQ== -->
+<pre><code>[1] &quot;C:/Users/odeli/Desktop/tmp/stageM1&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyAhISEgTU9OIE9SREkgISEhXG5iYXNlbGluZSA9IHJlYWQuY3N2KGZpbGUgPSBcIkM6L1VzZXJzL29kZWxpL0Rlc2t0b3AvZGF0YS9pbmNsdXNpb24vQmFzZWxpbmUuY3N2XCIsIGhlYWRlciA9IFRSVUUsIHJvdy5uYW1lcyA9IE5VTEwsIHNlcCA9ICc7JylcbiMgISEhIG9yZGkgYnVyZWF1ICEhIVxuI3N1aXZpXzYgPSByZWFkLmNzdihmaWxlID0gXCJXOi9PZMOpbGlhL3NyaF9yZXRyYWl0ZS9kYXRhLzZfYW5zL3N1aXZpNi5jc3ZcIiwgaGVhZGVyID0gVFJVRSwgcm93Lm5hbWVzID0gTlVMTCwgc2VwID0gXCI7XCIpXG4jc3VpdmlfNCA9IHJlYWQuY3N2KGZpbGUgPSBcIlc6L09kw6lsaWEvc3JoX3JldHJhaXRlL2RhdGEvNF9hbnMvc3Vpdmk0LmNzdlwiLCBoZWFkZXIgPSBUUlVFLCByb3cubmFtZXMgPSBOVUxMLCBzZXAgPSBcIjtcIilcbmBgYCJ9 -->
+<pre class="r"><code># !!! MON ORDI !!!
+baseline = read.csv(file = &quot;C:/Users/odeli/Desktop/data/inclusion/Baseline.csv&quot;, header = TRUE, row.names = NULL, sep = ';')
+# !!! ordi bureau !!!
+#suivi_6 = read.csv(file = &quot;W:/Odélia/srh_retraite/data/6_ans/suivi6.csv&quot;, header = TRUE, row.names = NULL, sep = &quot;;&quot;)
+#suivi_4 = read.csv(file = &quot;W:/Odélia/srh_retraite/data/4_ans/suivi4.csv&quot;, header = TRUE, row.names = NULL, sep = &quot;;&quot;)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -264,25 +292,6 @@ library(FactoMineR)</code></pre>
 baseline$Adm11 = as.factor(baseline$Adm11)
 baseline$Adm12 = as.factor(baseline$Adm12)
 baseline$Adm12a = as.factor(baseline$Adm12a)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>```</p>
-</div>
-<div id="data" class="section level2">
-<h2>Data</h2>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZ2V0d2QoKVxuXG4jICEhISBNT04gT1JESSAhISFcbmJhc2VsaW5lID0gcmVhZC5jc3YoZmlsZSA9IFwiQzovVXNlcnMvb2RlbGkvRGVza3RvcC9kYXRhL2luY2x1c2lvbi9CYXNlbGluZS5jc3ZcIiwgaGVhZGVyID0gVFJVRSwgcm93Lm5hbWVzID0gTlVMTCwgc2VwID0gJzsnKVxuXG4jICEhISBvcmRpIGJ1cmVhdSAhISFcblxuI3N1aXZpXzYgPSByZWFkLmNzdihmaWxlID0gXCJXOi9PZMOpbGlhL3NyaF9yZXRyYWl0ZS9kYXRhLzZfYW5zL3N1aXZpNi5jc3ZcIiwgaGVhZGVyID0gVFJVRSwgcm93Lm5hbWVzID0gTlVMTCwgc2VwID0gXCI7XCIpXG4jc3VpdmlfNCA9IHJlYWQuY3N2KGZpbGUgPSBcIlc6L09kw6lsaWEvc3JoX3JldHJhaXRlL2RhdGEvNF9hbnMvc3Vpdmk0LmNzdlwiLCBoZWFkZXIgPSBUUlVFLCByb3cubmFtZXMgPSBOVUxMLCBzZXAgPSBcIjtcIilcbmBgYCJ9 -->
-<pre class="r"><code>getwd()
-
-# !!! MON ORDI !!!
-baseline = read.csv(file = &quot;C:/Users/odeli/Desktop/data/inclusion/Baseline.csv&quot;, header = TRUE, row.names = NULL, sep = ';')
-
-# !!! ordi bureau !!!
-
-#suivi_6 = read.csv(file = &quot;W:/Odélia/srh_retraite/data/6_ans/suivi6.csv&quot;, header = TRUE, row.names = NULL, sep = &quot;;&quot;)
-#suivi_4 = read.csv(file = &quot;W:/Odélia/srh_retraite/data/4_ans/suivi4.csv&quot;, header = TRUE, row.names = NULL, sep = &quot;;&quot;)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -336,7 +345,7 @@ dim(exclus)</code></pre>
 <!-- rnb-text-end -->
 </div>
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIkRBVEEiDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KIyNMaWJyYXJ5DQpgYGB7cn0NCmxpYnJhcnkoZ2dwbG90MikNCmxpYnJhcnkoRmFjdG9NaW5lUikNCmBgYA0KDQojI0NoYW5nZW1lbnQgZGUgdHlwZQ0KDQpgYGB7cn0NCmJhc2VsaW5lJEFkbTEwID0gYXMuZmFjdG9yKGJhc2VsaW5lJEFkbTEwKQ0KYmFzZWxpbmUkQWRtMTEgPSBhcy5mYWN0b3IoYmFzZWxpbmUkQWRtMTEpDQpiYXNlbGluZSRBZG0xMiA9IGFzLmZhY3RvcihiYXNlbGluZSRBZG0xMikNCmJhc2VsaW5lJEFkbTEyYSA9IGFzLmZhY3RvcihiYXNlbGluZSRBZG0xMmEpDQpgYGANCmBgYA0KDQoNCiMjIERhdGENCmBgYHtyfQ0KZ2V0d2QoKQ0KDQojICEhISBNT04gT1JESSAhISENCmJhc2VsaW5lID0gcmVhZC5jc3YoZmlsZSA9ICJDOi9Vc2Vycy9vZGVsaS9EZXNrdG9wL2RhdGEvaW5jbHVzaW9uL0Jhc2VsaW5lLmNzdiIsIGhlYWRlciA9IFRSVUUsIHJvdy5uYW1lcyA9IE5VTEwsIHNlcCA9ICc7JykNCg0KIyAhISEgb3JkaSBidXJlYXUgISEhDQoNCiNzdWl2aV82ID0gcmVhZC5jc3YoZmlsZSA9ICJXOi9PZMOpbGlhL3NyaF9yZXRyYWl0ZS9kYXRhLzZfYW5zL3N1aXZpNi5jc3YiLCBoZWFkZXIgPSBUUlVFLCByb3cubmFtZXMgPSBOVUxMLCBzZXAgPSAiOyIpDQojc3VpdmlfNCA9IHJlYWQuY3N2KGZpbGUgPSAiVzovT2TDqWxpYS9zcmhfcmV0cmFpdGUvZGF0YS80X2Fucy9zdWl2aTQuY3N2IiwgaGVhZGVyID0gVFJVRSwgcm93Lm5hbWVzID0gTlVMTCwgc2VwID0gIjsiKQ0KYGBgDQoNCg0KDQojIyBEYXRhIGludGVybWVkaWFpcmVzDQoNCmBgYHtyfQ0KYmFzZWxpbmVQID0gYmFzZWxpbmVbLSh3aGljaChiYXNlbGluZSRuZXBwMyAlaW4lIG5hX2FjdGl2cHJvX2lkKSksXQ0KDQpiYXNlbGluZVAxID0gYmFzZWxpbmVQWy0od2hpY2goYmFzZWxpbmVQJG5lcHAzICVpbiUgbmFfc3JoX2lkKSksXQ0KDQpiYXNlbGluZVAyID0gYmFzZWxpbmVQMVstKHdoaWNoKGJhc2VsaW5lUDEkbmVwcDMgJWluJSBvdXRsaWVyc19hZ2VfaWQpKSxdDQoNCmJhc2VsaW5lUDMgPSBiYXNlbGluZVAyWy0od2hpY2goYmFzZWxpbmVQMiRuZXBwMyAlaW4lIG5hX2VudG91cmFnZV9pZCkpLF0NCg0KYmFzZWxpbmVQNCA9IGJhc2VsaW5lUDNbLSh3aGljaChiYXNlbGluZVAzJG5lcHAzICVpbiUgbmFfdGFiYWNfaWQpKSxdDQpgYGANCg0KIyMgR2VzdGlvbiBkZXMgZXhjbHVzDQoNCmBgYHtyfQ0KZXhjbHVzX2lkID0gdW5pcXVlKGMobmFfYWN0aXZwcm9faWQsIG5hX3NyaF9pZCwgb3V0bGllcnNfYWdlX2lkLCBuYV9lbnRvdXJhZ2VfaWQsIG5hX3RhYmFjX2lkKSkNCmxlbmd0aChleGNsdXNfaWQpDQpgYGANCmBgYHtyfQ0KbGVuZ3RoKGludGVyc2VjdChleGNsdXNfaWQsbmFfdGFiYWNfaWQpKQ0KYGBgDQoNCmBgYHtyfQ0KZXhjbHVzID0gYmFzZWxpbmVbd2hpY2goYmFzZWxpbmUkbmVwcDMgJWluJSBleGNsdXNfaWQpLF0NCmRpbShleGNsdXMpDQpgYGANCmBgYHtyfQ0KI2NvbXBhcmVHcm91cHMoYmFzZWxpbmUsZXhjbHVzKQ0KYGBgDQoNCg==</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIkRBVEEiDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KIyNMaWJyYXJ5DQpgYGB7cn0NCmxpYnJhcnkoZ2dwbG90MikNCmxpYnJhcnkoRmFjdG9NaW5lUikNCmBgYA0KIyMgRGF0YQ0KYGBge3J9DQpnZXR3ZCgpDQoNCiMgISEhIE1PTiBPUkRJICEhIQ0KYmFzZWxpbmUgPSByZWFkLmNzdihmaWxlID0gIkM6L1VzZXJzL29kZWxpL0Rlc2t0b3AvZGF0YS9pbmNsdXNpb24vQmFzZWxpbmUuY3N2IiwgaGVhZGVyID0gVFJVRSwgcm93Lm5hbWVzID0gTlVMTCwgc2VwID0gJzsnKQ0KDQojICEhISBvcmRpIGJ1cmVhdSAhISENCg0KI3N1aXZpXzYgPSByZWFkLmNzdihmaWxlID0gIlc6L09kw6lsaWEvc3JoX3JldHJhaXRlL2RhdGEvNl9hbnMvc3Vpdmk2LmNzdiIsIGhlYWRlciA9IFRSVUUsIHJvdy5uYW1lcyA9IE5VTEwsIHNlcCA9ICI7IikNCiNzdWl2aV80ID0gcmVhZC5jc3YoZmlsZSA9ICJXOi9PZMOpbGlhL3NyaF9yZXRyYWl0ZS9kYXRhLzRfYW5zL3N1aXZpNC5jc3YiLCBoZWFkZXIgPSBUUlVFLCByb3cubmFtZXMgPSBOVUxMLCBzZXAgPSAiOyIpDQpgYGANCg0KIyNDaGFuZ2VtZW50IGRlIHR5cGUNCg0KYGBge3J9DQpiYXNlbGluZSRBZG0xMCA9IGFzLmZhY3RvcihiYXNlbGluZSRBZG0xMCkNCmJhc2VsaW5lJEFkbTExID0gYXMuZmFjdG9yKGJhc2VsaW5lJEFkbTExKQ0KYmFzZWxpbmUkQWRtMTIgPSBhcy5mYWN0b3IoYmFzZWxpbmUkQWRtMTIpDQpiYXNlbGluZSRBZG0xMmEgPSBhcy5mYWN0b3IoYmFzZWxpbmUkQWRtMTJhKQ0KYGBgDQoNCg0KIyMgRGF0YSBpbnRlcm1lZGlhaXJlcw0KDQpgYGB7cn0NCmJhc2VsaW5lUCA9IGJhc2VsaW5lWy0od2hpY2goYmFzZWxpbmUkbmVwcDMgJWluJSBuYV9hY3RpdnByb19pZCkpLF0NCg0KYmFzZWxpbmVQMSA9IGJhc2VsaW5lUFstKHdoaWNoKGJhc2VsaW5lUCRuZXBwMyAlaW4lIG5hX3NyaF9pZCkpLF0NCg0KYmFzZWxpbmVQMiA9IGJhc2VsaW5lUDFbLSh3aGljaChiYXNlbGluZVAxJG5lcHAzICVpbiUgb3V0bGllcnNfYWdlX2lkKSksXQ0KDQpiYXNlbGluZVAzID0gYmFzZWxpbmVQMlstKHdoaWNoKGJhc2VsaW5lUDIkbmVwcDMgJWluJSBuYV9lbnRvdXJhZ2VfaWQpKSxdDQoNCmJhc2VsaW5lUDQgPSBiYXNlbGluZVAzWy0od2hpY2goYmFzZWxpbmVQMyRuZXBwMyAlaW4lIG5hX3RhYmFjX2lkKSksXQ0KYGBgDQoNCiMjIEdlc3Rpb24gZGVzIGV4Y2x1cw0KDQpgYGB7cn0NCmV4Y2x1c19pZCA9IHVuaXF1ZShjKG5hX2FjdGl2cHJvX2lkLCBuYV9zcmhfaWQsIG91dGxpZXJzX2FnZV9pZCwgbmFfZW50b3VyYWdlX2lkLCBuYV90YWJhY19pZCkpDQpsZW5ndGgoZXhjbHVzX2lkKQ0KYGBgDQpgYGB7cn0NCmxlbmd0aChpbnRlcnNlY3QoZXhjbHVzX2lkLG5hX3RhYmFjX2lkKSkNCmBgYA0KDQpgYGB7cn0NCmV4Y2x1cyA9IGJhc2VsaW5lW3doaWNoKGJhc2VsaW5lJG5lcHAzICVpbiUgZXhjbHVzX2lkKSxdDQpkaW0oZXhjbHVzKQ0KYGBgDQpgYGB7cn0NCiNjb21wYXJlR3JvdXBzKGJhc2VsaW5lLGV4Y2x1cykNCmBgYA0KDQo=</div>
 
 
 
