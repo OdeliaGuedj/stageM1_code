@@ -22,6 +22,7 @@ baseline = read.csv(file = "C:/Users/odeli/Desktop/data/inclusion/Baseline.csv",
 
 ##Changement de type
 
+### Activpro
 ```{r}
 baseline$Adm10 = as.factor(baseline$Adm10)
 baseline$Adm11 = as.factor(baseline$Adm11)
@@ -31,6 +32,9 @@ baseline$Adm12a[which(baseline$Adm12a == "")] = NA
 baseline$Adm12[which(baseline$Adm12 == "")] = NA
 baseline$Adm11[which(baseline$Adm11 == "")] = NA
 baseline$Adm10[which(baseline$Adm10 == "")] = NA
+baseline$activpro = as.factor(baseline$activpro)
+baseline$activproBis = as.factor(baseline$activproBis)
+baseline$activpro_cah = as.factor(baseline$activpro_cah)
 ```
 
 

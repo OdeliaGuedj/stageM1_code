@@ -2,33 +2,28 @@
 title: "R Notebook"
 output: html_notebook
 ---
+# Création base pour ACM et CAH
 
-```{r}
-library(FactoMineR)
-```
-```{r}
-baseline$Adm10 = as.factor(baseline$Adm10)
-baseline$Adm11 = as.factor(baseline$Adm11)
-baseline$Adm12 = as.factor(baseline$Adm12)
-baseline$Adm12a = as.factor(baseline$Adm12a)
-```
 ```{r}
 na_Adm10_id = baseline$nepp3[which(is.na(baseline$Adm10))]
 na_Adm11_id = baseline$nepp3[which(is.na(baseline$Adm11))]
 na_Adm12_id = baseline$nepp3[which(is.na(baseline$Adm12))]
 na_Adm12a_id = baseline$nepp3[which(is.na(baseline$Adm12a))]
-```
-
-```{r}
 na_actproBl_id = unique(c(na_Adm10_id,na_Adm11_id,na_Adm12_id,na_Adm12a_id))
 ```
 
 ```{r}
 actproBl = baseline[-which(baseline$nepp3 %in% na_actproBl_id),c(25,27,29,30) ]
 ```
+```{r}
+colnames(baseline)[25]
+colnames(baseline)[27]
+colnames(baseline)[29]
+colnames(baseline)[30]
+```
+# ACM
 
 ```{r}
-
 ACM_activpro = MCA(actproBl)
 ```
 
