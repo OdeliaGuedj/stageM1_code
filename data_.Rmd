@@ -27,6 +27,10 @@ baseline$Adm10 = as.factor(baseline$Adm10)
 baseline$Adm11 = as.factor(baseline$Adm11)
 baseline$Adm12 = as.factor(baseline$Adm12)
 baseline$Adm12a = as.factor(baseline$Adm12a)
+baseline$Adm12a[which(baseline$Adm12a == "")] = NA
+baseline$Adm12[which(baseline$Adm12 == "")] = NA
+baseline$Adm11[which(baseline$Adm11 == "")] = NA
+baseline$Adm10[which(baseline$Adm10 == "")] = NA
 ```
 
 
