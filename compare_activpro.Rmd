@@ -1,0 +1,8 @@
+```{r}
+summary(baseline$activpro)
+```
+
+```{r}
+summary(baseline$activproBis)
+```
+
