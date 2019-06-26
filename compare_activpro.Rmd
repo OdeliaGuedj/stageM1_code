@@ -1,8 +1,38 @@
 ```{r}
+print("activpro")
 summary(baseline$activpro)
+print("activproBis")
+summary(baseline$activproBis)
+print("activproCAH")
+summary(baseline$activproCAH)
 ```
 
+#Comparaison activpro et activproBis
 ```{r}
-summary(baseline$activproBis)
+length(which(baseline$activpro != baseline$activproBis))
 ```
+```{r}
+print("repartition des 270 dans activpro")
+summary(baseline$activpro[which(baseline$activpro != baseline$activproBis)])
+print("repartition des 270 dans activproBis")
+summary(baseline$activproBis[which(baseline$activpro != baseline$activproBis)])
+```
+Tendance à classer plus facilement en chômeurs et en reraite et plus difficilement en inactifs.
+Le surplus va en NSP.
+
+```{r}
+summary(baseline$Adm12a[which(baseline$activpro != baseline$activproBis)])
+summary(baseline$Adm11[which(baseline$activpro != baseline$activproBis)])
+summary(baseline$Adm12[which(baseline$activpro != baseline$activproBis)])
+summary(baseline$Adm10[which(baseline$activpro != baseline$activproBis)])
+```
+#comparaison activproBis et activproCAH
+```{r}
+(length(which(baseline$activproCAH != baseline$activproBis))/dim(baseline)[1])*100
+```
+```{r}
+summary(baseline$activproCAH[which(baseline$activproBis == "NSP")])
+```
+
+
 
