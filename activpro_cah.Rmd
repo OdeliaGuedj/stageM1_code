@@ -29,11 +29,7 @@ colnames(baseline)[595]
 # ACM
 
 ```{r}
-ACM_activpro = MCA(actproBl)
-```
-
-```{r}
-ACM_activpro$
+ACM_activpro = MCA(actproBl[,c(2,3,4,5)])
 ```
 
 # CAH
@@ -57,7 +53,7 @@ plot(cah_activpro, choice = "map")
 # Ajout dans la base
 
 ```{r}
-actproBl$cah_activpro = cah_activpro$data.clust$clust
+actproBl$cah_activpro = as.factor(cah_activpro$data.clust$clust)
 ```
 
 4 = retraite
@@ -66,19 +62,15 @@ actproBl$cah_activpro = cah_activpro$data.clust$clust
 3 = inactif
 
 ```{r}
-for (k in 1:(dim(actproBl)[1])){
-  if(actproBl$cah_activpro[k] == 1)
-    actproBl$cah_activproName[k] = "T"
-  else if(actproBl$cah_activpro[k] == 2)
-    actproBl$cah_activproName[k] = "C"
-  else if(actproBl$cah_activpro[k] == 3)
-    actproBl$cah_activproName[k] = "I"
-  else if(actproBl$cah_activpro[k] == 4)
-    actproBl$cah_activproName[k] = "R"
-}
+actproBl$cah_activproName[which(actproBl$cah_activpro == 1)] = "T"
+actproBl$cah_activproName[which(actproBl$cah_activpro == 2)] = "C"
+actproBl$cah_activproName[which(actproBl$cah_activpro == 3)] = "I"
+actproBl$cah_activproName[which(actproBl$cah_activpro == 4)] = "R"
 ```
+
 ```{r}
 actproBl$cah_activproName = as.factor(actproBl$cah_activproName)
+actproBl$cah_activproName = relevel(actproBl$cah_activproName , ref = "T")
 ```
 
 ```{r}
@@ -86,16 +78,26 @@ colnames(actproBl)
 ```
 
 ```{r}
-for(l in baseline$nepp3){
-  if(l %in% na_actproBl_id)
-    baseline$activproCAH[which(baseline$nepp3 == l)] = NA
+baseline$activproCAH = 0
+for(k in baseline$nepp3){
+  if(k %in% na_actproBl_id)
+    baseline$activproCAH[which(baseline$nepp3 == k)] = NA
   else
-    baseline$activproCAH[which(baseline$nepp3 == l)] = actproBl$cah_activproName[which(actproBl$nepp3 == l)]
+    baseline$activproCAH[which(baseline$nepp3 == k)] = actproBl$cah_activpro[which(actproBl$nepp3 == k)]
 }
+
+baseline$activproCAH = as.character(baseline$activproCAH)
+baseline$activproCAH[which(baseline$activproCAH == 1)] = "T"
+baseline$activproCAH[which(baseline$activproCAH == 2)] = "C"
+baseline$activproCAH[which(baseline$activproCAH == 3)] = "I"
+baseline$activproCAH[which(baseline$activproCAH == 4)] = "R"
+baseline$activproCAH = as.factor(baseline$activproCAH)
 ```
 
 ```{r}
-baseline$activproCAH = as.factor(baseline$activproCAH)
+baseline$activproCAH = relevel(baseline$activproCAH , ref = "T")
+levels(baseline$activproCAH) = c(levels(baseline$activproCAH), "NSP")
+levels(baseline$activproCAH)
 ```
 
 
