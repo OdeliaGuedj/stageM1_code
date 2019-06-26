@@ -1,5 +1,5 @@
 ---
-title: "R Notebook"
+title: "ACH et CAH pour activpro"
 output: html_notebook
 ---
 # Création base pour ACM et CAH
@@ -13,14 +13,19 @@ na_actproBl_id = unique(c(na_Adm10_id,na_Adm11_id,na_Adm12_id,na_Adm12a_id))
 ```
 
 ```{r}
-actproBl = baseline[-which(baseline$nepp3 %in% na_actproBl_id),c(25,27,29,30) ]
+actproBl = baseline[-which(baseline$nepp3 %in% na_actproBl_id),c(1,25,27,29,30,594,595) ]
 ```
 ```{r}
+colnames(baseline)[1]
 colnames(baseline)[25]
 colnames(baseline)[27]
 colnames(baseline)[29]
 colnames(baseline)[30]
+colnames(baseline)[594]
+colnames(baseline)[595]
 ```
+
+
 # ACM
 
 ```{r}
@@ -28,10 +33,12 @@ ACM_activpro = MCA(actproBl)
 ```
 
 ```{r}
-colnames(actproBl)
+ACM_activpro$
 ```
+
+# CAH
+
 ```{r}
-library(FactoMineR)
 cah_activpro = HCPC(ACM_activpro,graph = FALSE)
 ```
 
@@ -47,62 +54,54 @@ plot(cah_activpro, choice = "bar")
 ```{r}
 plot(cah_activpro, choice = "map")
 ```
+# Ajout dans la base
+
 ```{r}
 actproBl$cah_activpro = cah_activpro$data.clust$clust
 ```
 
-```{r}
-actproBl$activpro = baseline$activpro[-which(baseline$nepp3 %in% na_actproBl_id)]
-```
-
-```{r}
-actproBl$activpro[1:10]
-actproBl$cah_activpro[1:10]
-```
-
-```{r}
-actproBl$activpro[84:117]
-actproBl$cah_activpro[84:117]
-```
 4 = retraite
 1 = travail
 2 = chomeur
 3 = inactif
 
 ```{r}
-for (z in 1:(dim(actproBl)[1])){
-  if(actproBl$cah_activpro[z] == 1)
-    actproBl$cah_activpro2[z] = "T"
-  else if(actproBl$cah_activpro[z] == 2)
-    actproBl$cah_activpro2[z] = "C"
-  else if(actproBl$cah_activpro[z] == 3)
-    actproBl$cah_activpro2[z] = "I"
-  else if(actproBl$cah_activpro[z] == 4)
-    actproBl$cah_activpro2[z] = "R"
-  
+for (k in 1:(dim(actproBl)[1])){
+  if(actproBl$cah_activpro[k] == 1)
+    actproBl$cah_activproName[k] = "T"
+  else if(actproBl$cah_activpro[k] == 2)
+    actproBl$cah_activproName[k] = "C"
+  else if(actproBl$cah_activpro[k] == 3)
+    actproBl$cah_activproName[k] = "I"
+  else if(actproBl$cah_activpro[k] == 4)
+    actproBl$cah_activproName[k] = "R"
 }
-    
-
 ```
 ```{r}
-length(which(actproBl$activpro != actproBl$cah_activpro2))
+actproBl$cah_activproName = as.factor(actproBl$cah_activproName)
 ```
 
 ```{r}
-(length(which(actproBl$activpro != actproBl$cah_activpro2))/(dim(actproBl)[1]))*100
-```
-```{r}
-actproBl$cah_activpro2 = as.character(actproBl$cah_activpro2)
+colnames(actproBl)
 ```
 
 ```{r}
-summary(actproBl$activpro[which(actproBl$activpro != actproBl$cah_activpro2)])
-length(actproBl$cah_activpro2[which(actproBl$activpro != actproBl$cah_activpro2 & actproBl$activpro == "C")])
+for(l in baseline$nepp3){
+  if(l %in% na_actproBl_id)
+    baseline$activproCAH[which(baseline$nepp3 == l)] = NA
+  else
+    baseline$activproCAH[which(baseline$nepp3 == l)] = actproBl$cah_activproName[which(actproBl$nepp3 == l)]
+}
 ```
 
 ```{r}
-actproBl$activpro[which(actproBl$activpro == "NSP")] = NA
-str(actproBl$activpro)
-str(actproBl$cah_activpro2)
+baseline$activproCAH = as.factor(baseline$activproCAH)
 ```
+
+
+```{r}
+summary(actproBl$cah_activproName)
+summary(baseline$activproCAH)
+```
+
 

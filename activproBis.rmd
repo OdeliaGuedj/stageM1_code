@@ -186,13 +186,20 @@ for (j in 1:(dim(baseline)[1])){
 }
 ```
 
+```{r}
+baseline$activproBis = as.factor(baseline$activproBis)
+baseline$activproBis = relevel(baseline$activproBis , ref = "T")
+```
+
 
 ```{r}
-summary(as.factor(baseline$activproBis))
+summary(baseline$activproBis)
 ```
+
 ```{r}
-table(baseline$Adm12a[which(baseline$activproBis == 0)])
+na_activproBis_id = baseline$nepp3[which(is.na(baseline$activproBis))]
 ```
+
 
 
 
