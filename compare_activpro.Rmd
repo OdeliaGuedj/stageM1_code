@@ -31,47 +31,55 @@ summary(baseline$Adm10[which(baseline$activpro != baseline$activproBis)])
 length(which(baseline$activproCAH != baseline$activproBis))
 (length(which(baseline$activproCAH != baseline$activproBis))/dim(baseline)[1])*100
 ```
+## bar plot comparaison activproBis et activproCAH en %
+```{r}
+theme2l <- c( rgb(102,0,255, maxColorValue = 255),
+              rgb(49,140,231, maxColorValue = 255))
+
+activproCAH_prop = (table(baseline$activproCAH)/10157)*100
+actvproBis_prop = (table(baseline$activproBis)/10157)*100
+
+comp_activpro_prop = rbind(actvproBis_prop,activproCAH_prop)
+
+barplot(as.matrix(comp_activpro_prop), col = theme2l , beside = TRUE, main = "Comparaison des deux codages \n de la variable activpro (%)", xlab='classes activpro', ylab='Pourcentage')
+legend("topright", legend = rownames(comp_activpro_prop), col='black', pch = c(22), pt.bg = theme2l, bty ='n')
+
+
+
+```
+## bar plot comparaison activproBis et activproCAH en effetcifs
+```{r}
+theme2lBis <- c( rgb(115,8,0, maxColorValue = 255),
+              rgb(219,23,2, maxColorValue = 255))
+
+activproCAH_eff = table(baseline$activproCAH)
+actvproBis_eff = table(baseline$activproBis)
+
+comp_activpro_eff = rbind(actvproBis_eff,activproCAH_eff)
+
+barplot(as.matrix(comp_activpro_eff), col = theme2lBis , beside = TRUE, main = "Comparaison des deux codages \n de la variable activpro (effectifs)", xlab='classes activpro', ylab='Effectifs')
+legend("topright", legend = rownames(comp_activpro_prop), col='black', pch = c(22), pt.bg = theme2lBis, bty ='n')
+
+
+
+```
+
+
+
+# Etude des NSP
+
 ```{r}
 summary(baseline$activproCAH[which(baseline$activproBis == "NSP")])
 ```
 
 ```{r}
-ggplot(baseline[which(baseline$activproBis == "NSP"),], aes(x = baseline$activproCAH[which(baseline$activproBis == "NSP")])) + geom_bar(stat = "count", color = "blue", fill = "steelblue") + xlab("Classes de la variable activproBis") + ylab("Nombre d'observation par classe") + ggtitle("CAH des individus classifié comme NSP lors de la classification à la main\n n = 113") + theme_classic()
+ggplot(baseline[which(baseline$activproBis == "NSP"),], aes(x = baseline$activproCAH[which(baseline$activproBis == "NSP")])) + geom_bar(stat = "count", fill = "pink") + xlab("Classes de la variable activproBis") + ylab("Nombre d'observation par classe") + ggtitle("CAH des individus classifiés comme NSP lors de la classification à la main\n n = 113")  + theme_classic() 
+
 ```
 
 
 ```{r}
 summary(baseline$activproCAH[which(baseline$activproBis == "NSP")])
 ```
-```{r}
-summary(baseline$activproBis)
-```
-```{r}
-summary(baseline$activproCAH)
-```
-d<-data.frame(C1=c("a","b","c"),C2=c(2,5,8),C3=c(3,6,5))
-d2<-data.frame(C1=rep(d$C1,2),C=c(d$C2,d$C3),type=c(rep("C2",nrow(d)),rep("C3",nrow(d))))
-ggplot(data=d2,aes(x=C1,y=C,fill=type))+geom_bar(binwidth=0.5,position="dodge")
-```{r}
-df = data.frame(modalite = c("T","R","I","C","NSP","NA"),nb_obs = c(5666,3209,270,883,113,16,5460,3410,416,842,0,29), var = c("activproBis","activproBis","activproBis","activproBis","activproBis","activproBis","activproCAH","activproCAH","activproCAH","activproCAH","activproCAH","activproCAH"))
-
-ggplot(data = df, aes(x = modalite,y = nb_obs ,fill = var)) + geom_bar()
-
-```
-```{r}
-df
-```
-
-
-```{r}
-tableau1 = table(baseline$activproBis, baseline$activproCAH)
-
-
-barplot(as.matrix(tableau1),col=theme4l,beside=TRUE, main=" ", xlab='', ylab='')
-legend("topright", legend=rownames(tableau1), col='black', pch=c(22), pt.bg=theme4l, bty='n')
-
-
-```
-
 
 
