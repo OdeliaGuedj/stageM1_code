@@ -13,8 +13,16 @@ na_actproBl_id = unique(c(na_Adm10_id,na_Adm11_id,na_Adm12_id,na_Adm12a_id))
 ```
 
 ```{r}
-actproBl = baseline[-which(baseline$nepp3 %in% na_actproBl_id),c(1,25,27,29,30,594,595) ]
+actproBl = baseline[-which(baseline$nepp3 %in% na_actproBl_id),c("nepp3","Adm10","Adm11","Adm12","Adm12a") ]
 ```
+```{r}
+dim(actproBl)
+```
+
+```{r}
+colnames(actproBl)
+```
+
 ```{r}
 colnames(baseline)[1]
 colnames(baseline)[25]
@@ -24,13 +32,20 @@ colnames(baseline)[30]
 colnames(baseline)[594]
 colnames(baseline)[595]
 ```
+```{r}
+dim(baseline)[1] - dim(actproBl)[1]
+```
+
 
 
 # ACM
 
 ```{r}
-ACM_activpro = MCA(actproBl[,c(2,3,4,5)])
+ACM_activpro = MCA(actproBl[,c("Adm10","Adm11","Adm12a","Adm12")], graph = F)
 ```
+
+
+
 
 # CAH
 
@@ -50,6 +65,15 @@ plot(cah_activpro, choice = "bar")
 ```{r}
 plot(cah_activpro, choice = "map")
 ```
+
+ACM_activpro$desc.var$test.chi2
+ACM_activpro$desc.var$category
+
+```{r}
+cah_activpro$desc.var$test.chi2
+```
+
+
 # Ajout dans la base
 
 ```{r}
