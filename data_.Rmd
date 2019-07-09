@@ -11,6 +11,10 @@ library(fastcluster)
 library(cluster)
 library(TeachingDemos)
 library(Distance)
+library(factoextra)
+library(cowplot)
+library(questionr)
+
 ```
 ## Data
 ```{r}
@@ -27,8 +31,12 @@ baseline = read.csv(file = "C:/Users/odeli/Desktop/data/inclusion/Baseline.csv",
 ## Themes
 
 ```{r}
-theme2l <- c( rgb(102,0,255, maxColorValue = 255),
+theme2lbleu <- c( rgb(102,0,255, maxColorValue = 255),
               rgb(49,140,231, maxColorValue = 255))
+```
+```{r}
+theme2lrouge <- c( rgb(115,8,0, maxColorValue = 255),
+              rgb(219,23,2, maxColorValue = 255))
 ```
 
 ##Changement de type
