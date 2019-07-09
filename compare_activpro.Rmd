@@ -31,26 +31,38 @@ summary(baseline$Adm10[which(baseline$activpro != baseline$activproBis)])
 length(which(baseline$activproCAH != baseline$activproBis))
 (length(which(baseline$activproCAH != baseline$activproBis))/dim(baseline)[1])*100
 ```
+```{r}
+summary(baseline$activproBis)
+```
+```{r}
+summary(baseline$activproCAH)
+```
+```{r}
+baseline$activproBis = factor(baseline$activproBis, c("T","R","C","I","NSP",NA))
+baseline$activproCAH = factor(baseline$activproCAH, c("T","R","C","I","NSP",NA))
+```
+
 ## bar plot comparaison activproBis et activproCAH en %
 ```{r}
-theme2l <- c( rgb(102,0,255, maxColorValue = 255),
-              rgb(49,140,231, maxColorValue = 255))
-
 activproCAH_prop = (table(baseline$activproCAH)/10157)*100
 actvproBis_prop = (table(baseline$activproBis)/10157)*100
 
 comp_activpro_prop = rbind(actvproBis_prop,activproCAH_prop)
 
 barplot(as.matrix(comp_activpro_prop), col = theme2l , beside = TRUE, main = "Comparaison des deux codages \n de la variable activpro (%)", xlab='classes activpro', ylab='Pourcentage')
-legend("topright", legend = rownames(comp_activpro_prop), col='black', pch = c(22), pt.bg = theme2l, bty ='n')
+legend("right", legend = c("activproManuel","activproCAH"), col='black', pch = c(20), pt.bg = theme2l, bty ='n')
 
 
 
 ```
 ## bar plot comparaison activproBis et activproCAH en effetcifs
 ```{r}
-theme2lBis <- c( rgb(115,8,0, maxColorValue = 255),
-              rgb(219,23,2, maxColorValue = 255))
+summary(baseline$activproBis)
+summary(baseline$activproCAH)
+```
+
+```{r}
+
 
 activproCAH_eff = table(baseline$activproCAH)
 actvproBis_eff = table(baseline$activproBis)
@@ -58,10 +70,7 @@ actvproBis_eff = table(baseline$activproBis)
 comp_activpro_eff = rbind(actvproBis_eff,activproCAH_eff)
 
 barplot(as.matrix(comp_activpro_eff), col = theme2lBis , beside = TRUE, main = "Comparaison des deux codages \n de la variable activpro (effectifs)", xlab='classes activpro', ylab='Effectifs')
-legend("topright", legend = rownames(comp_activpro_prop), col='black', pch = c(22), pt.bg = theme2lBis, bty ='n')
-
-
-
+legend("topright", legend = rownames(comp_activpro_eff), col='black', pch = c(22), pt.bg = theme2lBis, bty ='n')
 ```
 
 
@@ -69,13 +78,30 @@ legend("topright", legend = rownames(comp_activpro_prop), col='black', pch = c(2
 # Etude des NSP
 
 ```{r}
-summary(baseline$activproCAH[which(baseline$activproBis == "NSP")])
+tab = table(baseline$activproCAH[which(baseline$activproBis == "NSP")])
+tab
 ```
+
+
 
 ```{r}
-ggplot(baseline[which(baseline$activproBis == "NSP"),], aes(x = baseline$activproCAH[which(baseline$activproBis == "NSP")])) + geom_bar(stat = "count", fill = "pink") + xlab("Classes de la variable activproBis") + ylab("Nombre d'observation par classe") + ggtitle("CAH des individus classifiés comme NSP lors de la classification à la main\n n = 113")  + theme_classic() 
+ggplot(baseline[which(baseline$activproBis == "NSP"),], aes(x = baseline$activproCAH[which(baseline$activproBis == "NSP")])) + 
+  geom_bar(stat = "count", fill = "blue") + 
+  xlab("Classes de la variable activproBis") + 
+  ylab("Nombre d'observation par classe") + 
+  ggtitle("CAH des individus classifiés comme NSP lors de la classification à la main\n n = 113")  + 
+  theme_classic() + 
+  annotate("text", "T", 35, label = "31") + 
+  annotate("text", "R", 10, label = "5") +
+  annotate("text", "I", 79, label = "77")
 
 ```
+
+
+
+
+
+
 
 
 ```{r}
