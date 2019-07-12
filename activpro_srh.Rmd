@@ -3,14 +3,20 @@ title: "Lien activpro et srh"
 output: html_notebook
 ---
 
-```{r}
-baseline$activpro = as.factor(baseline$activpro)
-baseline$Qm73 = as.factor(baseline$Qm73)
-```
 
 ```{r}
 chisq.test(baseline$activpro, baseline$Qm73)
 ```
+```{r}
+chisq.test(baseline$activproBis, baseline$Qm73)
+
+```
+```{r}
+chisq.test(baseline$activproCAH, baseline$Qm73)
+
+```
+
+
 ```{r}
 summary(baseline$srhBin)
 ```
