@@ -44,11 +44,11 @@ plot.MCA(ACM_activpro, choix = "ind", invisible = "var", title  = "Graphe des In
 plot(cah_activpro, choice = "map")
 
 ## graphe comparaison activproBis et activproCAH
-activproCAH_prop = (table(baseline$activproCAH)/10157)*100
-actvproBis_prop = (table(baseline$activproBis)/10157)*100
+activproCAH_prop = (table(baseline$activproCAH, useNA = "always")/10157)*100
+actvproBis_prop = (table(baseline$activproBis, useNA = "always")/10157)*100
 comp_activpro_prop = rbind(actvproBis_prop,activproCAH_prop)
-barplot(as.matrix(comp_activpro_prop), col = theme2l , 
+barplot(as.matrix(comp_activpro_prop), col = theme2lbleu , 
         beside = TRUE, 
         main = "Comparaison des deux codages \n de la variable activpro (%)", 
         xlab='Modalités', ylab='Pourcentage')
-legend("right", legend = c("activproManuel","activproCAH"), col='black', pch = c(22), pt.bg = theme2l, bty ='n')
+legend("right", legend = c("activproManuel","activproCAH"), col='black', pch = c(22), pt.bg = theme2lbleu, bty ='n')

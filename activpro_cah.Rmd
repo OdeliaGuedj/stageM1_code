@@ -43,9 +43,9 @@ dim(baseline)[1] - dim(actproBl)[1]
 ```{r}
 ACM_activpro = MCA(actproBl[,c("Adm10","Adm11","Adm12a","Adm12")], graph = F)
 ```
-
-
-
+```{r}
+ACM_activpro$eig
+```
 
 # CAH
 
@@ -66,12 +66,7 @@ plot(cah_activpro, choice = "bar")
 plot(cah_activpro, choice = "map")
 ```
 
-ACM_activpro$desc.var$test.chi2
-ACM_activpro$desc.var$category
 
-```{r}
-cah_activpro$desc.var$test.chi2
-```
 
 
 # Ajout dans la base
@@ -129,5 +124,29 @@ levels(baseline$activproCAH)
 summary(actproBl$cah_activproName)
 summary(baseline$activproCAH)
 ```
+```{r}
+colnames(actproBl)
+```
+```{r}
+test = actproBl[,c("Adm10","Adm11","Adm12a","Adm12","cah_activpro")]
+colnames(test)
+```
+
+
+```{r}
+catdes(test, num.var = 5)
+
+```
+```{r}
+testbis = test[which(baseline$activproBis == "NSP"),]
+```
+```{r}
+catdes(testbis, num.var = 5)
+```
+
+
+
+
+
 
 
