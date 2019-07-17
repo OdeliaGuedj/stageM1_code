@@ -43,9 +43,7 @@ dim(baseline)[1] - dim(actproBl)[1]
 ```{r}
 ACM_activpro = MCA(actproBl[,c("Adm10","Adm11","Adm12a","Adm12")], graph = F)
 ```
-```{r}
-ACM_activpro$eig
-```
+
 
 # CAH
 

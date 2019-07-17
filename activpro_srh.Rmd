@@ -4,27 +4,6 @@ output: html_notebook
 ---
 
 
-```{r}
-chisq.test(baseline$activpro, baseline$Qm73)
-```
-```{r}
-chisq.test(baseline$activproBis, baseline$Qm73)
-
-```
-```{r}
-chisq.test(baseline$activproCAH, baseline$Qm73)
-
-```
-
-
-```{r}
-summary(baseline$srhBin)
-```
-
-```{r}
-chisq.test(baseline$activpro, baseline$srhBin)
-```
-
 
 ```{r}
 tbl <- with(baseline, table(baseline$srhNum, baseline$activpro))
@@ -33,13 +12,37 @@ barplot(tbl, beside = TRUE)
 ```
 noir à blanc = de 0 à 10
 
+```{r}
+table(baseline$activproBis, baseline$srhBin)
+table(baseline$activproBis, baseline$Qm73)
+```
 
-
+```{r}
+A  =chisq.test(baseline$activproBis, baseline$srhBin)
+summary(A)
+A
+```
 
 
 ```{r}
-baselineP1$activpro = relevel(baselineP1$activpro, ref = "T")
+sum(((A$observed - A$expected)^2)/A$expected)
 ```
+
+
+```{r}
+qchisq(0.95,df=4)
+```
+```{r}
+str(baseline$srhNum)
+```
+
+
+```{r}
+ggplot(baseline, aes(x = baseline$activproBis, y  = baseline$srhNum, fill = baseline$activproBis)) + geom_boxplot()
+```
+
+
+
 
 
 ```{r}
@@ -77,6 +80,14 @@ chisq.test(baselineP1$Qm73, baselineP1$activpro)$observed
 chisq.test(baselineP1$srhBin, baselineP1$activpro)
 
 ```
+
+```{r}
+```
+```{r}
+
+```
+
+
 
 
 ```{r}
