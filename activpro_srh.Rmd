@@ -32,15 +32,24 @@ sum(((A$observed - A$expected)^2)/A$expected)
 ```{r}
 qchisq(0.95,df=4)
 ```
-```{r}
-str(baseline$srhNum)
-```
 
 
 ```{r}
 ggplot(baseline, aes(x = baseline$activproBis, y  = baseline$srhNum, fill = baseline$activproBis)) + geom_boxplot()
 ```
 
+```{r}
+b =as.factor(as.character(baseline$activproCAH))
+summary(b)
+```
+```{r}
+table(b, baseline$srhBin)
+chisq.test(b, baseline$srhBin)
+```
+
+```{r}
+qchisq(0.95,df=3)
+```
 
 
 
@@ -65,46 +74,4 @@ confint(reg_lin)
 ```
 
 
-
-```{r}
-anova(reg_log, test = "Chisq")
-```
-
-
-
-```{r}
-chisq.test(baselineP1$Qm73, baselineP1$activpro)$observed
-```
-
-```{r}
-chisq.test(baselineP1$srhBin, baselineP1$activpro)
-
-```
-
-```{r}
-```
-```{r}
-
-```
-
-
-
-
-```{r}
-a = rbind("T", "R", "C", "I")
-b = rbind(round(mean(baselineP1$srhNum[which(baselineP1$activpro == "T")]),2), 
-          round(mean(baselineP1$srhNum[which(baselineP1$activpro == "R")]),2),
-          round(mean(baselineP1$srhNum[which(baselineP1$activpro == "C")]),2),
-          round(mean(baselineP1$srhNum[which(baselineP1$activpro == "I")]),2))
-
-a
-b
-```
-```{r}
-df1= as.data.frame(cbind(a,b))
-df1
-```
-```{r}
-ggplot(df1, aes(x = a, y = b))+ geom_bar(stat = "identity")
-```
 
