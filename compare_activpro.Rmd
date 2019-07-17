@@ -49,8 +49,8 @@ actvproBis_prop = (table(baseline$activproBis)/10157)*100
 
 comp_activpro_prop = rbind(actvproBis_prop,activproCAH_prop)
 
-barplot(as.matrix(comp_activpro_prop), col = theme2l , beside = TRUE, main = "Comparaison des deux codages \n de la variable activpro (%)", xlab='classes activpro', ylab='Pourcentage')
-legend("right", legend = c("activproManuel","activproCAH"), col='black', pch = c(20), pt.bg = theme2l, bty ='n')
+barplot(as.matrix(comp_activpro_prop), col = theme2lbleu , beside = TRUE, main = "Comparaison des deux codages \n de la variable activpro (%)", xlab='classes activpro', ylab='Pourcentage')
+legend("right", legend = c("activproManuel","activproCAH"), col='black', pch = c(20), pt.bg = theme2lbleu, bty ='n')
 
 
 
@@ -108,4 +108,8 @@ ggplot(baseline[which(baseline$activproBis == "NSP"),], aes(x = baseline$activpr
 summary(baseline$activproCAH[which(baseline$activproBis == "NSP")])
 ```
 
+
+```{r}
+length(which(baseline$activproBis == "NSP"))
+```
 
