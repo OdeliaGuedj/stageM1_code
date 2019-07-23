@@ -1,0 +1,77 @@
+---
+title: "encodage variable tabac"
+output: html_notebook
+---
+
+```{r}
+baseline$Qm16 = as.factor(baseline$Qm16)
+baseline$Qm17a = as.factor(baseline$Qm17a)
+baseline$Qm17b = as.factor(baseline$Qm17b)
+baseline$Qm17c = as.factor(baseline$Qm17c)
+baseline$Qm17d = as.factor(baseline$Qm17d)
+baseline$Qm17e = as.factor(baseline$Qm17e)
+
+```
+
+```{r}
+summary(baseline$Qm16)
+```
+```{r}
+baseline$tabac[which(baseline$Qm16 == 1)] = "non_fum"
+baseline$tabac[which(baseline$Qm16 == 2)] = "fum_act"
+baseline$tabac[which(baseline$Qm16 == 3)] = "anc_fum"
+baseline$tabac[which(baseline$Qm16 == 4)] = "arret_cours"
+baseline$tabac[which(is.na(baseline$Qm16))] = NA
+baseline$tabac = as.factor(baseline$tabac)
+baseline$tabac = relevel(baseline$tabac , ref  = "non_fum")
+```
+```{r}
+summary(baseline$tabac)
+```
+```{r}
+table(baseline$activproBis, baseline$tabac, useNA = "always")
+```
+
+```{r}
+chisq.test(baseline$activproBis, baseline$tabac)
+```
+
+```{r}
+sum(is.na(baseline$tabac))
+```
+
+
+```{r}
+baseline$tabac[which(is.na(baseline$tabac))] = NA
+baseline$tabacBin[which(baseline$tabac %in% c("non_fum", "anc_fum"))] = 0
+baseline$tabacBin[which(baseline$tabac %in% c("arret_cours", "fum_act"))] =1
+```
+```{r}
+baseline$tabacBin = as.factor(baseline$tabacBin)
+```
+```{r}
+summary(baseline$tabacBin)
+```
+
+
+
+```{r}
+table(baseline$activproBis, baseline$tabacBin, useNA = "always")
+```
+
+```{r}
+chisq.test(baseline$activproBis, baseline$tabacBin)
+```
+```{r}
+round(prop.table(table(baseline$activproBis, baseline$tabacBin), 1)*100,2)
+
+```
+
+
+
+
+
+```{r}
+ggplot(df_tabac, aes(df_tabac))
+```
+
