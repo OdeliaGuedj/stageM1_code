@@ -1,0 +1,13 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+summary(baseline$bmi)
+```
+
+```{r}
+sum(is.na(baseline$bmi))
+```
+
