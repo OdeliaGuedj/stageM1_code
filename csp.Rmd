@@ -1,0 +1,22 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+baseline$csp = as.factor(baseline$csp)
+```
+```{r}
+summary(baseline$csp)
+```
+
+```{r}
+baseline$csp = as.numeric(baseline$csp)
+baseline$csp[which(baseline$csp == 1)] = "Elevée"
+baseline$csp[which(baseline$csp == 2)] = "Intermediaire"
+baseline$csp[which(baseline$csp == 3)] = "Basse"
+baseline$csp[which(baseline$csp == 4)] = "Inactifs"
+baseline$csp[which(baseline$csp == 5)] = "Sans Emplois"
+baseline$csp = as.factor(baseline$csp)
+```
+
