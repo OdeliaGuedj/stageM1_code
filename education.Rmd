@@ -1,0 +1,29 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+
+```{r}
+baseline$education = as.factor(baseline$Adm14)
+```
+
+```{r}
+summary(baseline$education)
+```
+
+```{r}
+baseline$education = as.numeric(baseline$education)
+baseline$education[which(baseline$education == 1)] = "Analphabète"
+baseline$education[which(baseline$education == 2)] = "Sans diplôme"
+baseline$education[which(baseline$education == 3)] = "CAP/Brevet des collèges"
+baseline$education[which(baseline$education == 4)] = "Baccalauréat"
+baseline$education[which(baseline$education == 5)] = "Bac+2"
+baseline$education[which(baseline$education == 6)] = "Licence/Maitrise/+"
+baseline$education = as.factor(baseline$education)
+```
+
+```{r}
+summary(baseline$education)
+```
+
