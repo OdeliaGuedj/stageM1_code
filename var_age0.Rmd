@@ -4,7 +4,10 @@ output: html_notebook
 ---
 
 ```{r}
-summary(baselineP1$age0)
+summary(baseline$age0)
+```
+```{r}
+sum(is.na(baseline$age0))
 ```
 
 
@@ -13,7 +16,7 @@ baseline$logAge0 = log(baseline$age0)
 ```
 
 ```{r}
-ggplot(baseline, aes(x = baseline$age0, color = baseline$sexe)) + geom_histogram(fill="white", position="dodge")+
+ggplot(baseline, aes(x = baseline$age0, color = baseline$sexe)) + geom_histogram(fill="black", position="dodge")+
   theme(legend.position="top") + ggtitle("Distribution de l'âge en fonction du sexe dans la cohorte epp3 \n n = 10157")
 ```
 
@@ -54,6 +57,13 @@ sum(is.na(baselineP2$age0))
 summary(baselineP2$age0)
 ```
 
+```{r}
+baseline$age0Cut = cut(baseline$age0, breaks = quantile(baseline$age0), right = T)
+summary(baseline$age0Cut)
+```
+```{r}
+
+```
 
 
 ```{r}
@@ -61,4 +71,16 @@ baseline$age0Cut = cut(baseline$age0, breaks = c(0,58,59,60,61,62,64,65,70,75,90
 summary(baseline$age0Cut)
 ```
 
+```{r}
+ggplot(baseline, aes(factor(baseline$activproBis,c("R","I","C","T","NSP",NA)), baseline$age0, fill = baseline$activproBis))+ 
+  geom_boxplot() +
+  xlab("Activité Professionelle") +
+  ylab("Âge") +
+ scale_fill_jama(name="",
+                         breaks=c("R", "I", "C","T","NSP",NA),
+                         labels=c("Retraités", "Inactifs", "Chômeurs","Travailleurs","Ne Sais Pas","NA"))
+
+
+
+```
 
