@@ -1,0 +1,22 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+ 0 = NON
+ 1 = OUI 
+```{r}
+baseline$diab = as.factor(baseline$diab)
+summary(baseline$diab)
+```
+
+
+
+```{r}
+baseline$diabete = as.factor(baseline$diabete)
+summary(baseline$diabete)
+```
+
+```{r}
+
+```
+
