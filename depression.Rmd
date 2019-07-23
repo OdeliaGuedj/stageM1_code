@@ -1,0 +1,30 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+baseline$depress = as.numeric(baseline$depress)
+```
+
+```{r}
+hist(baseline$depress)
+```
+```{r}
+baseline$Qm64 = as.factor(baseline$Qm64)
+summary(baseline$Qm64)
+```
+
+```{r}
+baseline$deptot = as.factor(baseline$deptot)
+summary(baseline$deptot)
+```
+
+```{r}
+length(which(baseline$deptot != baseline$Qm64))
+```
+
+```{r}
+table(baseline$deptot[which(baseline$deptot != baseline$Qm64)], baseline$Qm64[which(baseline$deptot != baseline$Qm64)])
+```
+
