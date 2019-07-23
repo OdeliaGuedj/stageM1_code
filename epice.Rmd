@@ -1,0 +1,13 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+summary(baseline$epice)
+```
+
+```{r}
+baseline$epice = as.numeric(baseline$epice)
+```
+
