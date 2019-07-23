@@ -1,0 +1,18 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+baseline$infar_myo = as.factor(baseline$Qm34)
+baseline$angor = as.factor(baseline$Qm35)
+baseline$AP_pontage = as.factor(baseline$AP_pontage)
+baseline$autre_pb_cv = as.factor(baseline$Qm37)
+baseline$malad_artere = as.factor(baseline$Qm38)
+baseline$phlebite = as.factor(baseline$Qm39)
+baseline$embo_pulm = as.factor(baseline$Qm40)
+baseline$avc = as.factor(baseline$Qm41)
+```
+
+
+
