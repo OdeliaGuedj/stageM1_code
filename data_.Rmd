@@ -14,6 +14,10 @@ library(Distance)
 library(factoextra)
 library(cowplot)
 library(questionr)
+library(pwr)
+library(ggpubr)
+library(ggsci)
+library(dplyr)
 
 ```
 ## Data
@@ -22,7 +26,6 @@ getwd()
 
 # !!! MON ORDI !!!
 baseline = read.csv(file = "C:/Users/odeli/Desktop/data/inclusion/Baseline.csv", header = TRUE, row.names = NULL, sep = ';')
-
 # !!! ordi bureau !!!
 
 #suivi_6 = read.csv(file = "W:/Odélia/srh_retraite/data/6_ans/suivi6.csv", header = TRUE, row.names = NULL, sep = ";")
@@ -37,6 +40,18 @@ theme2lbleu <- c( rgb(102,0,255, maxColorValue = 255),
 ```{r}
 theme2lrouge <- c( rgb(115,8,0, maxColorValue = 255),
               rgb(219,23,2, maxColorValue = 255))
+```
+
+```{r}
+blank_theme <- theme_minimal()+
+  theme(
+  axis.title.x = element_blank(),
+  axis.title.y = element_blank(),
+  panel.border = element_blank(),
+  panel.grid=element_blank(),
+  axis.ticks = element_blank(),
+  plot.title=element_text(size=14, face="bold")
+  )
 ```
 
 ##Changement de type
@@ -61,13 +76,17 @@ baseline$activproCAH = as.factor(baseline$activproCAH)
 
 ```{r}
 baselineP = baseline[-(which(baseline$nepp3 %in% na_activpro_id)),]
-
+```
+```{r}
 baselineP1 = baselineP[-(which(baselineP$nepp3 %in% na_srh_id)),]
-
+```
+```{r}
 baselineP2 = baselineP1[-(which(baselineP1$nepp3 %in% outliers_age_id)),]
-
+```
+```{r}
 baselineP3 = baselineP2[-(which(baselineP2$nepp3 %in% na_entourage_id)),]
-
+```
+```{r}
 baselineP4 = baselineP3[-(which(baselineP3$nepp3 %in% na_tabac_id)),]
 ```
 
