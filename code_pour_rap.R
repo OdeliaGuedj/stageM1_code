@@ -1,16 +1,17 @@
 ## Graphes 3.1.1
 summary(baseline$activproBis)
 baseline$activproBis = factor(baseline$activproBis, c("T","R","C","I","NSP",NA))
-ggplot(baseline, aes( x = baseline$activproBis, fill = baseline$activproBis)) + geom_bar(stat = "count") +theme_classic() + xlab(
-              "Activité Profesionnelle")+ ylab(
-                "Nombre de sujets") + ggtitle (
-                  "Classification manuelle de l'activité profesionnelle \n des sujets de EPP3, n = 10157. ") + annotate(
-                    "text", x=1, y=6000, label= "5666") + annotate(
-                      "text", x=2, y=3500, label= "3209")+annotate(
-                       "text", x=3, y=1200, label= "883")+annotate(
-                         "text", x=4, y=500, label= "270")+annotate(
-                           "text", x=5, y=400, label= "113")+annotate(
-                               "text", x=6, y=200, label= "16")
+ggplot(baseline, aes( x = baseline$activproBis, fill = baseline$activproBis)) + geom_bar(stat = "count") +
+  theme_void() + 
+  xlab("Activité Profesionnelle")+ 
+  ylab("Nombre de sujets") + 
+  ggtitle ("") + 
+  annotate("text", x=1, y=6000, label= "5666") + 
+  annotate("text", x=2, y=3500, label= "3209") +
+  annotate("text", x=3, y=1200, label= "883") +
+  annotate( "text", x=4, y=500, label= "270") +
+  annotate("text", x=5, y=400, label= "113") +
+  annotate("text", x=6, y=200, label= "16") + scale_fill_brewer("Activité Professionnelle",palette = "Blues")
 
 
 
@@ -51,11 +52,11 @@ plot(cah_activpro, choice = "map")
 activproCAH_prop = (table(baseline$activproCAH, useNA = "always")/10157)*100
 actvproBis_prop = (table(baseline$activproBis, useNA = "always")/10157)*100
 comp_activpro_prop = rbind(actvproBis_prop,activproCAH_prop)
-barplot(as.matrix(comp_activpro_prop), col = theme2lbleu , 
+barplot(as.matrix(comp_activpro_prop), col = c("#AFAFAF","#D2CAEC") , 
         beside = TRUE, 
-        main = "Comparaison des deux codages \n de la variable activpro (%)", 
+        main = "", 
         xlab='Modalités', ylab='Pourcentage')
-legend("right", legend = c("activproManuel","activproCAH"), col='black', pch = c(22), pt.bg = theme2lbleu, bty ='n')
+legend("right", legend = c("activpro","activproCAH"), col='black', pch = c(22), pt.bg = c("#AFAFAF","#D2CAEC"), bty ='n')
 
 #######################################################################################################################################
 
@@ -479,32 +480,89 @@ ggplot(baseline, aes(baseline$activproBis, baseline$age0, fill = baseline$sexe))
 
 #################################################################################################################################
 
+## Missing Values
+gg_miss_var(database) + scale_x_discrete(  labels = c("Âge", "Indice de Masse Corporelle","nepp3","Sexe", 
+                                                      "Activité Professionnelle (classif Manuelle)", "Tabac",  
+                                                      "Activité Professionnelle (CAH)","Catégorie Socio-Professionnelle",
+                                                      "Situation Familliale", "Diabète", "Infarctus du Myocarde",
+                                                      "Depression",  "AVC", "Angine de Poitrine","Autre Pb Cardiaque",
+                                                      "Phlébite","Embollie Pulmonaire","Maladie des Artères", 
+                                                      "Hypertenssion Arterielle","Niveau d'Education","Cancer", 
+                                                      "Sport" ,"Score Epice de Précarité","Alcool (Nb de verres)", 
+                                                      "Pontage/Angioplastie/Stent","Tentative de Suicide")) +
+  ylab("Nombre de Donées Manquantes")
 
-### tabac et activpro
+table_na = kable(df_na[,2:4],"latex", booktabs = T )
 
-tabac_T_prop = round((table(baseline$tabac[which(baseline$activproBis == "T")])/length(which(baseline$activproBis == "T")))*100,2)
-tabac_R_prop = round((table(baseline$tabac[which(baseline$activproBis == "R")])/length(which(baseline$activproBis == "R")))*100,2)
-tabac_C_prop = round((table(baseline$tabac[which(baseline$activproBis == "C")])/length(which(baseline$activproBis == "C")))*100,2)
-tabac_I_prop = round((table(baseline$tabac[which(baseline$activproBis == "I")])/length(which(baseline$activproBis == "I")))*100,2)
-tabac_NSP_prop = round((table(baseline$tabac[which(baseline$activproBis == "NSP")])/length(which(baseline$activproBis == "NSP")))*100,2)
-tabac_NA_prop = round((table(baseline$tabac[which(is.na(baseline$activproBis))])/length(which(is.na(baseline$activproBis))))*100,2)
-tabac_prop = cbind(tabac_T_prop,tabac_R_prop, tabac_C_prop, tabac_I_prop, tabac_NSP_prop,tabac_NA_prop)
-barplot(as.matrix(tabac_prop), col = c("#33CC99","#0066CC","orange","#CC3333") , beside = TRUE, main = "", xlab='', ylab='', names.arg = c("T","R","C","I","NSP","NA") )
-legend(x= 22.5 , y = 65, legend = c("Non fumeurs", "Ancien Fumeurs", "Arrêt en Cours", "Fumeurs Actuels"), 
-      col='black', pch = c(22), pt.bg = c("#33CC99","#0066CC","orange","#CC3333"), cex=0.55)
+###################################################################################################################################"
 
-### diabete et activpro
-diab_T_prop = round((table(baseline$diab[which(baseline$activproBis == "T")])/length(which(baseline$activproBis == "T")))*100,2)
-diab_R_prop = round((table(baseline$diab[which(baseline$activproBis == "R")])/length(which(baseline$activproBis == "R")))*100,2)
-diab_C_prop = round((table(baseline$diab[which(baseline$activproBis == "C")])/length(which(baseline$activproBis == "C")))*100,2)
-diab_I_prop = round((table(baseline$diab[which(baseline$activproBis == "I")])/length(which(baseline$activproBis == "I")))*100,2)
-diab_NSP_prop = round((table(baseline$diab[which(baseline$activproBis == "NSP")])/length(which(baseline$activproBis == "NSP")))*100,2)
-diab_NA_prop = round((table(baseline$diab[which(is.na(baseline$activproBis))])/length(which(is.na(baseline$activproBis))))*100,2)
-diab_prop = cbind(diab_T_prop,diab_R_prop, diab_C_prop, diab_I_prop, diab_NSP_prop,diab_NA_prop)
-barplot(as.matrix(diab_prop), col = c("#33CC99","#0066CC") , beside = TRUE, main = "", xlab='', ylab='', names.arg = c("T","R","C","I","NSP","NA") )
-legend(x= 22.5 , y = 65, legend = c("Diabetique", "Non Diabétique"), 
-       col='black', pch = c(22), pt.bg = c("#33CC99","#0066CC"), cex=0.55)
+## flowchart
+flowchart = DiagrammeR::grViz("
+digraph graph2 {
+                              
+                              
+                              node [shape = box, width = 5]
+                              a [label = '@@1']
+                              b [label = '@@2']
+                              c [label = '@@3']
+                              m [label = '@@13']
+                              
+                              node [shape = oval, width = 0.9]
+                              d [label = '@@4']
+                              e [label = '@@5']
+                              o [label = '@@@15]
+                              p [label = '@@@16]                  
+                              
+                              node [shape = circle, width = 0.9]
+                              f [label = '@@6']
+                              g [label = '@@7']
+                              h [label = '@@8']
+                              i [label = '@@9']
+                              j [label = '@@10']
+                              k [label = '@@11']
+                              l [label = '@@12']
+                              n [label = '@@14']    
+                              
+                              a -> b -> c -> d -> e 
+                              e -> f
+                              e -> g
+                              e -> h
+                              e -> i            
+                              e -> j
+                              e -> k
+                              e -> l
+                              l -> m
+                              n -> o
+                              n -> p
+                              
+                              
+                              }
+                              
+                              [1]: 'n = 10157 participants à epp3'
+                              [2]: '26 exclus NA  Santé perçue : n = 10131'
+                              [3]: '16 exlus NA  activproCAH : n = 10118'
+                              [4]: 'Analyses univariées'
+                              [5]: 'Analyses mutivariées'
+                              [6]: 'Modèle 1'
+                              [7]: 'Modèle 2'
+                              [8]: 'Modèle 3'
+                              [9]: 'Modèle 4'
+                              [10]: 'Modèle 5'
+                              [11]: 'Modèle 6'
+                              [12]: 'Modèle 7'
+                              [13]: 'Diagnostique du Modèle, exclusions leviers ou outliers'
+                              [14]: 'Modèle final : Logit Pénalisé'
+                              [15]: 'Analyses en Sous Groupes'
+                              [16]: 'Analyses de Sensibilité'
+                              
+                              ")
 
-### tabacBin et activpro
-ggplot(baseline, aes(baseline$tabacBin, fill = baseline$activproBis)) + geom_bar(position = position_dodge())
-ggplot(baseline, aes(baseline$activproBis, fill = baseline$tabacBin)) + geom_bar(position = position_dodge())
+
+
+
+
+
+
+
+
+
