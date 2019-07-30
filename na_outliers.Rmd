@@ -1,0 +1,145 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+```{r}
+database = baseline[,c("nepp3","activproBis","activproCAH","sexe","entourage", "age0Cut","education","csp","bmiCut","tabac","diab","Qm34","Qm35","AP_pontage","Qm37","Qm38","Qm39","Qm40","Qm41","sport2","hta","alcoolCut","cancer","EPICECut","TS","deptot","srhBin","cvd")]
+```
+
+```{r}
+colnames(database)
+```
+
+```{r}
+na_activproBis_id = database$nepp3[which(is.na(database$activproBis))]
+na_activproCAH_id = database$nepp3[which(is.na(database$activproCAH))]
+na_entourage_id = database$nepp3[which(is.na(database$entourage))]
+na_education_id = database$nepp3[which(is.na(database$education))]
+na_csp_id = database$nepp3[which(is.na(database$csp))]
+na_tabac_id = database$nepp3[which(is.na(database$tabac))]
+na_diab_id = database$nepp3[which(is.na(database$diab))]
+na_Qm34_id = database$nepp3[which(is.na(database$Qm34))]
+na_Qm35_id = database$nepp3[which(is.na(database$Qm35))]
+na_AP_pontage_id = database$nepp3[which(is.na(database$AP_pontage))]
+na_Qm37_id = database$nepp3[which(is.na(database$Qm37))]
+na_Qm38_id = database$nepp3[which(is.na(database$Qm38))]
+na_Qm39_id = database$nepp3[which(is.na(database$Qm39))]
+na_Qm40_id = database$nepp3[which(is.na(database$Qm40))]
+na_Qm41_id = database$nepp3[which(is.na(database$Qm41))]
+na_sport2_id = database$nepp3[which(is.na(database$sport2))]
+na_hta_id = database$nepp3[which(is.na(database$hta))]
+na_alcool_id = database$nepp3[which(is.na(database$alcool))]
+na_cancer_id = database$nepp3[which(is.na(database$cancer))]
+na_epice_id = database$nepp3[which(is.na(database$epice))]
+na_TS_id = database$nepp3[which(is.na(database$TS))]
+na_deptot_id = database$nepp3[which(is.na(database$deptot))]
+na_srh_id = database$nepp3[which(is.na(database$Qm73))]
+na_bmi_id = database$nepp3[which(is.na(database$bmi))]
+NA_cvd_id = database$nepp3[which(is.na(database$cvd))]
+```
+
+
+
+```{r}
+df_na = as.data.frame(miss_var_summary(database))
+df_na$variables = c("Tentative de Suicide",
+                "Pontage/Angioplastie/Stent",
+                "Alcool (Nb de verres)",
+                "Score Epice de Précarité",
+                "Sport",
+                "Maladies Cardiovasculaires",
+                "Cancer",
+                "Niveau d'Education",
+                "Hypertension Arterielle",
+                "Maladie des Artères",
+                "Autre Pb Cardiaque",
+                "Phlébite",
+                "Embolie Pulmonaire",
+                "AVC",
+                "Angine de Poitrine",
+                "Infarctus du Myocarde",
+                "Depression",
+                "Situation Familliale",
+                "Diabète",
+                "Catégorie Socio-Professionnelle",
+                "Activité Professionnelle (CAH)",
+                "Santé Perçue Binaire",
+                "Tabac",
+                "Activité Professionnelle (clasif Manuelle)",
+                "Âge",
+                "nepp3",
+                "Sexe",
+                "Indice de Masse Corporelle(Classes)")
+```
+
+```{r}
+df_na$variable
+```
+
+```{r}
+names(df_na) = c("nom_var", "Nb Na", "% NA","Variables" )
+
+```
+```{r}
+df_na$`% NA` = round(df_na$`% NA`,2)
+```
+
+
+```{r}
+#gg_miss_var(database) + scale_x_discrete(  labels = c()) +
+#ylab("Nombre de Donées Manquantes")
+```
+
+```{r}
+table_na = kable(df_na[,2:4],"latex", booktabs = T )
+```
+
+
+```{r}
+exclus_id = unique(c(na_srh_id,
+                     na_activproBis_id,
+                     na_activproCAH_id,
+                     na_entourage_id,
+                     na_education_id,
+                     na_csp_id,
+                     na_tabac_id,
+                     na_diab_id,
+                     na_sport2_id,
+                     na_hta_id,
+                     na_alcool_id,
+                     NA_cvd_id,
+                     na_cancer_id, 
+                     na_epice_id,
+                     na_deptot_id,
+                     na_bmi_id))
+```
+
+```{r}
+baseExclus = database[which(database$nepp3 %in% exclus_id),]
+```
+
+
+```{r}
+baseSansEcxlus = database[-which(database$nepp3 %in% exclus_id),]
+```
+
+
+```{r}
+BASE1 = database[,c("sexe","entourage","age0Cut","education","csp","bmiCut","tabac","diab","Qm34","Qm35","Qm37","Qm38","Qm39","Qm40","Qm41","sport2","hta","alcoolCut","cancer","EPICECut","TS","deptot","srhBin","activproCAH")]
+```
+
+
+```{r}
+BASE2 = database[,c("sexe","entourage","age0Cut","education","csp","bmiCut","tabac","diab","Qm34","Qm35","Qm37","Qm38","Qm39","Qm40","Qm41","sport2","hta","alcoolCut","cancer","EPICECut","TS","deptot","srhBin","activproBis")]
+```
+
+
+
+
+
+
+
+
+
+
+
