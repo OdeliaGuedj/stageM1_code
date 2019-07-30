@@ -1,0 +1,64 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+```{r}
+names(database)
+```
+
+
+```{r}
+database$sexe = relevel(database$sexe, ref = "H")
+database$education = relevel(database$education, ref = "CAP/Brevet des collèges")
+database$csp = relevel(database$csp, ref = "Intermediaire")
+database$alcoolCut = relevel(database$alcoolCut, ref = "0")
+```
+
+
+
+```{r}
+res_uni_log  = compareGroups(srhBin ~ .  , data = database)
+#res_uni_log
+#summary(res_uni_log)
+table_uni_log = createTable(res_uni_log, show.ratio = T, show.p.trend = F, show.p.overall = F)
+```
+
+
+
+
+```{r}
+export2latex(table_uni_log)
+```
+
+
+```{r}
+odds.ratio(glm(srhBin ~ age0, family = "binomial", data = database))
+```
+
+```{r}
+odds.ratio(glm(srhBin ~ bmi, family = "binomial", data = database))
+```
+
+```{r}
+odds.ratio(glm(srhBin ~ epice, family = "binomial", data = database))
+```
+
+
+```{r}
+createTable(compareGroups(srhBin ~ epice + age0 + bmi, data = database,method = "NA" ), show.ratio = T, show.p.trend = T, show.p.overall = F)
+```
+
+
+
+
+```{r}
+createTable(compareGroups(srhBin ~ age0Cut, data = database,method = "NA" ), show.ratio = T, show.p.trend = T, show.p.overall = F)
+```
+
+```{r}
+summary(database$age0[which(database$activproBis == "R")])
+```
+```{r}
+
+```
+

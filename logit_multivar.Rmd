@@ -1,0 +1,88 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+
+```{r}
+names(database)
+```
+
+```{r}
+model1 = glm(srhBin ~activproBis + sexe , data = BASE2, family = 'binomial')
+odds.ratio(model1)
+```
+```{r}
+model2 = glm(srhBin ~ activproBis + sexe + age0Cut , data = BASE2, family = 'binomial')
+odds.ratio(model2)
+```
+```{r}
+model3 = glm(srhBin ~ activproBis + sexe + age0Cut + alcoolCut + tabac + diab + hta + bmiCut+ sport2, data = BASE2, family = "binomial")
+odds.ratio(model3)
+```
+```{r}
+model4 = glm(srhBin ~ activproBis + sexe + age0Cut + deptot , data = BASE2 , family = "binomial")
+odds.ratio(model4)
+```
+`
+```{r}
+model5 = glm(srhBin ~ activproBis + sexe + age0Cut + csp + education + entourage + sport2, data =  BASE2, family = "binomial")
+odds.ratio(model5)
+```
+
+```{r}
+model6 = glm(srhBin ~ activproBis + sexe +age0Cut+ alcoolCut+ tabac + diab + hta + bmiCut + sport2 + deptot + csp + education + entourage, data = BASE2, family = "binomial")
+odds.ratio(model6)
+```
+```{r}
+model7 = glm(srhBin ~ activproBis + sexe + alcoolCut+ tabac + diab + hta + bmiCut + sport2 + deptot + csp + education + entourage, data = BASE2, family = "binomial")
+odds.ratio(model7)
+```
+
+```{r}
+model1$aic
+```
+```{r}
+model2$aic
+```
+```{r}
+model3$aic
+```
+```{r}
+model4$aic
+```
+```{r}
+model5$aic
+```
+```{r}
+model6$aic
+```
+```{r}
+model7$aic
+```
+```{r}
+model4$model
+```
+
+
+
+```{r}
+summary(model1)
+```
+
+
+
+```{r}
+names(BASE2)
+```
+
+
+
+```{r}
+table(BASE2$activproBis[which(BASE2$age0Cut == "(59.1,63.7]")])/2536
+```
+
+
+
+
+
