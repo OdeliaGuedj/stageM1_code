@@ -8,38 +8,118 @@ output: html_notebook
 ```{r}
 library(DiagrammeR)
 ```
-
 ```{r}
-DiagrammeR::grViz("
-digraph graph2 {
-
-graph [layout = dot]
-
-# node definitions with substituted label text
-node [shape = rectangle, width = 4, fillcolor = blue]
+flowchart = DiagrammeR::grViz("
+digraph graph {
+                  
+                  
+node [shape = box, width = 5]
 a [label = '@@1']
 b [label = '@@2']
 c [label = '@@3']
-d [label = '@@4']
-e [label = '@@5']
 
-
-a -> b -> c -> d -> e
-
-
-}
-
-      [1]: 'n = 10157 participants à epp3'
-      [2]: '76 individus exclus car données manquantes sur variable activpro : n = 10081'
-      [3]: '26 individus exclus car données manquantes pour la srh dont 16 déjà eclus pour activpro : n = 10071'
-      [4]: '27 individus exclus en tant que outliers sur âge : n = 10044'
-      [5]: '46 individus exclus car données manquantes sur variable entourage dont 20 déjà exclus pour âge : n = 10018'
-
-")
 ```
 
 
 
+graph [layout = d
+```{r}
+flowchart = DiagrammeR::grViz("
+digraph graph2 {
+                  
+                  
+node [shape = box, width = 5]
+a [label = '@@1']
+b [label = '@@2']
+c [label = '@@3']
+m [label = '@@13']
 
 
+node [shape = oval, width = 0.9]
+d [label = '@@4']
+e [label = '@@5']
+o [label = '@@15']
+p [label = '@@16']                  
+
+node [shape = circle, width = 0.9]
+f [label = '@@6']
+g [label = '@@7']
+h [label = '@@8']
+i [label = '@@9']
+j [label = '@@10']
+k [label = '@@11']
+l [label = '@@12']
+n [label = '@@14']
+u [label = '@@21']
+v [label = '@@22']
+
+node [shape = diamond, width = 0.9]
+q [label = '@@17']
+r [label = '@@18']
+s [label = '@@19']
+t [label = '@@20']
+
+node [shape = plaintext]
+w [label = '@@23']
+
+a -> b -> c -> d -> e 
+e -> f
+e -> g
+e -> h
+e -> i            
+e -> j
+e -> k
+e -> l
+l -> m
+m -> n
+n -> o
+n -> p
+o -> q
+o -> r
+o -> s
+o -> t
+p -> u
+p -> v
+
+f -> W
+
+                  }
+                  
+                  [1]: 'n = 10157 participants à epp3'
+                  [2]: '26 exclus NA  Santé perçue : n = 10131'
+                  [3]: '16 exlus NA  activproCAH : n = 10118'
+                  [4]: 'Analyses univariées'
+                  [5]: 'Analyses mutivariées'
+                  [6]: 'Modèle 1'
+                  [7]: 'Modèle 2'
+                  [8]: 'Modèle 3'
+                  [9]: 'Modèle 4'
+                  [10]: 'Modèle 5'
+                  [11]: 'Modèle 6'
+                  [12]: 'Modèle 7'
+                  [13]: 'Diagnostique du Modèle, exclusions leviers ou outliers'
+                  [14]: 'Logit Pénalisé'
+                  [15]: 'Analyses en Sous Groupes'
+                  [16]: 'Analyses de Sensibilité'
+[17]: 'CVD'
+[18]: 'Précarité'
+[19]: 'Âge'
+[20]: 'Dépression'
+[21]: 'Imputation Multiple'
+[22]: 'ActivproCAH'
+[23]: 'n = 10131'
+[24]: 'n = 10130'
+[25]: 'n = 8244'
+[26]: 'n = 10100'
+[27]: 'n = 9881'
+[28]: 'n = 8126'
+[29]: 'n = 8127'
+
+
+                  ")
+
+flowchart
+```
+            
+            
 
