@@ -18,7 +18,13 @@ library(pwr)
 library(ggpubr)
 library(ggsci)
 library(dplyr)
-
+library(mice)
+library(VIM)
+library(Amelia)
+library(naniar)
+library(knitr)
+library(compareGroups)
+library(MASS)
 ```
 ## Data
 ```{r}
@@ -72,39 +78,10 @@ baseline$activproCAH = as.factor(baseline$activproCAH)
 ```
 
 
-## Data intermediaires
 
-```{r}
-baselineP = baseline[-(which(baseline$nepp3 %in% na_activpro_id)),]
-```
-```{r}
-baselineP1 = baselineP[-(which(baselineP$nepp3 %in% na_srh_id)),]
-```
-```{r}
-baselineP2 = baselineP1[-(which(baselineP1$nepp3 %in% outliers_age_id)),]
-```
-```{r}
-baselineP3 = baselineP2[-(which(baselineP2$nepp3 %in% na_entourage_id)),]
-```
-```{r}
-baselineP4 = baselineP3[-(which(baselineP3$nepp3 %in% na_tabac_id)),]
-```
 
-## Gestion des exclus
 
-```{r}
-exclus_id = unique(c(na_activpro_id, na_srh_id, outliers_age_id, na_entourage_id, na_tabac_id))
-length(exclus_id)
-```
-```{r}
-length(intersect(exclus_id,na_tabac_id))
-```
 
-```{r}
-exclus = baseline[which(baseline$nepp3 %in% exclus_id),]
-dim(exclus)
-```
-```{r}
-#compareGroups(baseline,exclus)
-```
+
+
 

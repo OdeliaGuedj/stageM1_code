@@ -257,11 +257,39 @@ $(document).ready(function () {
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYmFzZWxpbmUkZXBpY2UgPSBhcy5udW1lcmljKGJhc2VsaW5lJGVwaWNlKVxuYGBgIn0= -->
+<pre class="r"><code>baseline$epice = as.numeric(baseline$epice)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYmFzZWxpbmUkRVBJQ0VDdXRbd2hpY2goYmFzZWxpbmUkZXBpY2UgPiAzMC4xNyldID0gXCJTaXR1YXRpb24gcHLDqWNhaXJlXCJcbmJhc2VsaW5lJEVQSUNFQ3V0W3doaWNoKGJhc2VsaW5lJGVwaWNlIDw9IDMwLjE3KV0gPSBcIlNpdHVhdGlvbiBub24gcHLDqWNhaXJlXCJcbmJhc2VsaW5lJEVQSUNFQ3V0W3doaWNoKGlzLm5hKGJhc2VsaW5lJGVwaWNlKSldID0gTkFcbmBgYCJ9 -->
+<pre class="r"><code>baseline$EPICECut[which(baseline$epice &gt; 30.17)] = &quot;Situation précaire&quot;
+baseline$EPICECut[which(baseline$epice &lt;= 30.17)] = &quot;Situation non précaire&quot;
+baseline$EPICECut[which(is.na(baseline$epice))] = NA</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYmFzZWxpbmUkRVBJQ0VDdXQgPSBhcy5mYWN0b3IoYmFzZWxpbmUkRVBJQ0VDdXQpXG5gYGAifQ== -->
+<pre class="r"><code>baseline$EPICECut = as.factor(baseline$EPICECut)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3VtbWFyeShiYXNlbGluZSRFUElDRUN1dClcbmBgYCJ9 -->
+<pre class="r"><code>summary(baseline$EPICECut)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiU2l0dWF0aW9uIG5vbiBwcsOpY2FpcmUgICAgIFNpdHVhdGlvbiBwcsOpY2FpcmUgICAgICAgICAgICAgICAgICAgTkEncyBcbiAgICAgICAgICAgICAgICAgIDcwNjMgICAgICAgICAgICAgICAgICAgMjMzOCAgICAgICAgICAgICAgICAgICAgNzU2IFxuIn0= -->
+<pre><code>Situation non précaire     Situation précaire                   NA's 
+                  7063                   2338                    756 </code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2siDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQpgYGB7cn0NCnN1bW1hcnkoYmFzZWxpbmUkZXBpY2UpDQpgYGANCg0KYGBge3J9DQpiYXNlbGluZSRlcGljZSA9IGFzLm51bWVyaWMoYmFzZWxpbmUkZXBpY2UpDQpgYGANCg0K</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2siDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQpgYGB7cn0NCnN1bW1hcnkoYmFzZWxpbmUkZXBpY2UpDQpgYGANCg0KYGBge3J9DQpiYXNlbGluZSRlcGljZSA9IGFzLm51bWVyaWMoYmFzZWxpbmUkZXBpY2UpDQpgYGANCg0KYGBge3J9DQpiYXNlbGluZSRFUElDRUN1dFt3aGljaChiYXNlbGluZSRlcGljZSA+IDMwLjE3KV0gPSAiU2l0dWF0aW9uIHByw6ljYWlyZSINCmJhc2VsaW5lJEVQSUNFQ3V0W3doaWNoKGJhc2VsaW5lJGVwaWNlIDw9IDMwLjE3KV0gPSAiU2l0dWF0aW9uIG5vbiBwcsOpY2FpcmUiDQpiYXNlbGluZSRFUElDRUN1dFt3aGljaChpcy5uYShiYXNlbGluZSRlcGljZSkpXSA9IE5BDQpgYGANCmBgYHtyfQ0KYmFzZWxpbmUkRVBJQ0VDdXQgPSBhcy5mYWN0b3IoYmFzZWxpbmUkRVBJQ0VDdXQpDQpgYGANCg0KYGBge3J9DQpzdW1tYXJ5KGJhc2VsaW5lJEVQSUNFQ3V0KQ0KYGBgDQoNCg0K</div>
 
 
 

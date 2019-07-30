@@ -14,5 +14,51 @@ baseline$embo_pulm = as.factor(baseline$Qm40)
 baseline$avc = as.factor(baseline$Qm41)
 ```
 
+```{r}
+database$Qm34 = as.factor(database$Qm34)
+database$Qm35 = as.factor(database$Qm35)
+database$Qm37 = as.factor(database$Qm37)
+database$Qm38 = as.factor(database$Qm38)
+database$Qm39 = as.factor(database$Qm39)
+database$Qm40 = as.factor(database$Qm40)
+database$Qm41 = as.factor(database$Qm41)
+```
 
+
+```{r}
+for(i in 1:dim(baseline)[1]){
+  if(is.na(baseline$Qm34[i])|
+     is.na(baseline$Qm35[i])|
+     is.na(baseline$Qm37[i])|
+     is.na(baseline$Qm38[i])|
+     is.na(baseline$Qm39[i])|
+     is.na(baseline$Qm40[i])|
+     is.na(baseline$Qm41[i]))
+    baseline$cvd[i] = NA
+  else
+    baseline$cvd[i] = as.numeric(as.character(baseline$Qm34[i])) + as.numeric(as.character(baseline$Qm35[i])) +as.numeric(as.character(baseline$Qm37[i]))+as.numeric(as.character(baseline$Qm38[i]))+as.numeric(as.character(baseline$Qm39[i]))+as.numeric(as.character(baseline$Qm40[i]))+as.numeric(as.character(baseline$Qm41[i]))
+}
+```
+```{r}
+baseline$cvd = as.factor(baseline$cvd)
+```
+
+```{r}
+summary(baseline$cvd)
+```
+
+
+
+```{r}
+baseline$cvd_bin[which(baseline$cvd == 0 )] =0
+baseline$cvd_bin[which(baseline$cvd %in% c (1,2,3,4,5))] = 1
+baseline$cvd_bin[which(is.na(baseline$cvd))] = NA
+```
+
+```{r}
+baseline$cvd_bin = as.factor(as.character(baseline$cvd_bin))
+```
+```{r}
+summary(baseline$cvd_bin)
+```
 

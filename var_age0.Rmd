@@ -21,49 +21,20 @@ ggplot(baseline, aes(x = baseline$age0, color = baseline$sexe)) + geom_histogram
 ```
 
 
-```{r}
-library(ggplot2)
-ggplot(baseline[which(baseline$sexe == "F"),], aes(x = baseline$age0[which(baseline$sexe == "F")])) + geom_histogram(fill = "pink", color = "red") + ggtitle("Distibution du log de l'âge des femmes")
-```
 
-```{r}
-library(ggplot2)
-ggplot(baseline[which(baseline$sexe == "H"),], aes(x = baseline$age0[which(baseline$sexe == "H")])) + geom_histogram(fill = "green", color = "blue") + ggtitle("Distibution du log de l'âge des femmes")
-```
+
+
 #gestion des na et outliers
 
 ```{r}
 sum(is.na(baseline$age0))
-```
-```{r}
-length(which(baseline$age0 > 76))
-```
-```{r}
-baseline$age0[which(baseline$age0 > 76)]
-```
-```{r}
-length(baseline$age0[which(baseline$age0 < 50)])
-```
-```{r}
-outliers_age_id = baseline$nepp3[which(baseline$age0 > 76 | baseline$age0 < 50)]
-```
-
-## Classes d'âge
-```{r}
-sum(is.na(baselineP2$age0))
-```
-
-```{r}
-summary(baselineP2$age0)
 ```
 
 ```{r}
 baseline$age0Cut = cut(baseline$age0, breaks = quantile(baseline$age0), right = T)
 summary(baseline$age0Cut)
 ```
-```{r}
 
-```
 
 
 ```{r}
@@ -83,4 +54,7 @@ ggplot(baseline, aes(factor(baseline$activproBis,c("R","I","C","T","NSP",NA)), b
 
 
 ```
-
+```{r}
+baseline$age0Cut = cut(baseline$age0, breaks = quantile(baseline$age0), right = T)
+summary(baseline$age0Cut)
+```

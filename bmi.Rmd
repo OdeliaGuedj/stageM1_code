@@ -11,3 +11,17 @@ summary(baseline$bmi)
 sum(is.na(baseline$bmi))
 ```
 
+```{r}
+baseline$bmiCut[which(baseline$bmi<= 25)] = "normal"
+baseline$bmiCut[which(baseline$bmi > 25 & baseline$bmi < 30)] = "surpoids"
+baseline$bmiCut[which(baseline$bmi >= 30)] = "obésite"
+```
+
+```{r}
+baseline$bmiCut = as.factor(baseline$bmiCut)
+```
+```{r}
+summary(baseline$bmiCut)
+```
+
+

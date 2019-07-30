@@ -11,3 +11,17 @@ summary(baseline$epice)
 baseline$epice = as.numeric(baseline$epice)
 ```
 
+```{r}
+baseline$EPICECut[which(baseline$epice > 30.17)] = "Situation précaire"
+baseline$EPICECut[which(baseline$epice <= 30.17)] = "Situation non précaire"
+baseline$EPICECut[which(is.na(baseline$epice))] = NA
+```
+```{r}
+baseline$EPICECut = as.factor(baseline$EPICECut)
+```
+
+```{r}
+summary(baseline$EPICECut)
+```
+
+

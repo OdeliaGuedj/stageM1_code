@@ -317,8 +317,8 @@ na_actproBl_id = unique(c(na_Adm10_id,na_Adm11_id,na_Adm12_id,na_Adm12a_id))</co
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY29sbmFtZXMoYmFzZWxpbmUpWzU5NF1cbmBgYCJ9 -->
 <pre class="r"><code>colnames(baseline)[594]</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiYWN0aXZwcm9CaXNcIlxuIn0= -->
-<pre><code>[1] &quot;activproBis&quot;</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIE5BXG4ifQ== -->
+<pre><code>[1] NA</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY29sbmFtZXMoYmFzZWxpbmUpWzU5NV1cbmBgYCJ9 -->
 <pre class="r"><code>colnames(baseline)[595]</code></pre>
@@ -684,6 +684,21 @@ Adm12a=NNNN    0.11196417  0.20527859 61.72985782  0.000000e+00       -Inf
 Adm11=0        4.58574838  7.88856305 57.91864139  0.000000e+00       -Inf
 Adm10=36       0.07917656  0.05865103 24.94075829  0.000000e+00       -Inf</code></pre>
 <!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyMjYWN0aXZwcm8gZXQgc3JoXG5nZ3Bsb3QoYmFzZWxpbmUsYWVzKGJhc2VsaW5lJGFjdGl2cHJvQmlzLCBiYXNlbGluZSRzcmhOdW0sIGZpbGwgPSBiYXNlbGluZSRhY3RpdnByb0JpcykpICsgZ2VvbV9ib3hwbG90KCkgKyB4bGFiKFwiQWN2dGl2aXTDqSBQcm9mZXNzaW9ubmVsbGVcIikgKyBcbiAgeWxhYihcIlNhbnTDqSBwZXLDp3VlXCIpICtcbiAgeWxpbSg1LDEwKSArXG4gIHNjYWxlX2ZpbGxfamFtYShuYW1lPVwiXCIsXG4gICAgICAgICAgICAgICAgICBicmVha3M9YyhcIlJcIiwgXCJJXCIsIFwiQ1wiLFwiVFwiLFwiTlNQXCIsTkEpLFxuICAgICAgICAgICAgICAgICAgbGFiZWxzPWMoXCJSZXRyYWl0w6lzXCIsIFwiSW5hY3RpZnNcIiwgXCJDaMO0bWV1cnNcIixcIlRyYXZhaWxsZXVyc1wiLFwiTmUgU2FpcyBQYXNcIixcIk5BXCIpKVxuYGBgIn0= -->
+<pre class="r"><code>###activpro et srh
+ggplot(baseline,aes(baseline$activproBis, baseline$srhNum, fill = baseline$activproBis)) + geom_boxplot() + xlab(&quot;Acvtivité Professionnelle&quot;) + 
+  ylab(&quot;Santé perçue&quot;) +
+  ylim(5,10) +
+  scale_fill_jama(name=&quot;&quot;,
+                  breaks=c(&quot;R&quot;, &quot;I&quot;, &quot;C&quot;,&quot;T&quot;,&quot;NSP&quot;,NA),
+                  labels=c(&quot;Retraités&quot;, &quot;Inactifs&quot;, &quot;Chômeurs&quot;,&quot;Travailleurs&quot;,&quot;Ne Sais Pas&quot;,&quot;NA&quot;))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiRXJyb3I6IEFlc3RoZXRpY3MgbXVzdCBiZSBlaXRoZXIgbGVuZ3RoIDEgb3IgdGhlIHNhbWUgYXMgdGhlIGRhdGEgKDEwMTU3KTogeCwgeSwgZmlsbFxuIn0= -->
+<pre><code>Error: Aesthetics must be either length 1 or the same as the data (10157): x, y, fill</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-plot-begin eyJjb25kaXRpb25zIjpbXSwiaGVpZ2h0Ijo0MzIuNjMyOSwic2l6ZV9iZWhhdmlvciI6MCwid2lkdGgiOjcwMH0= -->
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAArwAAAGwCAMAAAB8TkaXAAAAA1BMVEX///+nxBvIAAAACXBIWXMAAA7DAAAOwwHHb6hkAAABPElEQVR4nO3BAQ0AAADCoPdPbQ8HFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwafLAABhydcUAAAAABJRU5ErkJggg==" /></p>
+<!-- rnb-plot-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-chunk-begin -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudGVzdGJpcyA9IHRlc3Rbd2hpY2goYmFzZWxpbmUkYWN0aXZwcm9CaXMgPT0gXCJOU1BcIiksXVxuYGBgIn0= -->
