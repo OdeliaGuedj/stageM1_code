@@ -246,8 +246,43 @@ $(document).ready(function () {
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGF0YWJhc2UgPSBiYXNlbGluZVssYyhcIm5lcHAzXCIsXCJhY3RpdnByb0Jpc1wiLFwiYWN0aXZwcm9DQUhcIixcInNleGVcIixcImVudG91cmFnZVwiLCBcImFnZTBDdXRcIixcImVkdWNhdGlvblwiLFwiY3NwXCIsXCJibWlDdXRcIixcInRhYmFjXCIsXCJkaWFiXCIsXCJRbTM0XCIsXCJRbTM1XCIsXCJBUF9wb250YWdlXCIsXCJRbTM3XCIsXCJRbTM4XCIsXCJRbTM5XCIsXCJRbTQwXCIsXCJRbTQxXCIsXCJzcG9ydDJcIixcImh0YVwiLFwiYWxjb29sQ3V0XCIsXCJjYW5jZXJcIixcIkVQSUNFQ3V0XCIsXCJUU1wiLFwiZGVwdG90XCIsXCJzcmhCaW5cIixcImN2ZFwiKV1cbmBgYCJ9 -->
-<pre class="r"><code>database = baseline[,c(&quot;nepp3&quot;,&quot;activproBis&quot;,&quot;activproCAH&quot;,&quot;sexe&quot;,&quot;entourage&quot;, &quot;age0Cut&quot;,&quot;education&quot;,&quot;csp&quot;,&quot;bmiCut&quot;,&quot;tabac&quot;,&quot;diab&quot;,&quot;Qm34&quot;,&quot;Qm35&quot;,&quot;AP_pontage&quot;,&quot;Qm37&quot;,&quot;Qm38&quot;,&quot;Qm39&quot;,&quot;Qm40&quot;,&quot;Qm41&quot;,&quot;sport2&quot;,&quot;hta&quot;,&quot;alcoolCut&quot;,&quot;cancer&quot;,&quot;EPICECut&quot;,&quot;TS&quot;,&quot;deptot&quot;,&quot;srhBin&quot;,&quot;cvd&quot;)]</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGF0YWJhc2UgPSBiYXNlbGluZVssYyhcIm5lcHAzXCIsXCJhY3RpdnByb0Jpc1wiLFwiYWN0aXZwcm9DQUhcIixcInNleGVcIixcImVudG91cmFnZVwiLFwiYWdlMEN1dFwiLFwiZWR1Y2F0aW9uXCIsXCJjc3BcIixcImJtaUN1dFwiLFwidGFiYWNcIixcImRpYWJcIixcInNwb3J0MlwiLFwiaHRhXCIsXCJhbGNvb2xDdXRcIixcImNhbmNlclwiLFwiRVBJQ0VDdXRcIixcImRlcHRvdFwiLFwic3JoQmluXCIsXCJjdmRcIixcInN0cmVzc1wiKV1cbmBgYCJ9 -->
+<pre class="r"><code>database = baseline[,c(&quot;nepp3&quot;,&quot;activproBis&quot;,&quot;activproCAH&quot;,&quot;sexe&quot;,&quot;entourage&quot;,&quot;age0Cut&quot;,&quot;education&quot;,&quot;csp&quot;,&quot;bmiCut&quot;,&quot;tabac&quot;,&quot;diab&quot;,&quot;sport2&quot;,&quot;hta&quot;,&quot;alcoolCut&quot;,&quot;cancer&quot;,&quot;EPICECut&quot;,&quot;deptot&quot;,&quot;srhBin&quot;,&quot;cvd&quot;,&quot;stress&quot;)]</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>,“Qm34”,“Qm35”,“AP_pontage”,“Qm37”,“Qm38”,“Qm39”,“Qm40”,“Qm41”,“TS”)]</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY29sbmFtZXMoZGF0YWJhc2UpXG5gYGAifQ== -->
+<pre class="r"><code>colnames(database)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSBcIm5lcHAzXCIgICAgICAgXCJhY3RpdnByb0Jpc1wiIFwiYWN0aXZwcm9DQUhcIiBcInNleGVcIiAgICAgICAgXCJlbnRvdXJhZ2VcIiAgIFwiYWdlMEN1dFwiICAgICBcImVkdWNhdGlvblwiICAgXCJjc3BcIiAgICAgICAgXG4gWzldIFwiYm1pQ3V0XCIgICAgICBcInRhYmFjXCIgICAgICAgXCJkaWFiXCIgICAgICAgIFwic3BvcnQyXCIgICAgICBcImh0YVwiICAgICAgICAgXCJhbGNvb2xDdXRcIiAgIFwiY2FuY2VyXCIgICAgICBcIkVQSUNFQ3V0XCIgICBcblsxN10gXCJkZXB0b3RcIiAgICAgIFwic3JoQmluXCIgICAgICBcImN2ZFwiICAgICAgICAgXCJzdHJlc3NcIiAgICAgXG4ifQ== -->
+<pre><code> [1] &quot;nepp3&quot;       &quot;activproBis&quot; &quot;activproCAH&quot; &quot;sexe&quot;        &quot;entourage&quot;   &quot;age0Cut&quot;     &quot;education&quot;   &quot;csp&quot;        
+ [9] &quot;bmiCut&quot;      &quot;tabac&quot;       &quot;diab&quot;        &quot;sport2&quot;      &quot;hta&quot;         &quot;alcoolCut&quot;   &quot;cancer&quot;      &quot;EPICECut&quot;   
+[17] &quot;deptot&quot;      &quot;srhBin&quot;      &quot;cvd&quot;         &quot;stress&quot;     </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubmFfYWN0aXZwcm9CaXNfaWQgPSBkYXRhYmFzZSRuZXBwM1t3aGljaChpcy5uYShkYXRhYmFzZSRhY3RpdnByb0JpcykpXVxubmFfYWN0aXZwcm9DQUhfaWQgPSBkYXRhYmFzZSRuZXBwM1t3aGljaChpcy5uYShkYXRhYmFzZSRhY3RpdnByb0NBSCkpXVxubmFfZW50b3VyYWdlX2lkID0gZGF0YWJhc2UkbmVwcDNbd2hpY2goaXMubmEoZGF0YWJhc2UkZW50b3VyYWdlKSldXG5uYV9lZHVjYXRpb25faWQgPSBkYXRhYmFzZSRuZXBwM1t3aGljaChpcy5uYShkYXRhYmFzZSRlZHVjYXRpb24pKV1cbm5hX2NzcF9pZCA9IGRhdGFiYXNlJG5lcHAzW3doaWNoKGlzLm5hKGRhdGFiYXNlJGNzcCkpXVxubmFfdGFiYWNfaWQgPSBkYXRhYmFzZSRuZXBwM1t3aGljaChpcy5uYShkYXRhYmFzZSR0YWJhYykpXVxubmFfZGlhYl9pZCA9IGRhdGFiYXNlJG5lcHAzW3doaWNoKGlzLm5hKGRhdGFiYXNlJGRpYWIpKV1cbm5hX3Nwb3J0Ml9pZCA9IGRhdGFiYXNlJG5lcHAzW3doaWNoKGlzLm5hKGRhdGFiYXNlJHNwb3J0MikpXVxubmFfaHRhX2lkID0gZGF0YWJhc2UkbmVwcDNbd2hpY2goaXMubmEoZGF0YWJhc2UkaHRhKSldXG5uYV9hbGNvb2xfaWQgPSBkYXRhYmFzZSRuZXBwM1t3aGljaChpcy5uYShkYXRhYmFzZSRhbGNvb2wpKV1cbm5hX2NhbmNlcl9pZCA9IGRhdGFiYXNlJG5lcHAzW3doaWNoKGlzLm5hKGRhdGFiYXNlJGNhbmNlcikpXVxubmFfZXBpY2VfaWQgPSBkYXRhYmFzZSRuZXBwM1t3aGljaChpcy5uYShkYXRhYmFzZSRFUElDRUN1dCkpXVxubmFfZGVwdG90X2lkID0gZGF0YWJhc2UkbmVwcDNbd2hpY2goaXMubmEoZGF0YWJhc2UkZGVwdG90KSldXG5uYV9zcmhfaWQgPSBkYXRhYmFzZSRuZXBwM1t3aGljaChpcy5uYShkYXRhYmFzZSRzcmhCaW4pKV1cbk5BX2N2ZF9pZCA9IGRhdGFiYXNlJG5lcHAzW3doaWNoKGlzLm5hKGRhdGFiYXNlJGN2ZCkpXVxubmFfc3RyZXNzX2lkID0gZGF0YWJhc2UkbmVwcDNbd2hpY2goaXMubmEoZGF0YWJhc2Ukc3RyZXNzKSldXG5gYGAifQ== -->
+<pre class="r"><code>na_activproBis_id = database$nepp3[which(is.na(database$activproBis))]
+na_activproCAH_id = database$nepp3[which(is.na(database$activproCAH))]
+na_entourage_id = database$nepp3[which(is.na(database$entourage))]
+na_education_id = database$nepp3[which(is.na(database$education))]
+na_csp_id = database$nepp3[which(is.na(database$csp))]
+na_tabac_id = database$nepp3[which(is.na(database$tabac))]
+na_diab_id = database$nepp3[which(is.na(database$diab))]
+na_sport2_id = database$nepp3[which(is.na(database$sport2))]
+na_hta_id = database$nepp3[which(is.na(database$hta))]
+na_alcool_id = database$nepp3[which(is.na(database$alcool))]
+na_cancer_id = database$nepp3[which(is.na(database$cancer))]
+na_epice_id = database$nepp3[which(is.na(database$EPICECut))]
+na_deptot_id = database$nepp3[which(is.na(database$deptot))]
+na_srh_id = database$nepp3[which(is.na(database$srhBin))]
+NA_cvd_id = database$nepp3[which(is.na(database$cvd))]
+na_stress_id = database$nepp3[which(is.na(database$stress))]</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -256,64 +291,27 @@ $(document).ready(function () {
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY29sbmFtZXMoZGF0YWJhc2UpXG5gYGAifQ== -->
 <pre class="r"><code>colnames(database)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSBcIm5lcHAzXCIgICAgICAgXCJhY3RpdnByb0Jpc1wiIFwiYWN0aXZwcm9DQUhcIiBcInNleGVcIiAgICAgICAgXCJlbnRvdXJhZ2VcIiAgIFwiYWdlMEN1dFwiICAgICBcImVkdWNhdGlvblwiICBcbiBbOF0gXCJjc3BcIiAgICAgICAgIFwiYm1pQ3V0XCIgICAgICBcInRhYmFjXCIgICAgICAgXCJkaWFiXCIgICAgICAgIFwiUW0zNFwiICAgICAgICBcIlFtMzVcIiAgICAgICAgXCJBUF9wb250YWdlXCIgXG5bMTVdIFwiUW0zN1wiICAgICAgICBcIlFtMzhcIiAgICAgICAgXCJRbTM5XCIgICAgICAgIFwiUW00MFwiICAgICAgICBcIlFtNDFcIiAgICAgICAgXCJzcG9ydDJcIiAgICAgIFwiaHRhXCIgICAgICAgIFxuWzIyXSBcImFsY29vbEN1dFwiICAgXCJjYW5jZXJcIiAgICAgIFwiRVBJQ0VDdXRcIiAgICBcIlRTXCIgICAgICAgICAgXCJkZXB0b3RcIiAgICAgIFwic3JoQmluXCIgICAgICBcImN2ZFwiICAgICAgICBcbiJ9 -->
-<pre><code> [1] &quot;nepp3&quot;       &quot;activproBis&quot; &quot;activproCAH&quot; &quot;sexe&quot;        &quot;entourage&quot;   &quot;age0Cut&quot;     &quot;education&quot;  
- [8] &quot;csp&quot;         &quot;bmiCut&quot;      &quot;tabac&quot;       &quot;diab&quot;        &quot;Qm34&quot;        &quot;Qm35&quot;        &quot;AP_pontage&quot; 
-[15] &quot;Qm37&quot;        &quot;Qm38&quot;        &quot;Qm39&quot;        &quot;Qm40&quot;        &quot;Qm41&quot;        &quot;sport2&quot;      &quot;hta&quot;        
-[22] &quot;alcoolCut&quot;   &quot;cancer&quot;      &quot;EPICECut&quot;    &quot;TS&quot;          &quot;deptot&quot;      &quot;srhBin&quot;      &quot;cvd&quot;        </code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSBcIm5lcHAzXCIgICAgICAgXCJhY3RpdnByb0Jpc1wiIFwiYWN0aXZwcm9DQUhcIiBcInNleGVcIiAgICAgICAgXCJlbnRvdXJhZ2VcIiAgIFwiYWdlMEN1dFwiICAgICBcImVkdWNhdGlvblwiICAgXCJjc3BcIiAgICAgICAgXG4gWzldIFwiYm1pQ3V0XCIgICAgICBcInRhYmFjXCIgICAgICAgXCJkaWFiXCIgICAgICAgIFwic3BvcnQyXCIgICAgICBcImh0YVwiICAgICAgICAgXCJhbGNvb2xDdXRcIiAgIFwiY2FuY2VyXCIgICAgICBcIkVQSUNFQ3V0XCIgICBcblsxN10gXCJkZXB0b3RcIiAgICAgIFwic3JoQmluXCIgICAgICBcImN2ZFwiICAgICAgICAgXCJzdHJlc3NcIiAgICAgXG4ifQ== -->
+<pre><code> [1] &quot;nepp3&quot;       &quot;activproBis&quot; &quot;activproCAH&quot; &quot;sexe&quot;        &quot;entourage&quot;   &quot;age0Cut&quot;     &quot;education&quot;   &quot;csp&quot;        
+ [9] &quot;bmiCut&quot;      &quot;tabac&quot;       &quot;diab&quot;        &quot;sport2&quot;      &quot;hta&quot;         &quot;alcoolCut&quot;   &quot;cancer&quot;      &quot;EPICECut&quot;   
+[17] &quot;deptot&quot;      &quot;srhBin&quot;      &quot;cvd&quot;         &quot;stress&quot;     </code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubmFfYWN0aXZwcm9CaXNfaWQgPSBkYXRhYmFzZSRuZXBwM1t3aGljaChpcy5uYShkYXRhYmFzZSRhY3RpdnByb0JpcykpXVxubmFfYWN0aXZwcm9DQUhfaWQgPSBkYXRhYmFzZSRuZXBwM1t3aGljaChpcy5uYShkYXRhYmFzZSRhY3RpdnByb0NBSCkpXVxubmFfZW50b3VyYWdlX2lkID0gZGF0YWJhc2UkbmVwcDNbd2hpY2goaXMubmEoZGF0YWJhc2UkZW50b3VyYWdlKSldXG5uYV9lZHVjYXRpb25faWQgPSBkYXRhYmFzZSRuZXBwM1t3aGljaChpcy5uYShkYXRhYmFzZSRlZHVjYXRpb24pKV1cbm5hX2NzcF9pZCA9IGRhdGFiYXNlJG5lcHAzW3doaWNoKGlzLm5hKGRhdGFiYXNlJGNzcCkpXVxubmFfdGFiYWNfaWQgPSBkYXRhYmFzZSRuZXBwM1t3aGljaChpcy5uYShkYXRhYmFzZSR0YWJhYykpXVxubmFfZGlhYl9pZCA9IGRhdGFiYXNlJG5lcHAzW3doaWNoKGlzLm5hKGRhdGFiYXNlJGRpYWIpKV1cbm5hX1FtMzRfaWQgPSBkYXRhYmFzZSRuZXBwM1t3aGljaChpcy5uYShkYXRhYmFzZSRRbTM0KSldXG5uYV9RbTM1X2lkID0gZGF0YWJhc2UkbmVwcDNbd2hpY2goaXMubmEoZGF0YWJhc2UkUW0zNSkpXVxubmFfQVBfcG9udGFnZV9pZCA9IGRhdGFiYXNlJG5lcHAzW3doaWNoKGlzLm5hKGRhdGFiYXNlJEFQX3BvbnRhZ2UpKV1cbm5hX1FtMzdfaWQgPSBkYXRhYmFzZSRuZXBwM1t3aGljaChpcy5uYShkYXRhYmFzZSRRbTM3KSldXG5uYV9RbTM4X2lkID0gZGF0YWJhc2UkbmVwcDNbd2hpY2goaXMubmEoZGF0YWJhc2UkUW0zOCkpXVxubmFfUW0zOV9pZCA9IGRhdGFiYXNlJG5lcHAzW3doaWNoKGlzLm5hKGRhdGFiYXNlJFFtMzkpKV1cbm5hX1FtNDBfaWQgPSBkYXRhYmFzZSRuZXBwM1t3aGljaChpcy5uYShkYXRhYmFzZSRRbTQwKSldXG5uYV9RbTQxX2lkID0gZGF0YWJhc2UkbmVwcDNbd2hpY2goaXMubmEoZGF0YWJhc2UkUW00MSkpXVxubmFfc3BvcnQyX2lkID0gZGF0YWJhc2UkbmVwcDNbd2hpY2goaXMubmEoZGF0YWJhc2Ukc3BvcnQyKSldXG5uYV9odGFfaWQgPSBkYXRhYmFzZSRuZXBwM1t3aGljaChpcy5uYShkYXRhYmFzZSRodGEpKV1cbm5hX2FsY29vbF9pZCA9IGRhdGFiYXNlJG5lcHAzW3doaWNoKGlzLm5hKGRhdGFiYXNlJGFsY29vbCkpXVxubmFfY2FuY2VyX2lkID0gZGF0YWJhc2UkbmVwcDNbd2hpY2goaXMubmEoZGF0YWJhc2UkY2FuY2VyKSldXG5uYV9lcGljZV9pZCA9IGRhdGFiYXNlJG5lcHAzW3doaWNoKGlzLm5hKGRhdGFiYXNlJGVwaWNlKSldXG5uYV9UU19pZCA9IGRhdGFiYXNlJG5lcHAzW3doaWNoKGlzLm5hKGRhdGFiYXNlJFRTKSldXG5uYV9kZXB0b3RfaWQgPSBkYXRhYmFzZSRuZXBwM1t3aGljaChpcy5uYShkYXRhYmFzZSRkZXB0b3QpKV1cbm5hX3NyaF9pZCA9IGRhdGFiYXNlJG5lcHAzW3doaWNoKGlzLm5hKGRhdGFiYXNlJFFtNzMpKV1cbm5hX2JtaV9pZCA9IGRhdGFiYXNlJG5lcHAzW3doaWNoKGlzLm5hKGRhdGFiYXNlJGJtaSkpXVxuYGBgIn0= -->
-<pre class="r"><code>na_activproBis_id = database$nepp3[which(is.na(database$activproBis))]
-na_activproCAH_id = database$nepp3[which(is.na(database$activproCAH))]
-na_entourage_id = database$nepp3[which(is.na(database$entourage))]
-na_education_id = database$nepp3[which(is.na(database$education))]
-na_csp_id = database$nepp3[which(is.na(database$csp))]
-na_tabac_id = database$nepp3[which(is.na(database$tabac))]
-na_diab_id = database$nepp3[which(is.na(database$diab))]
-na_Qm34_id = database$nepp3[which(is.na(database$Qm34))]
-na_Qm35_id = database$nepp3[which(is.na(database$Qm35))]
-na_AP_pontage_id = database$nepp3[which(is.na(database$AP_pontage))]
-na_Qm37_id = database$nepp3[which(is.na(database$Qm37))]
-na_Qm38_id = database$nepp3[which(is.na(database$Qm38))]
-na_Qm39_id = database$nepp3[which(is.na(database$Qm39))]
-na_Qm40_id = database$nepp3[which(is.na(database$Qm40))]
-na_Qm41_id = database$nepp3[which(is.na(database$Qm41))]
-na_sport2_id = database$nepp3[which(is.na(database$sport2))]
-na_hta_id = database$nepp3[which(is.na(database$hta))]
-na_alcool_id = database$nepp3[which(is.na(database$alcool))]
-na_cancer_id = database$nepp3[which(is.na(database$cancer))]
-na_epice_id = database$nepp3[which(is.na(database$epice))]
-na_TS_id = database$nepp3[which(is.na(database$TS))]
-na_deptot_id = database$nepp3[which(is.na(database$deptot))]
-na_srh_id = database$nepp3[which(is.na(database$Qm73))]
-na_bmi_id = database$nepp3[which(is.na(database$bmi))]</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGZfbmEgPSBhcy5kYXRhLmZyYW1lKG1pc3NfdmFyX3N1bW1hcnkoZGF0YWJhc2UpKVxuZGZfbmEkdmFyaWFibGVzID0gYyhcIlRlbnRhdGl2ZSBkZSBTdWljaWRlXCIsXG4gICAgICAgICAgICAgICAgXCJQb250YWdlL0FuZ2lvcGxhc3RpZS9TdGVudFwiLFxuICAgICAgICAgICAgICAgIFwiQWxjb29sIChOYiBkZSB2ZXJyZXMpXCIsXG4gICAgICAgICAgICAgICAgXCJTY29yZSBFcGljZSBkZSBQcsOpY2FyaXTDqVwiLFxuICAgICAgICAgICAgICAgIFwiU3BvcnRcIixcbiAgICAgICAgICAgICAgICBcIk1hbGFkaWVzIENhcmRpb3Zhc2N1bGFpcmVzXCIsXG4gICAgICAgICAgICAgICAgXCJDYW5jZXJcIixcbiAgICAgICAgICAgICAgICBcIk5pdmVhdSBkJ0VkdWNhdGlvblwiLFxuICAgICAgICAgICAgICAgIFwiSHlwZXJ0ZW5zaW9uIEFydGVyaWVsbGVcIixcbiAgICAgICAgICAgICAgICBcIk1hbGFkaWUgZGVzIEFydMOocmVzXCIsXG4gICAgICAgICAgICAgICAgXCJBdXRyZSBQYiBDYXJkaWFxdWVcIixcbiAgICAgICAgICAgICAgICBcIlBobMOpYml0ZVwiLFxuICAgICAgICAgICAgICAgIFwiRW1ib2xpZSBQdWxtb25haXJlXCIsXG4gICAgICAgICAgICAgICAgXCJBVkNcIixcbiAgICAgICAgICAgICAgICBcIkFuZ2luZSBkZSBQb2l0cmluZVwiLFxuICAgICAgICAgICAgICAgIFwiSW5mYXJjdHVzIGR1IE15b2NhcmRlXCIsXG4gICAgICAgICAgICAgICAgXCJEZXByZXNzaW9uXCIsXG4gICAgICAgICAgICAgICAgXCJTaXR1YXRpb24gRmFtaWxsaWFsZVwiLFxuICAgICAgICAgICAgICAgIFwiRGlhYsOodGVcIixcbiAgICAgICAgICAgICAgICBcIkNhdMOpZ29yaWUgU29jaW8tUHJvZmVzc2lvbm5lbGxlXCIsXG4gICAgICAgICAgICAgICAgXCJBY3Rpdml0w6kgUHJvZmVzc2lvbm5lbGxlIChDQUgpXCIsXG4gICAgICAgICAgICAgICAgXCJTYW50w6kgUGVyw6d1ZSBCaW5haXJlXCIsXG4gICAgICAgICAgICAgICAgXCJUYWJhY1wiLFxuICAgICAgICAgICAgICAgIFwiQWN0aXZpdMOpIFByb2Zlc3Npb25uZWxsZSAoY2xhc2lmIE1hbnVlbGxlKVwiLFxuICAgICAgICAgICAgICAgIFwiw4JnZVwiLFxuICAgICAgICAgICAgICAgIFwibmVwcDNcIixcbiAgICAgICAgICAgICAgICBcIlNleGVcIixcbiAgICAgICAgICAgICAgICBcIkluZGljZSBkZSBNYXNzZSBDb3Jwb3JlbGxlKENsYXNzZXMpXCIpXG5gYGAifQ== -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGZfbmEgPSBhcy5kYXRhLmZyYW1lKG1pc3NfdmFyX3N1bW1hcnkoZGF0YWJhc2UpKVxuZGZfbmEkdmFyaWFibGVzID0gYyhcbiAgICAgICAgICAgICAgICBcbiAgICAgICAgICAgICAgICBcIkFsY29vbCAoTmIgZGUgdmVycmVzKVwiLFxuICAgICAgICAgICAgICAgIFwiU2NvcmUgRXBpY2UgZGUgUHLDqWNhcml0w6lcIixcbiAgICAgICAgICAgICAgICBcIlNwb3J0XCIsXG4gICAgICAgICAgICAgICAgXCJNYWxhZGllcyBDYXJkaW92YXNjdWxhaXJlc1wiLFxuICAgICAgICAgICAgICAgIFwiQ2FuY2VyXCIsXG4gICAgICAgICAgICAgICAgXCJOaXZlYXUgZCdFZHVjYXRpb25cIixcbiAgICAgICAgICAgICAgICBcIlNjb3JlIGRlIFN0cmVzcyBQZXLDp3UgKFBTUzQpXCIsXG4gICAgICAgICAgICAgICAgXCJIeXBlcnRlbnNpb24gQXJ0ZXJpZWxsZVwiLFxuICAgICAgICAgICAgICAgIFwiRGVwcmVzc2lvblwiLFxuICAgICAgICAgICAgICAgIFwiU2l0dWF0aW9uIEZhbWlsbGlhbGVcIixcbiAgICAgICAgICAgICAgICBcIkRpYWLDqHRlXCIsXG4gICAgICAgICAgICAgICAgXCJDYXTDqWdvcmllIFNvY2lvLVByb2Zlc3Npb25uZWxsZVwiLFxuICAgICAgICAgICAgICAgIFwiQWN0aXZpdMOpIFByb2Zlc3Npb25uZWxsZSAoQ0FIKVwiLFxuICAgICAgICAgICAgICAgIFwiU2FudMOpIFBlcsOndWUgQmluYWlyZVwiLFxuICAgICAgICAgICAgICAgIFwiVGFiYWNcIixcbiAgICAgICAgICAgICAgICBcIkFjdGl2aXTDqSBQcm9mZXNzaW9ubmVsbGUgKGNsYXNpZiBNYW51ZWxsZSlcIixcbiAgICAgICAgICAgICAgICBcIsOCZ2VcIixcbiAgICAgICAgICAgICAgICBcIm5lcHAzXCIsXG4gICAgICAgICAgICAgICAgXCJTZXhlXCIsXG4gICAgICAgICAgICAgICAgXCJJbmRpY2UgZGUgTWFzc2UgQ29ycG9yZWxsZShDbGFzc2VzKVwiXG4gICAgICAgICAgICAgICAgKVxuYGBgIn0= -->
 <pre class="r"><code>df_na = as.data.frame(miss_var_summary(database))
-df_na$variables = c(&quot;Tentative de Suicide&quot;,
-                &quot;Pontage/Angioplastie/Stent&quot;,
+df_na$variables = c(
+                
                 &quot;Alcool (Nb de verres)&quot;,
                 &quot;Score Epice de Précarité&quot;,
                 &quot;Sport&quot;,
                 &quot;Maladies Cardiovasculaires&quot;,
                 &quot;Cancer&quot;,
                 &quot;Niveau d'Education&quot;,
+                &quot;Score de Stress Perçu (PSS4)&quot;,
                 &quot;Hypertension Arterielle&quot;,
-                &quot;Maladie des Artères&quot;,
-                &quot;Autre Pb Cardiaque&quot;,
-                &quot;Phlébite&quot;,
-                &quot;Embolie Pulmonaire&quot;,
-                &quot;AVC&quot;,
-                &quot;Angine de Poitrine&quot;,
-                &quot;Infarctus du Myocarde&quot;,
                 &quot;Depression&quot;,
                 &quot;Situation Familliale&quot;,
                 &quot;Diabète&quot;,
@@ -325,7 +323,13 @@ df_na$variables = c(&quot;Tentative de Suicide&quot;,
                 &quot;Âge&quot;,
                 &quot;nepp3&quot;,
                 &quot;Sexe&quot;,
-                &quot;Indice de Masse Corporelle(Classes)&quot;)</code></pre>
+                &quot;Indice de Masse Corporelle(Classes)&quot;
+                )</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGZfbmFcbmBgYCJ9 -->
+<pre class="r"><code>df_na</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -334,11 +338,10 @@ df_na$variables = c(&quot;Tentative de Suicide&quot;,
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGZfbmEkdmFyaWFibGVcbmBgYCJ9 -->
 <pre class="r"><code>df_na$variable</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSBcIlRTXCIgICAgICAgICAgXCJBUF9wb250YWdlXCIgIFwiYWxjb29sQ3V0XCIgICBcIkVQSUNFQ3V0XCIgICAgXCJzcG9ydDJcIiAgICAgIFwiY3ZkXCIgICAgICAgICBcImNhbmNlclwiICAgICBcbiBbOF0gXCJlZHVjYXRpb25cIiAgIFwiaHRhXCIgICAgICAgICBcIlFtMzhcIiAgICAgICAgXCJRbTM3XCIgICAgICAgIFwiUW0zOVwiICAgICAgICBcIlFtNDBcIiAgICAgICAgXCJRbTQxXCIgICAgICAgXG5bMTVdIFwiUW0zNVwiICAgICAgICBcIlFtMzRcIiAgICAgICAgXCJkZXB0b3RcIiAgICAgIFwiZW50b3VyYWdlXCIgICBcImRpYWJcIiAgICAgICAgXCJjc3BcIiAgICAgICAgIFwiYWN0aXZwcm9DQUhcIlxuWzIyXSBcInNyaEJpblwiICAgICAgXCJ0YWJhY1wiICAgICAgIFwiYWN0aXZwcm9CaXNcIiBcImFnZTBDdXRcIiAgICAgXCJuZXBwM1wiICAgICAgIFwic2V4ZVwiICAgICAgICBcImJtaUN1dFwiICAgICBcbiJ9 -->
-<pre><code> [1] &quot;TS&quot;          &quot;AP_pontage&quot;  &quot;alcoolCut&quot;   &quot;EPICECut&quot;    &quot;sport2&quot;      &quot;cvd&quot;         &quot;cancer&quot;     
- [8] &quot;education&quot;   &quot;hta&quot;         &quot;Qm38&quot;        &quot;Qm37&quot;        &quot;Qm39&quot;        &quot;Qm40&quot;        &quot;Qm41&quot;       
-[15] &quot;Qm35&quot;        &quot;Qm34&quot;        &quot;deptot&quot;      &quot;entourage&quot;   &quot;diab&quot;        &quot;csp&quot;         &quot;activproCAH&quot;
-[22] &quot;srhBin&quot;      &quot;tabac&quot;       &quot;activproBis&quot; &quot;age0Cut&quot;     &quot;nepp3&quot;       &quot;sexe&quot;        &quot;bmiCut&quot;     </code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSBcImFsY29vbEN1dFwiICAgXCJFUElDRUN1dFwiICAgIFwic3BvcnQyXCIgICAgICBcImN2ZFwiICAgICAgICAgXCJjYW5jZXJcIiAgICAgIFwiZWR1Y2F0aW9uXCIgICBcInN0cmVzc1wiICAgICAgXCJodGFcIiAgICAgICAgXG4gWzldIFwiZGVwdG90XCIgICAgICBcImVudG91cmFnZVwiICAgXCJkaWFiXCIgICAgICAgIFwiY3NwXCIgICAgICAgICBcImFjdGl2cHJvQ0FIXCIgXCJzcmhCaW5cIiAgICAgIFwidGFiYWNcIiAgICAgICBcImFjdGl2cHJvQmlzXCJcblsxN10gXCJuZXBwM1wiICAgICAgIFwic2V4ZVwiICAgICAgICBcImFnZTBDdXRcIiAgICAgXCJibWlDdXRcIiAgICAgXG4ifQ== -->
+<pre><code> [1] &quot;alcoolCut&quot;   &quot;EPICECut&quot;    &quot;sport2&quot;      &quot;cvd&quot;         &quot;cancer&quot;      &quot;education&quot;   &quot;stress&quot;      &quot;hta&quot;        
+ [9] &quot;deptot&quot;      &quot;entourage&quot;   &quot;diab&quot;        &quot;csp&quot;         &quot;activproCAH&quot; &quot;srhBin&quot;      &quot;tabac&quot;       &quot;activproBis&quot;
+[17] &quot;nepp3&quot;       &quot;sexe&quot;        &quot;age0Cut&quot;     &quot;bmiCut&quot;     </code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -371,7 +374,7 @@ df_na$variables = c(&quot;Tentative de Suicide&quot;,
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZXhjbHVzX2lkID0gdW5pcXVlKGMobmFfc3JoX2lkLFxuICAgICAgICAgICAgICAgICAgICAgbmFfYWN0aXZwcm9CaXNfaWQsXG4gICAgICAgICAgICAgICAgICAgICBuYV9hY3RpdnByb0NBSF9pZCxcbiAgICAgICAgICAgICAgICAgICAgIG5hX2VudG91cmFnZV9pZCxcbiAgICAgICAgICAgICAgICAgICAgIG5hX2VkdWNhdGlvbl9pZCxcbiAgICAgICAgICAgICAgICAgICAgIG5hX2NzcF9pZCxcbiAgICAgICAgICAgICAgICAgICAgIG5hX3RhYmFjX2lkLFxuICAgICAgICAgICAgICAgICAgICAgbmFfZGlhYl9pZCxcbiAgICAgICAgICAgICAgICAgICAgIG5hX3Nwb3J0Ml9pZCxcbiAgICAgICAgICAgICAgICAgICAgIG5hX2h0YV9pZCxcbiAgICAgICAgICAgICAgICAgICAgIG5hX2FsY29vbF9pZCxcbiAgICAgICAgICAgICAgICAgICAgIE5BX2N2ZF9pZCxcbiAgICAgICAgICAgICAgICAgICAgIG5hX2NhbmNlcl9pZCwgXG4gICAgICAgICAgICAgICAgICAgICBuYV9lcGljZSxcbiAgICAgICAgICAgICAgICAgICAgIG5hX2RlcHRvdF9pZCxcbiAgICAgICAgICAgICAgICAgICAgIG5hX2JtaV9pZCkpXG5cbmBgYCJ9 -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZXhjbHVzX2lkID0gdW5pcXVlKGMobmFfc3JoX2lkLFxuICAgICAgICAgICAgICAgICAgICAgbmFfYWN0aXZwcm9CaXNfaWQsXG4gICAgICAgICAgICAgICAgICAgICBuYV9hY3RpdnByb0NBSF9pZCxcbiAgICAgICAgICAgICAgICAgICAgIG5hX2VudG91cmFnZV9pZCxcbiAgICAgICAgICAgICAgICAgICAgIG5hX2VkdWNhdGlvbl9pZCxcbiAgICAgICAgICAgICAgICAgICAgIG5hX2NzcF9pZCxcbiAgICAgICAgICAgICAgICAgICAgIG5hX3RhYmFjX2lkLFxuICAgICAgICAgICAgICAgICAgICAgbmFfZGlhYl9pZCxcbiAgICAgICAgICAgICAgICAgICAgIG5hX3Nwb3J0Ml9pZCxcbiAgICAgICAgICAgICAgICAgICAgIG5hX2h0YV9pZCxcbiAgICAgICAgICAgICAgICAgICAgIG5hX2FsY29vbF9pZCxcbiAgICAgICAgICAgICAgICAgICAgIE5BX2N2ZF9pZCxcbiAgICAgICAgICAgICAgICAgICAgIG5hX2NhbmNlcl9pZCwgXG4gICAgICAgICAgICAgICAgICAgICBuYV9lcGljZV9pZCxcbiAgICAgICAgICAgICAgICAgICAgIG5hX2RlcHRvdF9pZCxcbiAgICAgICAgICAgICAgICAgICAgIG5hX2JtaV9pZCxcbiAgICAgICAgICAgICAgICAgICAgIG5hX3N0cmVzc19pZCkpXG5gYGAifQ== -->
 <pre class="r"><code>exclus_id = unique(c(na_srh_id,
                      na_activproBis_id,
                      na_activproCAH_id,
@@ -385,15 +388,11 @@ df_na$variables = c(&quot;Tentative de Suicide&quot;,
                      na_alcool_id,
                      NA_cvd_id,
                      na_cancer_id, 
-                     na_epice,
+                     na_epice_id,
                      na_deptot_id,
-                     na_bmi_id))
-</code></pre>
+                     na_bmi_id,
+                     na_stress_id))</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiRXJyb3IgaW4gdW5pcXVlKGMobmFfc3JoX2lkLCBuYV9hY3RpdnByb0Jpc19pZCwgbmFfYWN0aXZwcm9DQUhfaWQsIG5hX2VudG91cmFnZV9pZCwgIDogXG4gIG9iamVjdCAnbmFfZXBpY2UnIG5vdCBmb3VuZFxuIn0= -->
-<pre><code>Error in unique(c(na_srh_id, na_activproBis_id, na_activproCAH_id, na_entourage_id,  : 
-  object 'na_epice' not found</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
@@ -409,24 +408,96 @@ df_na$variables = c(&quot;Tentative de Suicide&quot;,
 <pre class="r"><code>baseSansEcxlus = database[-which(database$nepp3 %in% exclus_id),]</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGltKGJhc2VTYW5zRWN4bHVzKVxuYGBgIn0= -->
+<pre class="r"><code>dim(baseSansEcxlus)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDc1MDEgICAyMFxuIn0= -->
+<pre><code>[1] 7501   20</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuQkFTRTEgPSBkYXRhYmFzZVssYyhcInNleGVcIixcImVudG91cmFnZVwiLFwiYWdlMEN1dFwiLFwiZWR1Y2F0aW9uXCIsXCJjc3BcIixcImJtaUN1dFwiLFwidGFiYWNcIixcImRpYWJcIixcIlFtMzRcIixcIlFtMzVcIixcIlFtMzdcIixcIlFtMzhcIixcIlFtMzlcIixcIlFtNDBcIixcIlFtNDFcIixcInNwb3J0MlwiLFwiaHRhXCIsXCJhbGNvb2xDdXRcIixcImNhbmNlclwiLFwiRVBJQ0VDdXRcIixcIlRTXCIsXCJkZXB0b3RcIixcInNyaEJpblwiLFwiYWN0aXZwcm9DQUhcIildXG5gYGAifQ== -->
-<pre class="r"><code>BASE1 = database[,c(&quot;sexe&quot;,&quot;entourage&quot;,&quot;age0Cut&quot;,&quot;education&quot;,&quot;csp&quot;,&quot;bmiCut&quot;,&quot;tabac&quot;,&quot;diab&quot;,&quot;Qm34&quot;,&quot;Qm35&quot;,&quot;Qm37&quot;,&quot;Qm38&quot;,&quot;Qm39&quot;,&quot;Qm40&quot;,&quot;Qm41&quot;,&quot;sport2&quot;,&quot;hta&quot;,&quot;alcoolCut&quot;,&quot;cancer&quot;,&quot;EPICECut&quot;,&quot;TS&quot;,&quot;deptot&quot;,&quot;srhBin&quot;,&quot;activproCAH&quot;)]</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGVuZ3RoKHdoaWNoKGlzLm5hKGJhc2VsaW5lJHNyaEJpbikpKVxuYGBgIn0= -->
+<pre class="r"><code>length(which(is.na(baseline$srhBin)))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDI2XG4ifQ== -->
+<pre><code>[1] 26</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGVuZ3RoKHdoaWNoKGlzLm5hKGJhc2VsaW5lJGFjdGl2cHJvQmlzKSkpXG5gYGAifQ== -->
+<pre class="r"><code>length(which(is.na(baseline$activproBis)))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDE2XG4ifQ== -->
+<pre><code>[1] 16</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGVuZ3RoKHdoaWNoKGlzLm5hKGJhc2VsaW5lJHNyaEJpbikgfCBpcy5uYShiYXNlbGluZSRhY3RpdnByb0JpcyApKSlcbmBgYCJ9 -->
+<pre class="r"><code>length(which(is.na(baseline$srhBin) | is.na(baseline$activproBis )))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDI2XG4ifQ== -->
+<pre><code>[1] 26</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYmFzZWxpbmUkbmVwcDNbd2hpY2goaXMubmEoYmFzZWxpbmUkYWdlMEN1dCkpXVxuYGBgIn0= -->
+<pre class="r"><code>baseline$nepp3[which(is.na(baseline$age0Cut))]</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiaW50ZWdlcigwKVxuIn0= -->
+<pre><code>integer(0)</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYmFzZWxpbmUkYWdlMFt3aGljaChiYXNlbGluZSRuZXBwMyA9PSAyMDk1KV1cbmBgYCJ9 -->
+<pre class="r"><code>baseline$age0[which(baseline$nepp3 == 2095)]</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDQ4LjUzXG4ifQ== -->
+<pre><code>[1] 48.53</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGV2ZWxzKGJhc2VsaW5lJGFnZTBDdXQpXG5gYGAifQ== -->
+<pre class="r"><code>levels(baseline$age0Cut)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiKDQ4LjUsNTQuNV1cIiBcIig1NC41LDU5LjFdXCIgXCIoNTkuMSw2My43XVwiIFwiKDYzLjcsODYuMl1cIlxuIn0= -->
+<pre><code>[1] &quot;(48.5,54.5]&quot; &quot;(54.5,59.1]&quot; &quot;(59.1,63.7]&quot; &quot;(63.7,86.2]&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuQkFTRTEgPSBkYXRhYmFzZVssYyhcInNleGVcIixcImVudG91cmFnZVwiLFwiYWdlMEN1dFwiLFwiZWR1Y2F0aW9uXCIsXCJjc3BcIixcImJtaUN1dFwiLFwidGFiYWNcIixcImRpYWJcIixcInNwb3J0MlwiLFwiaHRhXCIsXCJhbGNvb2xDdXRcIixcImNhbmNlclwiLFwiRVBJQ0VDdXRcIixcImRlcHRvdFwiLFwic3JoQmluXCIsXCJhY3RpdnByb0NBSFwiLFwic3RyZXNzXCIpXVxuYGBgIn0= -->
+<pre class="r"><code>BASE1 = database[,c(&quot;sexe&quot;,&quot;entourage&quot;,&quot;age0Cut&quot;,&quot;education&quot;,&quot;csp&quot;,&quot;bmiCut&quot;,&quot;tabac&quot;,&quot;diab&quot;,&quot;sport2&quot;,&quot;hta&quot;,&quot;alcoolCut&quot;,&quot;cancer&quot;,&quot;EPICECut&quot;,&quot;deptot&quot;,&quot;srhBin&quot;,&quot;activproCAH&quot;,&quot;stress&quot;)]</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuQkFTRTIgPSBkYXRhYmFzZVssYyhcInNleGVcIixcImVudG91cmFnZVwiLFwiYWdlMEN1dFwiLFwiZWR1Y2F0aW9uXCIsXCJjc3BcIixcImJtaUN1dFwiLFwidGFiYWNcIixcImRpYWJcIixcIlFtMzRcIixcIlFtMzVcIixcIlFtMzdcIixcIlFtMzhcIixcIlFtMzlcIixcIlFtNDBcIixcIlFtNDFcIixcInNwb3J0MlwiLFwiaHRhXCIsXCJhbGNvb2xDdXRcIixcImNhbmNlclwiLFwiRVBJQ0VDdXRcIixcIlRTXCIsXCJkZXB0b3RcIixcInNyaEJpblwiLFwiYWN0aXZwcm9CaXNcIildXG5gYGAifQ== -->
-<pre class="r"><code>BASE2 = database[,c(&quot;sexe&quot;,&quot;entourage&quot;,&quot;age0Cut&quot;,&quot;education&quot;,&quot;csp&quot;,&quot;bmiCut&quot;,&quot;tabac&quot;,&quot;diab&quot;,&quot;Qm34&quot;,&quot;Qm35&quot;,&quot;Qm37&quot;,&quot;Qm38&quot;,&quot;Qm39&quot;,&quot;Qm40&quot;,&quot;Qm41&quot;,&quot;sport2&quot;,&quot;hta&quot;,&quot;alcoolCut&quot;,&quot;cancer&quot;,&quot;EPICECut&quot;,&quot;TS&quot;,&quot;deptot&quot;,&quot;srhBin&quot;,&quot;activproBis&quot;)]</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuQkFTRTIgPSBkYXRhYmFzZVssYyhcInNleGVcIixcImVudG91cmFnZVwiLFwiYWdlMEN1dFwiLFwiZWR1Y2F0aW9uXCIsXCJjc3BcIixcImJtaUN1dFwiLFwidGFiYWNcIixcImRpYWJcIixcInNwb3J0MlwiLFwiaHRhXCIsXCJhbGNvb2xDdXRcIixcImNhbmNlclwiLFwiRVBJQ0VDdXRcIixcImRlcHRvdFwiLFwic3JoQmluXCIsXCJhY3RpdnByb0Jpc1wiLCBcInN0cmVzc1wiKV1cbmBgYCJ9 -->
+<pre class="r"><code>BASE2 = database[,c(&quot;sexe&quot;,&quot;entourage&quot;,&quot;age0Cut&quot;,&quot;education&quot;,&quot;csp&quot;,&quot;bmiCut&quot;,&quot;tabac&quot;,&quot;diab&quot;,&quot;sport2&quot;,&quot;hta&quot;,&quot;alcoolCut&quot;,&quot;cancer&quot;,&quot;EPICECut&quot;,&quot;deptot&quot;,&quot;srhBin&quot;,&quot;activproBis&quot;, &quot;stress&quot;)]</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGltKGJhc2VTYW5zRWN4bHVzKVxuYGBgIn0= -->
+<pre class="r"><code>dim(baseSansEcxlus)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDc1MDEgICAyMFxuIn0= -->
+<pre><code>[1] 7501   20</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2siDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KYGBge3J9DQpkYXRhYmFzZSA9IGJhc2VsaW5lWyxjKCJuZXBwMyIsImFjdGl2cHJvQmlzIiwiYWN0aXZwcm9DQUgiLCJzZXhlIiwiZW50b3VyYWdlIiwgImFnZTBDdXQiLCJlZHVjYXRpb24iLCJjc3AiLCJibWlDdXQiLCJ0YWJhYyIsImRpYWIiLCJRbTM0IiwiUW0zNSIsIkFQX3BvbnRhZ2UiLCJRbTM3IiwiUW0zOCIsIlFtMzkiLCJRbTQwIiwiUW00MSIsInNwb3J0MiIsImh0YSIsImFsY29vbEN1dCIsImNhbmNlciIsIkVQSUNFQ3V0IiwiVFMiLCJkZXB0b3QiLCJzcmhCaW4iLCJjdmQiKV0NCmBgYA0KDQpgYGB7cn0NCmNvbG5hbWVzKGRhdGFiYXNlKQ0KYGBgDQoNCmBgYHtyfQ0KbmFfYWN0aXZwcm9CaXNfaWQgPSBkYXRhYmFzZSRuZXBwM1t3aGljaChpcy5uYShkYXRhYmFzZSRhY3RpdnByb0JpcykpXQ0KbmFfYWN0aXZwcm9DQUhfaWQgPSBkYXRhYmFzZSRuZXBwM1t3aGljaChpcy5uYShkYXRhYmFzZSRhY3RpdnByb0NBSCkpXQ0KbmFfZW50b3VyYWdlX2lkID0gZGF0YWJhc2UkbmVwcDNbd2hpY2goaXMubmEoZGF0YWJhc2UkZW50b3VyYWdlKSldDQpuYV9lZHVjYXRpb25faWQgPSBkYXRhYmFzZSRuZXBwM1t3aGljaChpcy5uYShkYXRhYmFzZSRlZHVjYXRpb24pKV0NCm5hX2NzcF9pZCA9IGRhdGFiYXNlJG5lcHAzW3doaWNoKGlzLm5hKGRhdGFiYXNlJGNzcCkpXQ0KbmFfdGFiYWNfaWQgPSBkYXRhYmFzZSRuZXBwM1t3aGljaChpcy5uYShkYXRhYmFzZSR0YWJhYykpXQ0KbmFfZGlhYl9pZCA9IGRhdGFiYXNlJG5lcHAzW3doaWNoKGlzLm5hKGRhdGFiYXNlJGRpYWIpKV0NCm5hX1FtMzRfaWQgPSBkYXRhYmFzZSRuZXBwM1t3aGljaChpcy5uYShkYXRhYmFzZSRRbTM0KSldDQpuYV9RbTM1X2lkID0gZGF0YWJhc2UkbmVwcDNbd2hpY2goaXMubmEoZGF0YWJhc2UkUW0zNSkpXQ0KbmFfQVBfcG9udGFnZV9pZCA9IGRhdGFiYXNlJG5lcHAzW3doaWNoKGlzLm5hKGRhdGFiYXNlJEFQX3BvbnRhZ2UpKV0NCm5hX1FtMzdfaWQgPSBkYXRhYmFzZSRuZXBwM1t3aGljaChpcy5uYShkYXRhYmFzZSRRbTM3KSldDQpuYV9RbTM4X2lkID0gZGF0YWJhc2UkbmVwcDNbd2hpY2goaXMubmEoZGF0YWJhc2UkUW0zOCkpXQ0KbmFfUW0zOV9pZCA9IGRhdGFiYXNlJG5lcHAzW3doaWNoKGlzLm5hKGRhdGFiYXNlJFFtMzkpKV0NCm5hX1FtNDBfaWQgPSBkYXRhYmFzZSRuZXBwM1t3aGljaChpcy5uYShkYXRhYmFzZSRRbTQwKSldDQpuYV9RbTQxX2lkID0gZGF0YWJhc2UkbmVwcDNbd2hpY2goaXMubmEoZGF0YWJhc2UkUW00MSkpXQ0KbmFfc3BvcnQyX2lkID0gZGF0YWJhc2UkbmVwcDNbd2hpY2goaXMubmEoZGF0YWJhc2Ukc3BvcnQyKSldDQpuYV9odGFfaWQgPSBkYXRhYmFzZSRuZXBwM1t3aGljaChpcy5uYShkYXRhYmFzZSRodGEpKV0NCm5hX2FsY29vbF9pZCA9IGRhdGFiYXNlJG5lcHAzW3doaWNoKGlzLm5hKGRhdGFiYXNlJGFsY29vbCkpXQ0KbmFfY2FuY2VyX2lkID0gZGF0YWJhc2UkbmVwcDNbd2hpY2goaXMubmEoZGF0YWJhc2UkY2FuY2VyKSldDQpuYV9lcGljZV9pZCA9IGRhdGFiYXNlJG5lcHAzW3doaWNoKGlzLm5hKGRhdGFiYXNlJGVwaWNlKSldDQpuYV9UU19pZCA9IGRhdGFiYXNlJG5lcHAzW3doaWNoKGlzLm5hKGRhdGFiYXNlJFRTKSldDQpuYV9kZXB0b3RfaWQgPSBkYXRhYmFzZSRuZXBwM1t3aGljaChpcy5uYShkYXRhYmFzZSRkZXB0b3QpKV0NCm5hX3NyaF9pZCA9IGRhdGFiYXNlJG5lcHAzW3doaWNoKGlzLm5hKGRhdGFiYXNlJFFtNzMpKV0NCm5hX2JtaV9pZCA9IGRhdGFiYXNlJG5lcHAzW3doaWNoKGlzLm5hKGRhdGFiYXNlJGJtaSkpXQ0KTkFfY3ZkX2lkID0gZGF0YWJhc2UkbmVwcDNbd2hpY2goaXMubmEoZGF0YWJhc2UkY3ZkKSldDQpgYGANCg0KDQoNCmBgYHtyfQ0KZGZfbmEgPSBhcy5kYXRhLmZyYW1lKG1pc3NfdmFyX3N1bW1hcnkoZGF0YWJhc2UpKQ0KZGZfbmEkdmFyaWFibGVzID0gYygiVGVudGF0aXZlIGRlIFN1aWNpZGUiLA0KICAgICAgICAgICAgICAgICJQb250YWdlL0FuZ2lvcGxhc3RpZS9TdGVudCIsDQogICAgICAgICAgICAgICAgIkFsY29vbCAoTmIgZGUgdmVycmVzKSIsDQogICAgICAgICAgICAgICAgIlNjb3JlIEVwaWNlIGRlIFByw6ljYXJpdMOpIiwNCiAgICAgICAgICAgICAgICAiU3BvcnQiLA0KICAgICAgICAgICAgICAgICJNYWxhZGllcyBDYXJkaW92YXNjdWxhaXJlcyIsDQogICAgICAgICAgICAgICAgIkNhbmNlciIsDQogICAgICAgICAgICAgICAgIk5pdmVhdSBkJ0VkdWNhdGlvbiIsDQogICAgICAgICAgICAgICAgIkh5cGVydGVuc2lvbiBBcnRlcmllbGxlIiwNCiAgICAgICAgICAgICAgICAiTWFsYWRpZSBkZXMgQXJ0w6hyZXMiLA0KICAgICAgICAgICAgICAgICJBdXRyZSBQYiBDYXJkaWFxdWUiLA0KICAgICAgICAgICAgICAgICJQaGzDqWJpdGUiLA0KICAgICAgICAgICAgICAgICJFbWJvbGllIFB1bG1vbmFpcmUiLA0KICAgICAgICAgICAgICAgICJBVkMiLA0KICAgICAgICAgICAgICAgICJBbmdpbmUgZGUgUG9pdHJpbmUiLA0KICAgICAgICAgICAgICAgICJJbmZhcmN0dXMgZHUgTXlvY2FyZGUiLA0KICAgICAgICAgICAgICAgICJEZXByZXNzaW9uIiwNCiAgICAgICAgICAgICAgICAiU2l0dWF0aW9uIEZhbWlsbGlhbGUiLA0KICAgICAgICAgICAgICAgICJEaWFiw6h0ZSIsDQogICAgICAgICAgICAgICAgIkNhdMOpZ29yaWUgU29jaW8tUHJvZmVzc2lvbm5lbGxlIiwNCiAgICAgICAgICAgICAgICAiQWN0aXZpdMOpIFByb2Zlc3Npb25uZWxsZSAoQ0FIKSIsDQogICAgICAgICAgICAgICAgIlNhbnTDqSBQZXLDp3VlIEJpbmFpcmUiLA0KICAgICAgICAgICAgICAgICJUYWJhYyIsDQogICAgICAgICAgICAgICAgIkFjdGl2aXTDqSBQcm9mZXNzaW9ubmVsbGUgKGNsYXNpZiBNYW51ZWxsZSkiLA0KICAgICAgICAgICAgICAgICLDgmdlIiwNCiAgICAgICAgICAgICAgICAibmVwcDMiLA0KICAgICAgICAgICAgICAgICJTZXhlIiwNCiAgICAgICAgICAgICAgICAiSW5kaWNlIGRlIE1hc3NlIENvcnBvcmVsbGUoQ2xhc3NlcykiKQ0KYGBgDQoNCmBgYHtyfQ0KZGZfbmEkdmFyaWFibGUNCmBgYA0KDQpgYGB7cn0NCm5hbWVzKGRmX25hKSA9IGMoIm5vbV92YXIiLCAiTmIgTmEiLCAiJSBOQSIsIlZhcmlhYmxlcyIgKQ0KDQpgYGANCmBgYHtyfQ0KZGZfbmEkYCUgTkFgID0gcm91bmQoZGZfbmEkYCUgTkFgLDIpDQpgYGANCg0KDQpgYGB7cn0NCiNnZ19taXNzX3ZhcihkYXRhYmFzZSkgKyBzY2FsZV94X2Rpc2NyZXRlKCAgbGFiZWxzID0gYygpKSArDQojeWxhYigiTm9tYnJlIGRlIERvbsOpZXMgTWFucXVhbnRlcyIpDQpgYGANCg0KYGBge3J9DQp0YWJsZV9uYSA9IGthYmxlKGRmX25hWywyOjRdLCJsYXRleCIsIGJvb2t0YWJzID0gVCApDQpgYGANCg0KDQpgYGB7cn0NCmV4Y2x1c19pZCA9IHVuaXF1ZShjKG5hX3NyaF9pZCwNCiAgICAgICAgICAgICAgICAgICAgIG5hX2FjdGl2cHJvQmlzX2lkLA0KICAgICAgICAgICAgICAgICAgICAgbmFfYWN0aXZwcm9DQUhfaWQsDQogICAgICAgICAgICAgICAgICAgICBuYV9lbnRvdXJhZ2VfaWQsDQogICAgICAgICAgICAgICAgICAgICBuYV9lZHVjYXRpb25faWQsDQogICAgICAgICAgICAgICAgICAgICBuYV9jc3BfaWQsDQogICAgICAgICAgICAgICAgICAgICBuYV90YWJhY19pZCwNCiAgICAgICAgICAgICAgICAgICAgIG5hX2RpYWJfaWQsDQogICAgICAgICAgICAgICAgICAgICBuYV9zcG9ydDJfaWQsDQogICAgICAgICAgICAgICAgICAgICBuYV9odGFfaWQsDQogICAgICAgICAgICAgICAgICAgICBuYV9hbGNvb2xfaWQsDQogICAgICAgICAgICAgICAgICAgICBOQV9jdmRfaWQsDQogICAgICAgICAgICAgICAgICAgICBuYV9jYW5jZXJfaWQsIA0KICAgICAgICAgICAgICAgICAgICAgbmFfZXBpY2VfaWQsDQogICAgICAgICAgICAgICAgICAgICBuYV9kZXB0b3RfaWQsDQogICAgICAgICAgICAgICAgICAgICBuYV9ibWlfaWQpKQ0KYGBgDQoNCmBgYHtyfQ0KYmFzZUV4Y2x1cyA9IGRhdGFiYXNlW3doaWNoKGRhdGFiYXNlJG5lcHAzICVpbiUgZXhjbHVzX2lkKSxdDQpgYGANCg0KDQpgYGB7cn0NCmJhc2VTYW5zRWN4bHVzID0gZGF0YWJhc2VbLXdoaWNoKGRhdGFiYXNlJG5lcHAzICVpbiUgZXhjbHVzX2lkKSxdDQpgYGANCg0KDQpgYGB7cn0NCkJBU0UxID0gZGF0YWJhc2VbLGMoInNleGUiLCJlbnRvdXJhZ2UiLCJhZ2UwQ3V0IiwiZWR1Y2F0aW9uIiwiY3NwIiwiYm1pQ3V0IiwidGFiYWMiLCJkaWFiIiwiUW0zNCIsIlFtMzUiLCJRbTM3IiwiUW0zOCIsIlFtMzkiLCJRbTQwIiwiUW00MSIsInNwb3J0MiIsImh0YSIsImFsY29vbEN1dCIsImNhbmNlciIsIkVQSUNFQ3V0IiwiVFMiLCJkZXB0b3QiLCJzcmhCaW4iLCJhY3RpdnByb0NBSCIpXQ0KYGBgDQoNCg0KYGBge3J9DQpCQVNFMiA9IGRhdGFiYXNlWyxjKCJzZXhlIiwiZW50b3VyYWdlIiwiYWdlMEN1dCIsImVkdWNhdGlvbiIsImNzcCIsImJtaUN1dCIsInRhYmFjIiwiZGlhYiIsIlFtMzQiLCJRbTM1IiwiUW0zNyIsIlFtMzgiLCJRbTM5IiwiUW00MCIsIlFtNDEiLCJzcG9ydDIiLCJodGEiLCJhbGNvb2xDdXQiLCJjYW5jZXIiLCJFUElDRUN1dCIsIlRTIiwiZGVwdG90Iiwic3JoQmluIiwiYWN0aXZwcm9CaXMiKV0NCmBgYA0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg==</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2siDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KYGBge3J9DQpkYXRhYmFzZSA9IGJhc2VsaW5lWyxjKCJuZXBwMyIsImFjdGl2cHJvQmlzIiwiYWN0aXZwcm9DQUgiLCJzZXhlIiwiZW50b3VyYWdlIiwiYWdlMEN1dCIsImVkdWNhdGlvbiIsImNzcCIsImJtaUN1dCIsInRhYmFjIiwiZGlhYiIsInNwb3J0MiIsImh0YSIsImFsY29vbEN1dCIsImNhbmNlciIsIkVQSUNFQ3V0IiwiZGVwdG90Iiwic3JoQmluIiwiY3ZkIiwic3RyZXNzIildDQpgYGANCiwiUW0zNCIsIlFtMzUiLCJBUF9wb250YWdlIiwiUW0zNyIsIlFtMzgiLCJRbTM5IiwiUW00MCIsIlFtNDEiLCJUUyIpXQ0KDQoNCmBgYHtyfQ0KY29sbmFtZXMoZGF0YWJhc2UpDQpgYGANCg0KDQpgYGB7cn0NCm5hX2FjdGl2cHJvQmlzX2lkID0gZGF0YWJhc2UkbmVwcDNbd2hpY2goaXMubmEoZGF0YWJhc2UkYWN0aXZwcm9CaXMpKV0NCm5hX2FjdGl2cHJvQ0FIX2lkID0gZGF0YWJhc2UkbmVwcDNbd2hpY2goaXMubmEoZGF0YWJhc2UkYWN0aXZwcm9DQUgpKV0NCm5hX2VudG91cmFnZV9pZCA9IGRhdGFiYXNlJG5lcHAzW3doaWNoKGlzLm5hKGRhdGFiYXNlJGVudG91cmFnZSkpXQ0KbmFfZWR1Y2F0aW9uX2lkID0gZGF0YWJhc2UkbmVwcDNbd2hpY2goaXMubmEoZGF0YWJhc2UkZWR1Y2F0aW9uKSldDQpuYV9jc3BfaWQgPSBkYXRhYmFzZSRuZXBwM1t3aGljaChpcy5uYShkYXRhYmFzZSRjc3ApKV0NCm5hX3RhYmFjX2lkID0gZGF0YWJhc2UkbmVwcDNbd2hpY2goaXMubmEoZGF0YWJhc2UkdGFiYWMpKV0NCm5hX2RpYWJfaWQgPSBkYXRhYmFzZSRuZXBwM1t3aGljaChpcy5uYShkYXRhYmFzZSRkaWFiKSldDQpuYV9zcG9ydDJfaWQgPSBkYXRhYmFzZSRuZXBwM1t3aGljaChpcy5uYShkYXRhYmFzZSRzcG9ydDIpKV0NCm5hX2h0YV9pZCA9IGRhdGFiYXNlJG5lcHAzW3doaWNoKGlzLm5hKGRhdGFiYXNlJGh0YSkpXQ0KbmFfYWxjb29sX2lkID0gZGF0YWJhc2UkbmVwcDNbd2hpY2goaXMubmEoZGF0YWJhc2UkYWxjb29sKSldDQpuYV9jYW5jZXJfaWQgPSBkYXRhYmFzZSRuZXBwM1t3aGljaChpcy5uYShkYXRhYmFzZSRjYW5jZXIpKV0NCm5hX2VwaWNlX2lkID0gZGF0YWJhc2UkbmVwcDNbd2hpY2goaXMubmEoZGF0YWJhc2UkRVBJQ0VDdXQpKV0NCm5hX2RlcHRvdF9pZCA9IGRhdGFiYXNlJG5lcHAzW3doaWNoKGlzLm5hKGRhdGFiYXNlJGRlcHRvdCkpXQ0KbmFfc3JoX2lkID0gZGF0YWJhc2UkbmVwcDNbd2hpY2goaXMubmEoZGF0YWJhc2Ukc3JoQmluKSldDQpOQV9jdmRfaWQgPSBkYXRhYmFzZSRuZXBwM1t3aGljaChpcy5uYShkYXRhYmFzZSRjdmQpKV0NCm5hX3N0cmVzc19pZCA9IGRhdGFiYXNlJG5lcHAzW3doaWNoKGlzLm5hKGRhdGFiYXNlJHN0cmVzcykpXQ0KbmFfYm1pX2lkID0gZGF0YWJhc2UkbmVwcDNbd2hpY2goaXMubmEoZGF0YWJhc2UkYm1pQ3V0KSldDQoNCmBgYA0KDQpgYGB7cn0NCmNvbG5hbWVzKGRhdGFiYXNlKQ0KYGBgDQoNCg0KYGBge3J9DQpkZl9uYSA9IGFzLmRhdGEuZnJhbWUobWlzc192YXJfc3VtbWFyeShkYXRhYmFzZSkpDQpkZl9uYSR2YXJpYWJsZXMgPSBjKA0KICAgICAgICAgICAgICAgIA0KICAgICAgICAgICAgICAgICJBbGNvb2wgKE5iIGRlIHZlcnJlcykiLA0KICAgICAgICAgICAgICAgICJTY29yZSBFcGljZSBkZSBQcsOpY2FyaXTDqSIsDQogICAgICAgICAgICAgICAgIlNwb3J0IiwNCiAgICAgICAgICAgICAgICAiTWFsYWRpZXMgQ2FyZGlvdmFzY3VsYWlyZXMiLA0KICAgICAgICAgICAgICAgICJDYW5jZXIiLA0KICAgICAgICAgICAgICAgICJOaXZlYXUgZCdFZHVjYXRpb24iLA0KICAgICAgICAgICAgICAgICJTY29yZSBkZSBTdHJlc3MgUGVyw6d1IChQU1M0KSIsDQogICAgICAgICAgICAgICAgIkh5cGVydGVuc2lvbiBBcnRlcmllbGxlIiwNCiAgICAgICAgICAgICAgICAiRGVwcmVzc2lvbiIsDQogICAgICAgICAgICAgICAgIlNpdHVhdGlvbiBGYW1pbGxpYWxlIiwNCiAgICAgICAgICAgICAgICAiRGlhYsOodGUiLA0KICAgICAgICAgICAgICAgICJDYXTDqWdvcmllIFNvY2lvLVByb2Zlc3Npb25uZWxsZSIsDQogICAgICAgICAgICAgICAgIkFjdGl2aXTDqSBQcm9mZXNzaW9ubmVsbGUgKENBSCkiLA0KICAgICAgICAgICAgICAgICJTYW50w6kgUGVyw6d1ZSBCaW5haXJlIiwNCiAgICAgICAgICAgICAgICAiVGFiYWMiLA0KICAgICAgICAgICAgICAgICJBY3Rpdml0w6kgUHJvZmVzc2lvbm5lbGxlIChjbGFzaWYgTWFudWVsbGUpIiwNCiAgICAgICAgICAgICAgICAiw4JnZSIsDQogICAgICAgICAgICAgICAgIm5lcHAzIiwNCiAgICAgICAgICAgICAgICAiU2V4ZSIsDQogICAgICAgICAgICAgICAgIkluZGljZSBkZSBNYXNzZSBDb3Jwb3JlbGxlKENsYXNzZXMpIg0KICAgICAgICAgICAgICAgICkNCg0KYGBgDQpgYGB7cn0NCmRmX25hDQpgYGANCg0KYGBge3J9DQpkZl9uYSR2YXJpYWJsZQ0KYGBgDQoNCmBgYHtyfQ0KbmFtZXMoZGZfbmEpID0gYygibm9tX3ZhciIsICJOYiBOYSIsICIlIE5BIiwiVmFyaWFibGVzIiApDQoNCmBgYA0KYGBge3J9DQpkZl9uYSRgJSBOQWAgPSByb3VuZChkZl9uYSRgJSBOQWAsMikNCmBgYA0KDQoNCmBgYHtyfQ0KI2dnX21pc3NfdmFyKGRhdGFiYXNlKSArIHNjYWxlX3hfZGlzY3JldGUoICBsYWJlbHMgPSBjKCkpICsNCiN5bGFiKCJOb21icmUgZGUgRG9uw6llcyBNYW5xdWFudGVzIikNCmBgYA0KDQpgYGB7cn0NCnRhYmxlX25hID0ga2FibGUoZGZfbmFbLDI6NF0sImxhdGV4IiwgYm9va3RhYnMgPSBUICkNCmBgYA0KDQoNCmBgYHtyfQ0KZXhjbHVzX2lkID0gdW5pcXVlKGMobmFfc3JoX2lkLA0KICAgICAgICAgICAgICAgICAgICAgbmFfYWN0aXZwcm9CaXNfaWQsDQogICAgICAgICAgICAgICAgICAgICBuYV9hY3RpdnByb0NBSF9pZCwNCiAgICAgICAgICAgICAgICAgICAgIG5hX2VudG91cmFnZV9pZCwNCiAgICAgICAgICAgICAgICAgICAgIG5hX2VkdWNhdGlvbl9pZCwNCiAgICAgICAgICAgICAgICAgICAgIG5hX2NzcF9pZCwNCiAgICAgICAgICAgICAgICAgICAgIG5hX3RhYmFjX2lkLA0KICAgICAgICAgICAgICAgICAgICAgbmFfZGlhYl9pZCwNCiAgICAgICAgICAgICAgICAgICAgIG5hX3Nwb3J0Ml9pZCwNCiAgICAgICAgICAgICAgICAgICAgIG5hX2h0YV9pZCwNCiAgICAgICAgICAgICAgICAgICAgIG5hX2FsY29vbF9pZCwNCiAgICAgICAgICAgICAgICAgICAgIE5BX2N2ZF9pZCwNCiAgICAgICAgICAgICAgICAgICAgIG5hX2NhbmNlcl9pZCwgDQogICAgICAgICAgICAgICAgICAgICBuYV9lcGljZV9pZCwNCiAgICAgICAgICAgICAgICAgICAgIG5hX2RlcHRvdF9pZCwNCiAgICAgICAgICAgICAgICAgICAgIG5hX2JtaV9pZCwNCiAgICAgICAgICAgICAgICAgICAgIG5hX3N0cmVzc19pZCkpDQpgYGANCg0KYGBge3J9DQpiYXNlRXhjbHVzID0gZGF0YWJhc2Vbd2hpY2goZGF0YWJhc2UkbmVwcDMgJWluJSBleGNsdXNfaWQpLF0NCmBgYA0KDQoNCmBgYHtyfQ0KYmFzZVNhbnNFY3hsdXMgPSBkYXRhYmFzZVstd2hpY2goZGF0YWJhc2UkbmVwcDMgJWluJSBleGNsdXNfaWQpLF0NCmBgYA0KYGBge3J9DQpkaW0oYmFzZVNhbnNFY3hsdXMpDQpgYGANCg0KDQpgYGB7cn0NCmxlbmd0aCh3aGljaChpcy5uYShiYXNlbGluZSRzcmhCaW4pKSkNCmBgYA0KYGBge3J9DQpsZW5ndGgod2hpY2goaXMubmEoYmFzZWxpbmUkYWN0aXZwcm9CaXMpKSkNCmBgYA0KDQpgYGB7cn0NCmxlbmd0aCh3aGljaChpcy5uYShiYXNlbGluZSRzcmhCaW4pIHwgaXMubmEoYmFzZWxpbmUkYWN0aXZwcm9CaXMgKSkpDQpgYGANCg0KYGBge3J9DQpiYXNlbGluZSRuZXBwM1t3aGljaChpcy5uYShiYXNlbGluZSRhZ2UwQ3V0KSldDQpgYGANCmBgYHtyfQ0KYmFzZWxpbmUkYWdlMFt3aGljaChiYXNlbGluZSRuZXBwMyA9PSAyMDk1KV0NCmBgYA0KYGBge3J9DQpsZXZlbHMoYmFzZWxpbmUkYWdlMEN1dCkNCmBgYA0KDQoNCg0KYGBge3J9DQpCQVNFMSA9IGRhdGFiYXNlWyxjKCJzZXhlIiwiZW50b3VyYWdlIiwiYWdlMEN1dCIsImVkdWNhdGlvbiIsImNzcCIsImJtaUN1dCIsInRhYmFjIiwiZGlhYiIsInNwb3J0MiIsImh0YSIsImFsY29vbEN1dCIsImNhbmNlciIsIkVQSUNFQ3V0IiwiZGVwdG90Iiwic3JoQmluIiwiYWN0aXZwcm9DQUgiLCJzdHJlc3MiKV0NCmBgYA0KDQoNCmBgYHtyfQ0KQkFTRTIgPSBkYXRhYmFzZVssYygic2V4ZSIsImVudG91cmFnZSIsImFnZTBDdXQiLCJlZHVjYXRpb24iLCJjc3AiLCJibWlDdXQiLCJ0YWJhYyIsImRpYWIiLCJzcG9ydDIiLCJodGEiLCJhbGNvb2xDdXQiLCJjYW5jZXIiLCJFUElDRUN1dCIsImRlcHRvdCIsInNyaEJpbiIsImFjdGl2cHJvQmlzIiwgInN0cmVzcyIpXQ0KYGBgDQoNCg0KYGBge3J9DQpkaW0oYmFzZVNhbnNFY3hsdXMpDQpgYGANCg0KDQoNCg0KDQoNCg0KDQoNCg0K</div>
 
 
 

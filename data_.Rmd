@@ -72,7 +72,6 @@ baseline$Adm12a[which(baseline$Adm12a == "")] = NA
 baseline$Adm12[which(baseline$Adm12 == "")] = NA
 baseline$Adm11[which(baseline$Adm11 == "")] = NA
 baseline$Adm10[which(baseline$Adm10 == "")] = NA
-baseline$activpro = as.factor(baseline$activpro)
 baseline$activproBis = as.factor(baseline$activproBis)
 baseline$activproCAH = as.factor(baseline$activproCAH)
 ```

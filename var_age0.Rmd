@@ -58,3 +58,7 @@ ggplot(baseline, aes(factor(baseline$activproBis,c("R","I","C","T","NSP",NA)), b
 baseline$age0Cut = cut(baseline$age0, breaks = quantile(baseline$age0), right = T)
 summary(baseline$age0Cut)
 ```
+```{r}
+baseline$age0Cut[which(is.na(baseline$age0Cut))] = "(48.5,54.5]"
+```
+

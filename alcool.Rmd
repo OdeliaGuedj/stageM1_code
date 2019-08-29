@@ -30,9 +30,7 @@ summary(baseline$alcool)
 baseline$alcoolCut = NA
 baseline$alcoolCut[which(baseline$alcool == 0)] = 0
 baseline$alcoolCut[which(baseline$alcool %in% c(1,2))] = "1-2"
-baseline$alcoolCut[which(baseline$alcool %in% c(3,4,5))] = "3-5"
-baseline$alcoolCut[which(baseline$alcool %in% c(6,7,8,9,10))] = "5-10"
-baseline$alcoolCut[which(baseline$alcool %in% c(11,12,13,14,16,18,20,32,40,60))] = ">10"
+baseline$alcoolCut[which(baseline$alcool %in% c(3,4,5,6,7,8,9,10,11,12,13,14,16,18,20,32,40,60))] = "3+"
 baseline$alcoolCut = as.factor(baseline$alcoolCut)
 summary(baseline$alcoolCut)
 ```

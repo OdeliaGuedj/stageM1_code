@@ -1,6 +1,6 @@
 ## Graphes 3.1.1
 summary(baseline$activproBis)
-baseline$activproBis = factor(baseline$activproBis, c("T","R","C","I","NSP",NA))
+baseline$activproBis = factor(baseline$activproBis, c("T","R","C","I","NSP"))
 ggplot(baseline, aes( x = baseline$activproBis, fill = baseline$activproBis)) + geom_bar(stat = "count") +
   theme_void() + 
   xlab("Activité Profesionnelle")+ 
@@ -11,18 +11,49 @@ ggplot(baseline, aes( x = baseline$activproBis, fill = baseline$activproBis)) + 
   annotate("text", x=3, y=1200, label= "883") +
   annotate( "text", x=4, y=500, label= "270") +
   annotate("text", x=5, y=400, label= "113") +
-  annotate("text", x=6, y=200, label= "16") + scale_fill_brewer("Activité Professionnelle",palette = "Blues")
+  annotate("text", x=6, y=200, label= "16") + 
+  scale_fill_brewer("Activité Professionnelle",palette = "Blues")
 
 
 
 library(cowplot)
 window()
-df1 = ggplot(baseline, aes(baseline$age0)) + geom_histogram(col = "white", fill = "black", bins  = 20) + xlab("n = 10157")+ ylab("")+ggtitle("Baseline") +theme_minimal()
-df2 = ggplot(baseline[which(baseline$activproBis == "T"),], aes(baseline[which(baseline$activproBis == "T"), "age0"])) + geom_histogram(col = "white", fill = "blue", bins  = 20)  + xlab("n = 5666")+ ylab("") + ggtitle("Travailleurs")+theme_minimal()
-df3 = ggplot(baseline[which(baseline$activproBis == "R"),], aes(baseline[which(baseline$activproBis == "R"), "age0"])) + geom_histogram(col = "white", fill = "yellow", bins  = 20) + xlab("n = 3209")+ ylab("") + ggtitle("Retraités")+theme_minimal()
-df4 = ggplot(baseline[which(baseline$activproBis == "C"),], aes(baseline[which(baseline$activproBis == "C"), "age0"])) + geom_histogram(col = "white", fill = "orange", bins  = 20)+ xlab("n = 883")+ ylab("") + ggtitle("Chômeurs")+theme_minimal()
-df5 = ggplot(baseline[which(baseline$activproBis == "I"),], aes(baseline[which(baseline$activproBis == "I"), "age0"])) + geom_histogram(col = "white", fill = "green", bins  = 20)+ xlab("n = 270")+ ylab("") + ggtitle("Inactifs")+theme_minimal()
-df6 = ggplot(baseline[which(baseline$activproBis == "NSP"),], aes(baseline[which(baseline$activproBis == "NSP"), "age0"])) + geom_histogram(col = "white", fill = "purple", bins  = 20) + xlab("n = 113")+ ylab("") + ggtitle("NSP")+theme_minimal()
+df1 = ggplot(baseline, aes(baseline$age0)) + geom_histogram(col = "white", fill = "black", bins  = 20) + 
+  xlab("n = 10157") + ylab("") + ggtitle("Baseline") + 
+  theme_classic2() + 
+  theme(plot.title = element_text(family = "serif", face= "bold", hjust = 0.5 , size = 15),
+  axis.title.x = element_text(family = "serif", size = 10))
+
+df2 = ggplot(baseline[which(baseline$activproBis == "T"),], aes(baseline[which(baseline$activproBis == "T"), "age0"])) + 
+  geom_histogram(col = "white", fill = "#5472AE", bins  = 20)  + xlab("n = 5666")+ ylab("") + ggtitle("Travailleurs")+
+  theme_classic2() + 
+  theme(plot.title = element_text(family = "serif", face= "bold", hjust =0.5, size = 15),
+        axis.title.x = element_text(family = "serif", size = 10))
+
+df3 = ggplot(baseline[which(baseline$activproBis == "R"),], aes(baseline[which(baseline$activproBis == "R"), "age0"])) + 
+  geom_histogram(col = "white", fill = "#FFDE75", bins  = 20) + xlab("n = 3209")+ ylab("") + ggtitle("Retraités")+
+  theme_classic2() + 
+  theme(plot.title = element_text(family = "serif", face= "bold", hjust =0.5, size = 15 ),
+        axis.title.x = element_text(family = "serif", size = 10))
+
+df4 = ggplot(baseline[which(baseline$activproBis == "C"),], aes(baseline[which(baseline$activproBis == "C"), "age0"])) + 
+  geom_histogram(col = "white", fill = "#DD985C", bins  = 20)+ xlab("n = 883")+ ylab("") + ggtitle("Chômeurs")+
+  theme_classic2() + 
+  theme(plot.title = element_text(family = "serif", face= "bold", hjust =0.5, size = 15 ),
+        axis.title.x = element_text(family = "serif", size = 10))
+
+df5 = ggplot(baseline[which(baseline$activproBis == "I"),], aes(baseline[which(baseline$activproBis == "I"), "age0"])) + 
+  geom_histogram(col = "white", fill = "#82C46C", bins  = 20)+ xlab("n = 270")+ ylab("") + ggtitle("Inactifs")+
+  theme_classic2() +
+  theme(plot.title = element_text(family = "serif", face= "bold", hjust =0.5, size = 15 ),
+        axis.title.x = element_text(family = "serif", size = 10))
+
+df6 = ggplot(baseline[which(baseline$activproBis == "NSP"),], aes(baseline[which(baseline$activproBis == "NSP"), "age0"])) + 
+  geom_histogram(col = "white", fill = "#723E64", bins  = 20) + xlab("n = 113")+ ylab("") + ggtitle("NSP")+ 
+  theme_classic2() + 
+  theme(plot.title = element_text(family = "serif", face= "bold", hjust =0.5, size = 15 ),
+        axis.title.x = element_text(family = "serif", size = 10))
+
 #df7 = ggplot(baseline[which(is.na(baseline$activproBis)),], aes(baseline[which(is.na(baseline$activproBis)), "age0"])) + geom_histogram(col = "white", fill = "brown", bins  = 20) + xlab("n = 16")+ ylab("Sujets NA") + ggtitle("Age NA")
 plot_grid(df1, df2, df3, df4, df5, df6)
 
@@ -34,7 +65,8 @@ plot.MCA(ACM_activpro, choix = "var", title = "Graphe des Variables")
 plot.MCA(ACM_activpro, choix = "ind", invisible = "var", title = "Graphe des Individus")
 
 fviz_mca_biplot(ACM_activpro, label ="var", col.var = "cos2", select.var = list(contrib = 15)) + 
-  labs(title = "Graphe des Individus et des Modalités")
+  labs(title = "Graphe des Individus et des Modalités") + 
+  theme(plot.title = element_text(family = "serif", face = "bold", hjust = .5, size = 15)) 
 
 #######################################################################################################################################
 
@@ -49,14 +81,21 @@ plot(cah_activpro, choice = "map")
 #######################################################################################################################################
 
 ## graphe comparaison activproBis et activproCAH
+
+baseline$activproCAH = factor(baseline$activproCAH, c("T","R","C","I","NSP"))
 activproCAH_prop = (table(baseline$activproCAH, useNA = "always")/10157)*100
+
+baseline$activproBis = factor(baseline$activproBis, c("T","R","C","I","NSP"))
 actvproBis_prop = (table(baseline$activproBis, useNA = "always")/10157)*100
+
 comp_activpro_prop = rbind(actvproBis_prop,activproCAH_prop)
-barplot(as.matrix(comp_activpro_prop), col = c("#AFAFAF","#D2CAEC") , 
+
+barplot(as.matrix(comp_activpro_prop), col = c("#22427C","#318CE7") , 
         beside = TRUE, 
         main = "", 
         xlab='Modalités', ylab='Pourcentage')
-legend("right", legend = c("activpro","activproCAH"), col='black', pch = c(22), pt.bg = c("#AFAFAF","#D2CAEC"), bty ='n')
+legend(x = 13, y = 60, legend = c("Codage Manuel","CAH"), 
+       col='black', pch = c(22), pt.bg = c("#22427C","#318CE7"), bty ='n')
 
 #######################################################################################################################################
 
@@ -72,8 +111,8 @@ pie_sexe = ggplot(df_sexe, aes(x="", y = nb_sujets, fill = sexe)) +
   geom_bar(width = 1, stat = "identity") + 
   coord_polar("y", start=0) + blank_theme + theme(axis.text.x=element_blank()) +
   geom_text(aes(y = nb_sujets/2 + c(0, cumsum(nb_sujets)[-length(nb_sujets)]), 
-                label = nb_sujets/100 ), size=5, color = "white") +
- scale_fill_manual ("Sexe",values = c("#77B5FE","#FEBFD2"))
+                label = nb_sujets/100 ), size=5, color = "black") +
+ scale_fill_manual ("Sexe",values = c("#77B5FE","#FEBFD2")) 
 
 ### Entourage
 df_entourage <- data.frame(
@@ -112,15 +151,15 @@ flip_barPlot_entourage =  ggplot(data = df_entourage, aes(x = df_entourage$entou
 
 ### age 
 hist_age = ggplot(baseline, aes(baseline$age0)) + 
-  geom_histogram(fill = "#DD985C", col = "white",bins = 50) + 
+  geom_histogram(fill = "#FEE347", col = "white",bins = 50) + 
   #scale_color_aaas(name = "sexe")+
   xlab("Âge") + 
-  geom_vline(xintercept = 54.47,  color = "brown", size=1) +
-  annotate(geom = "text",x = 56, y = 500, label = "Q1")+
-  geom_vline(xintercept = 59.11,  color = "brown", size=1) +
-  annotate(geom = "text",x = 61, y = 550, label = "Med") +
-  geom_vline(xintercept = 63.66,  color = "brown", size=1) +
-  annotate(geom = "text",x = 65, y = 500, label = "Q3")
+  geom_vline(xintercept = 54.47,  color = "black", size=1) +
+  annotate(geom = "text",x = 56.5, y = 500, label = "Q1")+
+  geom_vline(xintercept = 59.11,  color = "black", size=1) +
+  annotate(geom = "text",x = 61.5, y = 550, label = "Med") +
+  geom_vline(xintercept = 63.66,  color = "black", size=1) +
+  annotate(geom = "text",x = 65.5, y = 500, label = "Q3")
 
 ### education
 df_education <- data.frame(
@@ -137,9 +176,9 @@ df_education$prop = round((df_education$nb_sujets/10157)*100,2)
 df_education$education = factor(df_education$education, c("NA",
                                                           "Analphabète",
                                                           "Sans diplôme",
-                                                          "Bac+2",
-                                                          "Baccalauréat",
                                                           "CAP/Brevet des collèges",
+                                                          "Baccalauréat",
+                                                          "Bac+2",
                                                           "Licence/Maitrise/+"))
 
 flip_barPlot_education = ggplot(data = df_education, aes(x = education , y = prop)) +
@@ -296,7 +335,7 @@ pie_diab = ggplot(df_diab, aes(x="", y = nb_sujets, fill = diab)) +
   geom_bar(width = 1, stat = "identity") + 
   coord_polar("y", start=0) + blank_theme + theme(axis.text.x=element_blank()) +
   geom_text(aes(y = nb_sujets/2 + c(0, cumsum(nb_sujets)[-length(nb_sujets)]), 
-                label = nb_sujets/100 ), size=4, color = "#22427C") +
+                label = nb_sujets/100 ), size=4, color = "black") +
   scale_fill_brewer("Diabète", palette = "Blues")
 
 #aes(y = nb_sujets/10 + c(0, cumsum(nb_sujets)[-length(nb_sujets)])
@@ -329,7 +368,7 @@ pie_cancer = ggplot(df_cancer, aes(x="", y = nb_sujets, fill = cancer)) +
   geom_bar(width = 1, stat = "identity") + 
   coord_polar("y", start=0) + blank_theme + theme(axis.text.x=element_blank()) +
   geom_text(aes(y = nb_sujets/2 + c(0, cumsum(nb_sujets)[-length(nb_sujets)]), 
-                label = nb_sujets/100 ), size=5, color = "#723E64") +
+                label = nb_sujets/100 ), size=5, color = "black") +
   scale_fill_brewer("Déjà soigné pour un Cancer ?", palette = "Purples")
 
   
@@ -358,23 +397,21 @@ pie_hta = ggplot(df_hta, aes(x="", y = nb_sujets, fill = hta)) +
   geom_bar(width = 1, stat = "identity") + 
   coord_polar("y", start=0) + blank_theme + theme(axis.text.x=element_blank()) +
   geom_text(aes(y = nb_sujets/2 + c(0, cumsum(nb_sujets)[-length(nb_sujets)]), 
-                label = nb_sujets/100 ), size=5, color = "white") +
+                label = nb_sujets/100 ), size=5, color = "black") +
   scale_fill_brewer("Sujet Hypertendu",palette = "PuRd")
 
 
 
 ###alcool
 df_alcool = data.frame(
-  alcool = c("0", "1-2", "3-5", "5-10", ">10", "NA"),
-  nb_sujets = c(length(which(baseline$alcoolCut == 0)),
+  alcool = c("0", "1-2", "3+","NA"),
+  nb_sujets = c(length(which(baseline$alcoolCut == "0")),
                 length(which(baseline$alcoolCut == "1-2")),
-                length(which(baseline$alcoolCut == "3-5")),
-                length(which(baseline$alcoolCut == "5-10")),
-                length(which(baseline$alcoolCut == ">10")),
+                length(which(baseline$alcoolCut == "3+")),
                 length(which(is.na(baseline$alcoolCut)))))
 df_alcool$prop = round(((df_alcool$nb_sujets)/10157)*100,2)
 
-df_alcool$alcool = factor(df_alcool$alcool, c("NA", "5-10", "3-5", "1-2", "0"))
+df_alcool$alcool = factor(df_alcool$alcool, c("NA", "3+", "1-2", "0"))
 
 flip_barPlot_alcool = ggplot(data = df_alcool, aes(x = df_alcool$alcool , y = prop)) +
   geom_bar(position="dodge",stat="identity" ,  fill = "#FE96A0") +
@@ -396,7 +433,7 @@ flip_barPlot_alcool = ggplot(data = df_alcool, aes(x = df_alcool$alcool , y = pr
   ) +
   ylab("Consommation d'alcool \n(en nombre de verres quotidiens)")
 
-plot_grid(hist_bmi, flip_barPlot_tabac, pie_diab, barPlot_cvd, pie_cancer, pie_sport2, pie_hta, flip_barPlot_alcool)
+plot_grid(hist_bmi, flip_barPlot_tabac, flip_barPlot_alcool, pie_sport2, pie_diab, pie_cancer, pie_hta)
 
 ###############################################################################################################################
 
@@ -414,7 +451,7 @@ pie_epice = ggplot(df_epice, aes(x="", y = nb_sujets, fill = df_epice$precarite)
   geom_bar(width = 1, stat = "identity") + coord_polar("y", start=0) + blank_theme + theme(axis.text.x=element_blank()) +
   geom_text(aes(y = nb_sujets/2 + c(0, cumsum(nb_sujets)[-length(nb_sujets)]), 
                 label = nb_sujets/100 ), size=5, color = "black") +
-  scale_fill_brewer("Précarité \n (Basé sur le score EPICE", palette = "Pastel2" )
+  scale_fill_brewer("Précarité \n (Basé sur le score EPICE)", palette = "Pastel2" )
 
 ###ts
 df_TS <- data.frame(
@@ -443,7 +480,19 @@ pie_deptot = ggplot(df_deptot, aes(x="", y = nb_sujets, fill = deptot)) +
                 label = nb_sujets/100 ), size=5, color = "black") +
   scale_fill_brewer("Depression",palette = "PuBu")
 
-plot_grid(pie_epice, barPlot_TS, pie_deptot)
+
+###Stress
+hist_stress = ggplot(baseline, aes(baseline$stress)) + 
+  geom_histogram(fill = "steelblue", col = "white",bins = 50) + 
+  xlab("Score de stress perçu (PSS4)") + ylab("")+
+  geom_vline(xintercept = 2,  color = "black", size=1) +
+  annotate(geom = "text",x = 2.6, y = 2000, label = "Q1")+
+  geom_vline(xintercept = 4,  color = "black", size=1) +
+  annotate(geom = "text",x = 4.8, y = 2250, label = "Med") +
+  geom_vline(xintercept = 6,  color = "black", size=1) +
+  annotate(geom = "text",x = 6.8, y = 2500, label = "Q3")
+
+plot_grid(pie_epice,hist_stress,pie_deptot, pie_deptot, pie_deptot)
 #################################################################################################################################"
 
 ## graphes variables croisées
@@ -501,17 +550,30 @@ flowchart = DiagrammeR::grViz("
 digraph graph2 {
                               
                               
-                              node [shape = box, width = 5]
+                              node [shape = box, width = 3]
                               a [label = '@@1']
                               b [label = '@@2']
                               c [label = '@@3']
-                              m [label = '@@13']
+s [label = '@@19']
+t [label = '@@20']
+u [label = '@@21']
+v [label = '@@22']
+w [label = '@@23']
+x [label = '@@24']
+y [label = '@@25']
+z [label = '@@26']
+aa [label = '@@27']
+bb [label = '@@28']
+                              
+                              
                               
                               node [shape = oval, width = 0.9]
                               d [label = '@@4']
                               e [label = '@@5']
-                              o [label = '@@@15]
-                              p [label = '@@@16]                  
+                              l [label = '@@12']
+                              n [label = '@@14']
+                              o [label = '@@15']
+                              
                               
                               node [shape = circle, width = 0.9]
                               f [label = '@@6']
@@ -520,49 +582,96 @@ digraph graph2 {
                               i [label = '@@9']
                               j [label = '@@10']
                               k [label = '@@11']
-                              l [label = '@@12']
-                              n [label = '@@14']    
+                              m [label = '@@13']
+                              r [label = '@@18']
                               
-                              a -> b -> c -> d -> e 
-                              e -> f
-                              e -> g
-                              e -> h
-                              e -> i            
-                              e -> j
-                              e -> k
-                              e -> l
-                              l -> m
-                              n -> o
-                              n -> p
+                              
+                              node [shape = diamond, width = 0.9]
+                              p [label = '@@16']
+                              q [label = '@@17']
+
+                              
+a -> b -> c -> d -> e 
+e->s
+s->f
+e->t
+t->g
+e->u
+u->h
+u->i
+u->j
+h->v
+i->v
+j->v
+v->k
+k->l
+l->w
+w->m
+m->n
+n->p
+n->q
+p->x
+p->y
+q->z
+q->aa
+m->o
+o->bb
+bb->r
+                            
+
                               
                               
                               }
                               
-                              [1]: 'n = 10157 participants à epp3'
-                              [2]: '26 exclus NA  Santé perçue : n = 10131'
-                              [3]: '16 exlus NA  activproCAH : n = 10118'
+                              [1]: 'Participants à EPP3: n = 10157'
+                              [2]: '26 exclus NA  Santé perçue'
+                              [3]: '16 exclus NA  activité professionnelle'
                               [4]: 'Analyses univariées'
                               [5]: 'Analyses mutivariées'
                               [6]: 'Modèle 1'
                               [7]: 'Modèle 2'
-                              [8]: 'Modèle 3'
-                              [9]: 'Modèle 4'
-                              [10]: 'Modèle 5'
-                              [11]: 'Modèle 6'
-                              [12]: 'Modèle 7'
-                              [13]: 'Diagnostique du Modèle, exclusions leviers ou outliers'
-                              [14]: 'Modèle final : Logit Pénalisé'
-                              [15]: 'Analyses en Sous Groupes'
-                              [16]: 'Analyses de Sensibilité'
+                              [8]: 'AIC 1'
+                              [9]: 'AIC 2'
+                              [10]: 'AIC 3'
+                              [11]: 'Modèle 3'
+                              [12]: 'Detection obs atypiques'
+                              [13]: 'Modèle final'
+                              [14]: 'Analyses en Sous Groupes'
+                              [15]: 'Analyse de sensibilité'
+                              [16]: 'Pathologies lourdes'
+                              [17]: 'Précarité'
+                              [18]: 'Modèle CAH'
+[19]: 'n = 10 131'
+[20]: 'n = 10 131'
+[21]: 'n = 7 501'
+[22]: 'n = 7 501'
+[23]: 'n =7 454'
+[24]: 'OUI : n = 1 207'
+[25]: 'NON : n = 7407'
+[26]: 'OUI : n = 1 744'
+[27]: 'NON : n = 5757'
+[28]: 'n = 7 454'
                               
                               ")
 
+flowchart
 
 
+###############################################################################################################################################
 
+#Diagnostique du modele
+plot(x = database$stress, y = logit , main = "Vérification de la linéarité du lien entre le logit et l'âge", xlab = "Stresse PSS4" ,
+     ylab = 'logit (1.05 - 0.19 Stresse)')
+plot(model_final, 4)
+abline(h = 0.0004, col = "blue")
 
-
-
-
+window()
+par(mfrow = c(3,2))
+plot(model_final, 1)
+plot(model_final, 2)
+plot(model_final, 3)
+plot(model_final, 4)
+plot(model_final, 5)
+plot(model_final, 6)
 
 

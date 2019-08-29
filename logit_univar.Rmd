@@ -29,10 +29,13 @@ table_uni_log = createTable(res_uni_log, show.ratio = T, show.p.trend = F, show.
 ```{r}
 export2latex(table_uni_log)
 ```
+```{r}
+odds.ratio(glm(srhBin ~ alcoolCut, family = "binomial", data = database))
+```
 
 
 ```{r}
-odds.ratio(glm(srhBin ~ age0, family = "binomial", data = database))
+odds.ratio(glm(srhBin ~ activproBis, family = "binomial", data = baseline))
 ```
 
 ```{r}
@@ -59,6 +62,10 @@ createTable(compareGroups(srhBin ~ age0Cut, data = database,method = "NA" ), sho
 summary(database$age0[which(database$activproBis == "R")])
 ```
 ```{r}
+odds.ratio(glm(srhBin ~ stress, family = "binomial", data = database))
+```
 
+```{r}
+table(database$stress,database$srhBin)
 ```
 

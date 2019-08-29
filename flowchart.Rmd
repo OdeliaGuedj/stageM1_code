@@ -8,21 +8,12 @@ output: html_notebook
 ```{r}
 library(DiagrammeR)
 ```
-```{r}
-flowchart = DiagrammeR::grViz("
-digraph graph {
-                  
-                  
-node [shape = box, width = 5]
-a [label = '@@1']
-b [label = '@@2']
-c [label = '@@3']
-
-```
 
 
 
-graph [layout = d
+
+
+
 ```{r}
 flowchart = DiagrammeR::grViz("
 digraph graph2 {
@@ -38,8 +29,8 @@ m [label = '@@13']
 node [shape = oval, width = 0.9]
 d [label = '@@4']
 e [label = '@@5']
-o [label = '@@15']
-p [label = '@@16']                  
+n [label = '@@14']
+                 
 
 node [shape = circle, width = 0.9]
 f [label = '@@6']
@@ -49,18 +40,22 @@ i [label = '@@9']
 j [label = '@@10']
 k [label = '@@11']
 l [label = '@@12']
-n [label = '@@14']
-u [label = '@@21']
-v [label = '@@22']
+
 
 node [shape = diamond, width = 0.9]
+o [label = '@@15']
+p [label = '@@16']
 q [label = '@@17']
 r [label = '@@18']
-s [label = '@@19']
-t [label = '@@20']
 
 node [shape = plaintext]
-w [label = '@@23']
+m1 [label = '@@19']
+m2 [label = '@@20']
+m3 [label = '@@21']
+m4 [label = '@@22']
+m5 [label = '@@23']
+m6 [label = '@@24']
+m7 [label = '@@25']
 
 a -> b -> c -> d -> e 
 e -> f
@@ -70,50 +65,54 @@ e -> i
 e -> j
 e -> k
 e -> l
+
 l -> m
+
+
 m -> n
+
 n -> o
 n -> p
-o -> q
-o -> r
-o -> s
-o -> t
-p -> u
-p -> v
+n -> q
+n -> r
 
-f -> W
+
+f -> m1
+g -> m2
+h -> m3
+i -> m4
+j -> m5
+k -> m6
+l -> m7
+
 
                   }
                   
-                  [1]: 'n = 10157 participants à epp3'
-                  [2]: '26 exclus NA  Santé perçue : n = 10131'
-                  [3]: '16 exlus NA  activproCAH : n = 10118'
-                  [4]: 'Analyses univariées'
-                  [5]: 'Analyses mutivariées'
-                  [6]: 'Modèle 1'
-                  [7]: 'Modèle 2'
-                  [8]: 'Modèle 3'
-                  [9]: 'Modèle 4'
-                  [10]: 'Modèle 5'
-                  [11]: 'Modèle 6'
-                  [12]: 'Modèle 7'
-                  [13]: 'Diagnostique du Modèle, exclusions leviers ou outliers'
-                  [14]: 'Logit Pénalisé'
-                  [15]: 'Analyses en Sous Groupes'
-                  [16]: 'Analyses de Sensibilité'
-[17]: 'CVD'
-[18]: 'Précarité'
-[19]: 'Âge'
-[20]: 'Dépression'
-[21]: 'Imputation Multiple'
-[22]: 'ActivproCAH'
-[23]: 'n = 10131'
-[24]: 'n = 10130'
-[25]: 'n = 8244'
-[26]: 'n = 10100'
-[27]: 'n = 9881'
-[28]: 'n = 8126'
-[29]: 'n = 8127'
+[1]: 'n = 10157 participants à epp3'
+[2]: '26 exclus NA  Santé perçue : n = 10131'
+[3]: '16 exlus NA  activproCAH : n = 10118'
+[4]: 'Analyses univariées'
+[5]: 'Analyses mutivariées'
+[6]: 'Modèle 1'
+[7]: 'Modèle 2'
+[8]: 'Modèle 3'
+[9]: 'Modèle 4'
+[10]: 'Modèle 5'
+[11]: 'Modèle 6'
+[12]: 'Modèle 7'
+[13]: 'Diagnostique du Modèle, exclusions leviers ou outliers'
+[14]: 'Analyses en Sous Groupes'
+[15]: 'CVD'
+[16]: 'Précarité'
+[17]: 'Âge'
+[18]: 'Dépression'
+[19]: 'n = 10131'
+[20]: 'n = 10130'
+[21]: 'n = 8244'
+[22]: 'n = 10100'
+[23]: 'n = 9881'
+[24]: 'n = 8126'
+[25]: 'n = 8127'
 
 
                   ")

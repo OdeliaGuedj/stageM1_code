@@ -1,0 +1,52 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+
+```{r}
+colnames(baseSansEcxlus)
+```
+
+
+```{r}
+base_ASG_maladiesGraves_o = baseSansEcxlus[which(baseSansEcxlus$cancer == 1 | baseSansEcxlus$cvd != 0 ),]
+base_ASG_maladiesGraves_n = baseSansEcxlus[which(baseSansEcxlus$cancer == 0 | baseSansEcxlus$cvd == 0 ),]
+
+```
+```{r}
+dim(base_ASG_maladiesGraves_o)
+dim(base_ASG_maladiesGraves_n)
+```
+
+```{r}
+base_ASG_precarite_o = baseSansEcxlus[which(baseSansEcxlus$EPICECut == "Situation précaire"),]
+base_ASG_precarite_n = baseSansEcxlus[which(baseSansEcxlus$EPICECut != "Situation précaire"),]
+```
+```{r}
+dim(base_ASG_precarite_o)
+dim(base_ASG_precarite_n)
+```
+
+
+
+
+```{r}
+summary(base_ASG_maladiesGraves_o)
+```
+
+```{r}
+summary(base_ASG_maladiesGraves_n)
+```
+
+
+
+
+```{r}
+model_ASG_precarite_o = glm(srhBin ~ activproBis + sexe + csp + education + entourage + sport2 + bmiCut + hta + tabac + deptot+ stress, family = "binomial", data = base_ASG_precarite_o)
+odds.ratio(model_ASG_precarite_o)
+```
+```{r}
+model_ASG_precarite_n= glm(srhBin ~ activproBis + sexe + csp + education + entourage + sport2 + bmiCut + hta + tabac + deptot+ stress, family = "binomial", data = base_ASG_precarite_n)
+odds.ratio(model_ASG_precarite_n)
+```

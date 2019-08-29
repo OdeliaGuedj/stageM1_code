@@ -12,77 +12,77 @@ names(database)
 model1 = glm(srhBin ~activproBis + sexe , data = BASE2, family = 'binomial')
 odds.ratio(model1)
 ```
+
+
+
 ```{r}
 model2 = glm(srhBin ~ activproBis + sexe + age0Cut , data = BASE2, family = 'binomial')
 odds.ratio(model2)
 ```
-```{r}
-model3 = glm(srhBin ~ activproBis + sexe + age0Cut + alcoolCut + tabac + diab + hta + bmiCut+ sport2, data = BASE2, family = "binomial")
-odds.ratio(model3)
-```
-```{r}
-model4 = glm(srhBin ~ activproBis + sexe + age0Cut + deptot , data = BASE2 , family = "binomial")
-odds.ratio(model4)
-```
-`
-```{r}
-model5 = glm(srhBin ~ activproBis + sexe + age0Cut + csp + education + entourage + sport2, data =  BASE2, family = "binomial")
-odds.ratio(model5)
-```
-
-```{r}
-model6 = glm(srhBin ~ activproBis + sexe +age0Cut+ alcoolCut+ tabac + diab + hta + bmiCut + sport2 + deptot + csp + education + entourage, data = BASE2, family = "binomial")
-odds.ratio(model6)
-```
-```{r}
-model7 = glm(srhBin ~ activproBis + sexe + alcoolCut+ tabac + diab + hta + bmiCut + sport2 + deptot + csp + education + entourage, data = BASE2, family = "binomial")
-odds.ratio(model7)
-```
-
-```{r}
-model1$aic
-```
-```{r}
-model2$aic
-```
-```{r}
-model3$aic
-```
-```{r}
-model4$aic
-```
-```{r}
-model5$aic
-```
-```{r}
-model6$aic
-```
-```{r}
-model7$aic
-```
-```{r}
-model4$model
-```
-
 
 
 ```{r}
-summary(model1)
+(2018+1095)/(8+88+1095+2018)
 ```
 
 
+######### variables style de vie
 
 ```{r}
-names(BASE2)
+aic_sante_phy = step(fit_null, direction = "both", scope = ~ activproBis + sexe + age0Cut + alcoolCut + tabac + diab + hta + bmiCut+ sport2 , trace = F)
+summary(aic_sante_phy)
+aic_sante_phy
 ```
-
-
+##################anté psy
 
 ```{r}
-table(BASE2$activproBis[which(BASE2$age0Cut == "(59.1,63.7]")])/2536
+aic_sante_psy = step(fit_null, direction = "both", scope = ~ activproBis + sexe + age0Cut + deptot+ stress , trace = F)
+summary(aic_sante_psy)
 ```
 
 
+############ variables socio admin
+
+```{r}
+aic_var_sa = step(fit_null, direction = "both", scope = ~ activproBis + sexe + age0Cut + csp + education + entourage , trace = F)
+summary(aic_var_sa)
+```
+```{r}
+aic_var_sa$formula
+```
+
+```{r}
+aic_sante_phy$formula
+```
+```{r}
+aic_sante_psy$formula
+```
+```{r}
+baseSansEcxlus$activproBis = relevel(baseSansEcxlus$activproBis, ref = "T")
+baseSansEcxlus$sexe = relevel(baseSansEcxlus$sexe, ref = "H")
+baseSansEcxlus$csp = relevel(baseSansEcxlus$csp, ref = "Intermediaire")
+baseSansEcxlus$education = relevel(baseSansEcxlus$education, ref = "CAP/Brevet des collèges")
+baseSansEcxlus$entourage = relevel(baseSansEcxlus$entourage, ref = "couple")
+baseSansEcxlus$sport2 = relevel(baseSansEcxlus$sport2, ref = 1)
+baseSansEcxlus$bmiCut = relevel(baseSansEcxlus$bmiCut, ref = "normal")
+#baseSansEcxlus$hta = relevel(baseSansEcxlus$hta, ref = 0)
+baseSansEcxlus$tabac = relevel(baseSansEcxlus$tabac, ref = "non_fum")
+#baseSansEcxlus$deptot = relevel(baseSansEcxlus$deptot, ref = 0)
+
+```
+```{r}
+summary(baseSansEcxlus$deptot)
+```
+
+```{r}
+model_final = glm(srhBin ~ activproBis + sexe + csp + education + entourage + sport2 + bmiCut + hta + tabac + deptot+ stress, family = "binomial", data = baseSansEcxlus)
+odds.ratio(model_final)
+```
+
+```{r}
+fit_null = glm(srhBin ~ 1, data = baseSansEcxlus, family = "binomial")
+summary(fit_null)
+```
 
 
 

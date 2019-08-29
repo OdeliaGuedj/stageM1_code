@@ -20,3 +20,5 @@ baseline$csp[which(baseline$csp == 5)] = "Sans Emplois"
 baseline$csp = as.factor(baseline$csp)
 ```
 
+
+

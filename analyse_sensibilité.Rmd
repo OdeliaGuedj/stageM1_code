@@ -1,0 +1,27 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+
+
+
+
+```{r}
+analyse_sens = glm(srhBin ~ activproCAH + sexe + csp + education + entourage + sport2 + bmiCut + hta + tabac + deptot+ stress, family = "binomial", data = baseSansEcxlus[-c(33,123,356,371,412,527,654,888,1086,1125,1141,1266,1450,1813,1920,2061,2069,2223,2407,2410,2445,2506,2819,2837,2931,3224,3261,3441,3467,3573,3624,3897,4102,4109,4132,4279,4467,4571,4577,4638,4965,5794,5883,6279,6422,7183,7461,7684,7833,8001,8078,8092,8190,8260,8298,9214,9724
+),])
+```
+```{r}
+OR_Ana_sens = odds.ratio(analyse_sens)
+```
+```{r}
+OR_Ana_sens
+```
+
+
+```{r}
+df_analys_sens = as.data.frame(OR_Ana_sens)
+```
+
+
+

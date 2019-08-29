@@ -1,0 +1,89 @@
+--
+title: "R Notebook"
+output: html_notebook
+---
+
+
+##Linéarité stresse
+```{r}
+logit_stresse = glm(srhBin ~ stress, family = "binomial", data = database)
+summary(logit_stresse)
+```
+```{r}
+logit = 1.05 - 0.19*database$stress
+```
+```{r}
+plot(x = database$stress, y = logit , main = "Vérification de la linéarité du lien entre le logit et l'âge", xlab = "Stresse PSS4" )
+```
+
+
+## Test de la dévianace
+```{r}
+deviance(model_final)/df.residual(model_final)
+```
+
+#test résidus de pearson 
+
+```{r}
+e = residuals(model_final, type = "pearson")
+s2 = sum(residuals(model_final, type = "pearson")^2)
+ddl = df.residual(model_final)
+pvaleur = 1 - pchisq(s2, ddl)
+
+
+```
+```{r}
+s2
+pvaleur
+```
+
+##Résidus déorrélés ?
+
+```{r}
+plot(model_final, which = 1:6)
+```
+
+
+
+
+
+##Observations atypiques
+```{r}
+e_bis = rstandard(model_final, type = "pearson")
+plot(e_bis)
+length(e_bis[abs(e_bis) > 2])
+```
+
+
+```{r}
+individus_suspects= which( cooks.distance (model_final)>0.0004)
+residus = rstandard(model_final, type = "pearson")
+leviers = hat( model.matrix( model_final ))
+obs_at = rbind( residus[individus_suspects  ] , leviers[individus_suspects ])
+obs_at = as.data.frame(t(as.matrix(obs_at)))
+```
+```{r}
+colnames(obs_at) = c("residus", "leviers")
+```
+
+```{r}
+ind_exclus_atypiques = obs_at[which(obs_at$residus > 2 | obs_at$residus < -2),]
+dim(ind_exclus_atypiques)
+```
+
+```{r}
+ind_exclus_atypiques
+```
+
+
+
+
+
+
+```{r}
+model_propre = glm(srhBin ~ activproBis + sexe + csp + education + entourage + sport2 + bmiCut + hta + tabac + deptot+ stress, family = "binomial", data = baseSansEcxlus[-c(33,123,356,371,412,527,654,888,1086,1125,1141,1266,1450,1813,1920,2061,2069,2223,2407,2410,2445,2506,2819,2837,2931,3224,3261,3441,3467,3573,3624,3897,4102,4109,4132,4279,4467,4571,4577,4638,4965,5794,5883,6279,6422,7183,7461,7684,7833,8001,8078,8092,8190,8260,8298,9214,9724
+),])
+```
+
+
+

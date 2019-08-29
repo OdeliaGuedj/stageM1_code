@@ -35,5 +35,8 @@ str(baseline$sexe)
 ```{r}
 sum(is.na(baseline$sexe))
 ```
+```{r}
+baseline$sexe = relevel(baseline$sexe, ref = "H")
+```
 
 

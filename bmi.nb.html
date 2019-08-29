@@ -246,9 +246,8 @@ $(document).ready(function () {
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3VtbWFyeShiYXNlbGluZSRibWkpXG5cbmBgYCJ9 -->
-<pre class="r"><code>summary(baseline$bmi)
-</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3VtbWFyeShiYXNlbGluZSRibWkpXG5gYGAifQ== -->
+<pre class="r"><code>summary(baseline$bmi)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiICAgTWluLiAxc3QgUXUuICBNZWRpYW4gICAgTWVhbiAzcmQgUXUuICAgIE1heC4gXG4gIDE0LjUwICAgMjIuNjYgICAyNC45MSAgIDI1LjE5ICAgMjcuMzQgICA1MS4wNiBcbiJ9 -->
 <pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
@@ -258,9 +257,8 @@ $(document).ready(function () {
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3VtKGlzLm5hKGJhc2VsaW5lJGJtaSkpXG5cbmBgYCJ9 -->
-<pre class="r"><code>sum(is.na(baseline$bmi))
-</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3VtKGlzLm5hKGJhc2VsaW5lJGJtaSkpXG5gYGAifQ== -->
+<pre class="r"><code>sum(is.na(baseline$bmi))</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiWzFdIDBcbiJ9 -->
 <pre><code>[1] 0</code></pre>
@@ -278,103 +276,13 @@ baseline$bmiCut[which(baseline$bmi &gt;= 30)] = &quot;obésite&quot;</code></pre
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuKGJhc2VsaW5lJGJtaUN1dCA9IGFzLmZhY3RvcihiYXNlbGluZSRibWlDdXQpKVxuXG5gYGAifQ== -->
-<pre class="r"><code>(baseline$bmiCut = as.factor(baseline$bmiCut))
-</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYmFzZWxpbmUkYm1pQ3V0ID0gYXMuZmFjdG9yKGJhc2VsaW5lJGJtaUN1dClcbmBgYCJ9 -->
+<pre class="r"><code>baseline$bmiCut = as.factor(baseline$bmiCut)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiICAgWzFdIG5vcm1hbCAgIHN1cnBvaWRzIG5vcm1hbCAgIG9iw6lzaXRlICBzdXJwb2lkcyBub3JtYWwgICBzdXJwb2lkcyBub3JtYWwgICBub3JtYWwgICBvYsOpc2l0ZSAgbm9ybWFsICAgc3VycG9pZHNcbiAgWzEzXSBub3JtYWwgICBvYsOpc2l0ZSAgbm9ybWFsICAgbm9ybWFsICAgbm9ybWFsICAgc3VycG9pZHMgbm9ybWFsICAgbm9ybWFsICAgb2LDqXNpdGUgIHN1cnBvaWRzIG9iw6lzaXRlICBzdXJwb2lkc1xuICBbMjVdIHN1cnBvaWRzIG9iw6lzaXRlICBzdXJwb2lkcyBvYsOpc2l0ZSAgbm9ybWFsICAgbm9ybWFsICAgc3VycG9pZHMgbm9ybWFsICAgbm9ybWFsICAgbm9ybWFsICAgbm9ybWFsICAgbm9ybWFsICBcbiAgWzM3XSBvYsOpc2l0ZSAgc3VycG9pZHMgb2LDqXNpdGUgIHN1cnBvaWRzIG5vcm1hbCAgIG5vcm1hbCAgIG5vcm1hbCAgIHN1cnBvaWRzIHN1cnBvaWRzIG5vcm1hbCAgIG5vcm1hbCAgIG5vcm1hbCAgXG4gIFs0OV0gc3VycG9pZHMgbm9ybWFsICAgc3VycG9pZHMgbm9ybWFsICAgbm9ybWFsICAgbm9ybWFsICAgc3VycG9pZHMgbm9ybWFsICAgbm9ybWFsICAgb2LDqXNpdGUgIHN1cnBvaWRzIG5vcm1hbCAgXG4gIFs2MV0gbm9ybWFsICAgbm9ybWFsICAgbm9ybWFsICAgc3VycG9pZHMgc3VycG9pZHMgbm9ybWFsICAgc3VycG9pZHMgc3VycG9pZHMgc3VycG9pZHMgbm9ybWFsICAgc3VycG9pZHMgb2LDqXNpdGUgXG4gIFs3M10gbm9ybWFsICAgc3VycG9pZHMgc3VycG9pZHMgc3VycG9pZHMgc3VycG9pZHMgbm9ybWFsICAgc3VycG9pZHMgc3VycG9pZHMgbm9ybWFsICAgbm9ybWFsICAgb2LDqXNpdGUgIG5vcm1hbCAgXG4gIFs4NV0gbm9ybWFsICAgc3VycG9pZHMgbm9ybWFsICAgc3VycG9pZHMgbm9ybWFsICAgc3VycG9pZHMgbm9ybWFsICAgc3VycG9pZHMgbm9ybWFsICAgbm9ybWFsICAgc3VycG9pZHMgc3VycG9pZHNcbiAgWzk3XSBub3JtYWwgICBvYsOpc2l0ZSAgc3VycG9pZHMgc3VycG9pZHMgc3VycG9pZHMgbm9ybWFsICAgc3VycG9pZHMgc3VycG9pZHMgbm9ybWFsICAgc3VycG9pZHMgbm9ybWFsICAgbm9ybWFsICBcbiBbMTA5XSBzdXJwb2lkcyBvYsOpc2l0ZSAgc3VycG9pZHMgc3VycG9pZHMgc3VycG9pZHMgbm9ybWFsICAgbm9ybWFsICAgc3VycG9pZHMgc3VycG9pZHMgc3VycG9pZHMgc3VycG9pZHMgc3VycG9pZHNcbiBbMTIxXSBub3JtYWwgICBub3JtYWwgICBub3JtYWwgICBzdXJwb2lkcyBub3JtYWwgICBzdXJwb2lkcyBub3JtYWwgICBzdXJwb2lkcyBzdXJwb2lkcyBub3JtYWwgICBub3JtYWwgICBvYsOpc2l0ZSBcbiBbMTMzXSBzdXJwb2lkcyBzdXJwb2lkcyBub3JtYWwgICBzdXJwb2lkcyBzdXJwb2lkcyBzdXJwb2lkcyBzdXJwb2lkcyBzdXJwb2lkcyBub3JtYWwgICBvYsOpc2l0ZSAgc3VycG9pZHMgbm9ybWFsICBcbiBbMTQ1XSBzdXJwb2lkcyBzdXJwb2lkcyBub3JtYWwgICBvYsOpc2l0ZSAgc3VycG9pZHMgbm9ybWFsICAgbm9ybWFsICAgbm9ybWFsICAgbm9ybWFsICAgbm9ybWFsICAgb2LDqXNpdGUgIG5vcm1hbCAgXG4gWzE1N10gb2LDqXNpdGUgIHN1cnBvaWRzIHN1cnBvaWRzIG9iw6lzaXRlICBub3JtYWwgICBzdXJwb2lkcyBub3JtYWwgICBub3JtYWwgICBzdXJwb2lkcyBzdXJwb2lkcyBzdXJwb2lkcyBzdXJwb2lkc1xuIFsxNjldIG5vcm1hbCAgIG5vcm1hbCAgIHN1cnBvaWRzIG5vcm1hbCAgIG5vcm1hbCAgIG5vcm1hbCAgIG5vcm1hbCAgIG5vcm1hbCAgIG9iw6lzaXRlICBub3JtYWwgICBub3JtYWwgICBzdXJwb2lkc1xuIFsxODFdIG9iw6lzaXRlICBub3JtYWwgICBzdXJwb2lkcyBub3JtYWwgICBub3JtYWwgICBzdXJwb2lkcyBub3JtYWwgICBvYsOpc2l0ZSAgbm9ybWFsICAgc3VycG9pZHMgbm9ybWFsICAgbm9ybWFsICBcbiBbMTkzXSBub3JtYWwgICBvYsOpc2l0ZSAgbm9ybWFsICAgc3VycG9pZHMgbm9ybWFsICAgbm9ybWFsICAgc3VycG9pZHMgc3VycG9pZHMgb2LDqXNpdGUgIG5vcm1hbCAgIHN1cnBvaWRzIG5vcm1hbCAgXG4gWzIwNV0gbm9ybWFsICAgbm9ybWFsICAgbm9ybWFsICAgbm9ybWFsICAgbm9ybWFsICAgbm9ybWFsICAgc3VycG9pZHMgc3VycG9pZHMgc3VycG9pZHMgc3VycG9pZHMgc3VycG9pZHMgbm9ybWFsICBcbiBbMjE3XSBvYsOpc2l0ZSAgbm9ybWFsICAgc3VycG9pZHMgc3VycG9pZHMgc3VycG9pZHMgb2LDqXNpdGUgIHN1cnBvaWRzIG9iw6lzaXRlICBub3JtYWwgICBub3JtYWwgICBzdXJwb2lkcyBvYsOpc2l0ZSBcbiBbMjI5XSBub3JtYWwgICBzdXJwb2lkcyBzdXJwb2lkcyBub3JtYWwgICBub3JtYWwgICBzdXJwb2lkcyBub3JtYWwgICBzdXJwb2lkcyBzdXJwb2lkcyBzdXJwb2lkcyBvYsOpc2l0ZSAgb2LDqXNpdGUgXG4gWzI0MV0gc3VycG9pZHMgbm9ybWFsICAgbm9ybWFsICAgbm9ybWFsICAgbm9ybWFsICAgbm9ybWFsICAgc3VycG9pZHMgbm9ybWFsICAgbm9ybWFsICAgbm9ybWFsICAgbm9ybWFsICAgbm9ybWFsICBcbiBbMjUzXSBub3JtYWwgICBub3JtYWwgICBzdXJwb2lkcyBzdXJwb2lkcyBub3JtYWwgICBub3JtYWwgICBub3JtYWwgICBub3JtYWwgICBub3JtYWwgICBzdXJwb2lkcyBub3JtYWwgICBzdXJwb2lkc1xuIFsyNjVdIG5vcm1hbCAgIG9iw6lzaXRlICBub3JtYWwgICBub3JtYWwgICBzdXJwb2lkcyBub3JtYWwgICBzdXJwb2lkcyBub3JtYWwgICBub3JtYWwgICBzdXJwb2lkcyBzdXJwb2lkcyBub3JtYWwgIFxuIFsyNzddIHN1cnBvaWRzIG5vcm1hbCAgIHN1cnBvaWRzIHN1cnBvaWRzIHN1cnBvaWRzIHN1cnBvaWRzIHN1cnBvaWRzIG5vcm1hbCAgIG5vcm1hbCAgIHN1cnBvaWRzIHN1cnBvaWRzIG9iw6lzaXRlIFxuIFsyODldIHN1cnBvaWRzIG5vcm1hbCAgIHN1cnBvaWRzIG5vcm1hbCAgIG5vcm1hbCAgIG9iw6lzaXRlICBzdXJwb2lkcyBub3JtYWwgICBub3JtYWwgICBub3JtYWwgICBub3JtYWwgICBzdXJwb2lkc1xuIFszMDFdIHN1cnBvaWRzIG5vcm1hbCAgIG5vcm1hbCAgIHN1cnBvaWRzIHN1cnBvaWRzIG5vcm1hbCAgIG5vcm1hbCAgIHN1cnBvaWRzIG5vcm1hbCAgIG5vcm1hbCAgIG5vcm1hbCAgIG5vcm1hbCAgXG4gWzMxM10gb2LDqXNpdGUgIG9iw6lzaXRlICBub3JtYWwgICBzdXJwb2lkcyBzdXJwb2lkcyBub3JtYWwgICBzdXJwb2lkcyBzdXJwb2lkcyBub3JtYWwgICBzdXJwb2lkcyBvYsOpc2l0ZSAgc3VycG9pZHNcbiBbMzI1XSBub3JtYWwgICBzdXJwb2lkcyBzdXJwb2lkcyBzdXJwb2lkcyBub3JtYWwgICBub3JtYWwgICBvYsOpc2l0ZSAgbm9ybWFsICAgbm9ybWFsICAgbm9ybWFsICAgc3VycG9pZHMgbm9ybWFsICBcbiBbMzM3XSBzdXJwb2lkcyBvYsOpc2l0ZSAgbm9ybWFsICAgc3VycG9pZHMgbm9ybWFsICAgc3VycG9pZHMgbm9ybWFsICAgc3VycG9pZHMgbm9ybWFsICAgc3VycG9pZHMgbm9ybWFsICAgc3VycG9pZHNcbiBbMzQ5XSBzdXJwb2lkcyBub3JtYWwgICBzdXJwb2lkcyBzdXJwb2lkcyBzdXJwb2lkcyBub3JtYWwgICBzdXJwb2lkcyBzdXJwb2lkcyBub3JtYWwgICBub3JtYWwgICBvYsOpc2l0ZSAgb2LDqXNpdGUgXG4gWzM2MV0gc3VycG9pZHMgc3VycG9pZHMgbm9ybWFsICAgbm9ybWFsICAgb2LDqXNpdGUgIG9iw6lzaXRlICBzdXJwb2lkcyBzdXJwb2lkcyBzdXJwb2lkcyBzdXJwb2lkcyBub3JtYWwgICBvYsOpc2l0ZSBcbiBbMzczXSBub3JtYWwgICBub3JtYWwgICBub3JtYWwgICBzdXJwb2lkcyBub3JtYWwgICBub3JtYWwgICBub3JtYWwgICBzdXJwb2lkcyBub3JtYWwgICBvYsOpc2l0ZSAgbm9ybWFsICAgbm9ybWFsICBcbiBbMzg1XSBub3JtYWwgICBub3JtYWwgICBub3JtYWwgICBub3JtYWwgICBzdXJwb2lkcyBub3JtYWwgICBub3JtYWwgICBvYsOpc2l0ZSAgc3VycG9pZHMgbm9ybWFsICAgc3VycG9pZHMgbm9ybWFsICBcbiBbMzk3XSBzdXJwb2lkcyBzdXJwb2lkcyBzdXJwb2lkcyBub3JtYWwgICBzdXJwb2lkcyBub3JtYWwgICBub3JtYWwgICBzdXJwb2lkcyBub3JtYWwgICBub3JtYWwgICBub3JtYWwgICBvYsOpc2l0ZSBcbiBbNDA5XSBub3JtYWwgICBub3JtYWwgICBub3JtYWwgICBub3JtYWwgICBub3JtYWwgICBub3JtYWwgICBub3JtYWwgICBub3JtYWwgICBzdXJwb2lkcyBzdXJwb2lkcyBub3JtYWwgICBzdXJwb2lkc1xuIFs0MjFdIHN1cnBvaWRzIG9iw6lzaXRlICBub3JtYWwgICBub3JtYWwgICBub3JtYWwgICBzdXJwb2lkcyBub3JtYWwgICBzdXJwb2lkcyBzdXJwb2lkcyBzdXJwb2lkcyBub3JtYWwgICBzdXJwb2lkc1xuIFs0MzNdIG5vcm1hbCAgIG5vcm1hbCAgIG5vcm1hbCAgIG5vcm1hbCAgIG5vcm1hbCAgIHN1cnBvaWRzIHN1cnBvaWRzIHN1cnBvaWRzIG9iw6lzaXRlICBzdXJwb2lkcyBub3JtYWwgICBub3JtYWwgIFxuIFs0NDVdIG5vcm1hbCAgIHN1cnBvaWRzIG9iw6lzaXRlICBzdXJwb2lkcyBvYsOpc2l0ZSAgc3VycG9pZHMgc3VycG9pZHMgc3VycG9pZHMgc3VycG9pZHMgbm9ybWFsICAgc3VycG9pZHMgc3VycG9pZHNcbiBbNDU3XSBzdXJwb2lkcyBzdXJwb2lkcyBub3JtYWwgICBub3JtYWwgICBvYsOpc2l0ZSAgbm9ybWFsICAgc3VycG9pZHMgc3VycG9pZHMgb2LDqXNpdGUgIG5vcm1hbCAgIG5vcm1hbCAgIG5vcm1hbCAgXG4gWzQ2OV0gc3VycG9pZHMgbm9ybWFsICAgc3VycG9pZHMgbm9ybWFsICAgc3VycG9pZHMgbm9ybWFsICAgbm9ybWFsICAgc3VycG9pZHMgc3VycG9pZHMgb2LDqXNpdGUgIHN1cnBvaWRzIHN1cnBvaWRzXG4gWzQ4MV0gc3VycG9pZHMgbm9ybWFsICAgc3VycG9pZHMgbm9ybWFsICAgc3VycG9pZHMgc3VycG9pZHMgc3VycG9pZHMgbm9ybWFsICAgc3VycG9pZHMgb2LDqXNpdGUgIG9iw6lzaXRlICBub3JtYWwgIFxuIFs0OTNdIHN1cnBvaWRzIHN1cnBvaWRzIHN1cnBvaWRzIG5vcm1hbCAgIG5vcm1hbCAgIG9iw6lzaXRlICBzdXJwb2lkcyBub3JtYWwgICBzdXJwb2lkcyBzdXJwb2lkcyBzdXJwb2lkcyBub3JtYWwgIFxuIFs1MDVdIG5vcm1hbCAgIG5vcm1hbCAgIG9iw6lzaXRlICBzdXJwb2lkcyBzdXJwb2lkcyBzdXJwb2lkcyBzdXJwb2lkcyBub3JtYWwgICBub3JtYWwgICBzdXJwb2lkcyBzdXJwb2lkcyBzdXJwb2lkc1xuIFs1MTddIG5vcm1hbCAgIHN1cnBvaWRzIG5vcm1hbCAgIG9iw6lzaXRlICBzdXJwb2lkcyBzdXJwb2lkcyBzdXJwb2lkcyBvYsOpc2l0ZSAgbm9ybWFsICAgbm9ybWFsICAgb2LDqXNpdGUgIG5vcm1hbCAgXG4gWzUyOV0gc3VycG9pZHMgbm9ybWFsICAgc3VycG9pZHMgbm9ybWFsICAgc3VycG9pZHMgc3VycG9pZHMgbm9ybWFsICAgc3VycG9pZHMgb2LDqXNpdGUgIHN1cnBvaWRzIG5vcm1hbCAgIG5vcm1hbCAgXG4gWzU0MV0gc3VycG9pZHMgc3VycG9pZHMgc3VycG9pZHMgc3VycG9pZHMgc3VycG9pZHMgbm9ybWFsICAgbm9ybWFsICAgc3VycG9pZHMgc3VycG9pZHMgbm9ybWFsICAgc3VycG9pZHMgc3VycG9pZHNcbiBbNTUzXSBzdXJwb2lkcyBub3JtYWwgICBub3JtYWwgICBzdXJwb2lkcyBub3JtYWwgICBzdXJwb2lkcyBub3JtYWwgICBzdXJwb2lkcyBvYsOpc2l0ZSAgb2LDqXNpdGUgIG9iw6lzaXRlICBzdXJwb2lkc1xuIFs1NjVdIHN1cnBvaWRzIHN1cnBvaWRzIHN1cnBvaWRzIHN1cnBvaWRzIHN1cnBvaWRzIHN1cnBvaWRzIHN1cnBvaWRzIHN1cnBvaWRzIG9iw6lzaXRlICBub3JtYWwgICBub3JtYWwgICBvYsOpc2l0ZSBcbiBbNTc3XSBzdXJwb2lkcyBub3JtYWwgICBzdXJwb2lkcyBzdXJwb2lkcyBzdXJwb2lkcyBzdXJwb2lkcyBvYsOpc2l0ZSAgc3VycG9pZHMgc3VycG9pZHMgbm9ybWFsICAgc3VycG9pZHMgbm9ybWFsICBcbiBbNTg5XSBub3JtYWwgICBub3JtYWwgICBub3JtYWwgICBub3JtYWwgICBzdXJwb2lkcyBzdXJwb2lkcyBzdXJwb2lkcyBub3JtYWwgICBub3JtYWwgICBzdXJwb2lkcyBzdXJwb2lkcyBub3JtYWwgIFxuIFs2MDFdIG5vcm1hbCAgIHN1cnBvaWRzIG5vcm1hbCAgIHN1cnBvaWRzIHN1cnBvaWRzIHN1cnBvaWRzIHN1cnBvaWRzIG5vcm1hbCAgIHN1cnBvaWRzIG5vcm1hbCAgIG5vcm1hbCAgIG5vcm1hbCAgXG4gWzYxM10gbm9ybWFsICAgbm9ybWFsICAgc3VycG9pZHMgbm9ybWFsICAgbm9ybWFsICAgbm9ybWFsICAgc3VycG9pZHMgc3VycG9pZHMgc3VycG9pZHMgc3VycG9pZHMgc3VycG9pZHMgc3VycG9pZHNcbiBbNjI1XSBzdXJwb2lkcyBzdXJwb2lkcyBub3JtYWwgICBub3JtYWwgICBub3JtYWwgICBzdXJwb2lkcyBzdXJwb2lkcyBub3JtYWwgICBub3JtYWwgICBzdXJwb2lkcyBzdXJwb2lkcyBzdXJwb2lkc1xuIFs2MzddIG9iw6lzaXRlICBub3JtYWwgICBub3JtYWwgICBvYsOpc2l0ZSAgb2LDqXNpdGUgIG5vcm1hbCAgIG9iw6lzaXRlICBub3JtYWwgICBzdXJwb2lkcyBzdXJwb2lkcyBub3JtYWwgICBvYsOpc2l0ZSBcbiBbNjQ5XSBzdXJwb2lkcyBzdXJwb2lkcyBub3JtYWwgICBub3JtYWwgICBzdXJwb2lkcyBub3JtYWwgICBzdXJwb2lkcyBvYsOpc2l0ZSAgbm9ybWFsICAgc3VycG9pZHMgc3VycG9pZHMgbm9ybWFsICBcbiBbNjYxXSBzdXJwb2lkcyBub3JtYWwgICBzdXJwb2lkcyBzdXJwb2lkcyBub3JtYWwgICBub3JtYWwgICBzdXJwb2lkcyBub3JtYWwgICBub3JtYWwgICBub3JtYWwgICBub3JtYWwgICBub3JtYWwgIFxuIFs2NzNdIHN1cnBvaWRzIG5vcm1hbCAgIG5vcm1hbCAgIHN1cnBvaWRzIG9iw6lzaXRlICBub3JtYWwgICBzdXJwb2lkcyBzdXJwb2lkcyBzdXJwb2lkcyBzdXJwb2lkcyBzdXJwb2lkcyBzdXJwb2lkc1xuIFs2ODVdIHN1cnBvaWRzIG9iw6lzaXRlICBvYsOpc2l0ZSAgc3VycG9pZHMgbm9ybWFsICAgc3VycG9pZHMgc3VycG9pZHMgc3VycG9pZHMgbm9ybWFsICAgbm9ybWFsICAgbm9ybWFsICAgc3VycG9pZHNcbiBbNjk3XSBub3JtYWwgICBzdXJwb2lkcyBzdXJwb2lkcyBzdXJwb2lkcyBzdXJwb2lkcyBub3JtYWwgICBub3JtYWwgICBzdXJwb2lkcyBub3JtYWwgICBzdXJwb2lkcyBzdXJwb2lkcyBzdXJwb2lkc1xuIFs3MDldIG9iw6lzaXRlICBub3JtYWwgICBub3JtYWwgICBzdXJwb2lkcyBub3JtYWwgICBub3JtYWwgICBzdXJwb2lkcyBvYsOpc2l0ZSAgc3VycG9pZHMgc3VycG9pZHMgbm9ybWFsICAgc3VycG9pZHNcbiBbNzIxXSBzdXJwb2lkcyBub3JtYWwgICBvYsOpc2l0ZSAgc3VycG9pZHMgbm9ybWFsICAgc3VycG9pZHMgbm9ybWFsICAgc3VycG9pZHMgc3VycG9pZHMgc3VycG9pZHMgbm9ybWFsICAgbm9ybWFsICBcbiBbNzMzXSBvYsOpc2l0ZSAgbm9ybWFsICAgbm9ybWFsICAgc3VycG9pZHMgb2LDqXNpdGUgIG5vcm1hbCAgIG5vcm1hbCAgIHN1cnBvaWRzIG9iw6lzaXRlICBzdXJwb2lkcyBzdXJwb2lkcyBub3JtYWwgIFxuIFs3NDVdIG5vcm1hbCAgIG5vcm1hbCAgIG9iw6lzaXRlICBzdXJwb2lkcyBub3JtYWwgICBub3JtYWwgICBvYsOpc2l0ZSAgbm9ybWFsICAgc3VycG9pZHMgc3VycG9pZHMgbm9ybWFsICAgbm9ybWFsICBcbiBbNzU3XSBzdXJwb2lkcyBzdXJwb2lkcyBub3JtYWwgICBzdXJwb2lkcyBub3JtYWwgICBzdXJwb2lkcyBzdXJwb2lkcyBub3JtYWwgICBzdXJwb2lkcyBvYsOpc2l0ZSAgc3VycG9pZHMgbm9ybWFsICBcbiBbNzY5XSBzdXJwb2lkcyBzdXJwb2lkcyBub3JtYWwgICBzdXJwb2lkcyBub3JtYWwgICBzdXJwb2lkcyBub3JtYWwgICBub3JtYWwgICBub3JtYWwgICBub3JtYWwgICBub3JtYWwgICBub3JtYWwgIFxuIFs3ODFdIHN1cnBvaWRzIHN1cnBvaWRzIG5vcm1hbCAgIHN1cnBvaWRzIG5vcm1hbCAgIG9iw6lzaXRlICBub3JtYWwgICBzdXJwb2lkcyBvYsOpc2l0ZSAgbm9ybWFsICAgc3VycG9pZHMgc3VycG9pZHNcbiBbNzkzXSBzdXJwb2lkcyBub3JtYWwgICBzdXJwb2lkcyBzdXJwb2lkcyBub3JtYWwgICBub3JtYWwgICBvYsOpc2l0ZSAgbm9ybWFsICAgc3VycG9pZHMgbm9ybWFsICAgc3VycG9pZHMgbm9ybWFsICBcbiBbODA1XSBub3JtYWwgICBzdXJwb2lkcyBub3JtYWwgICBzdXJwb2lkcyBzdXJwb2lkcyBvYsOpc2l0ZSAgbm9ybWFsICAgc3VycG9pZHMgbm9ybWFsICAgbm9ybWFsICAgbm9ybWFsICAgbm9ybWFsICBcbiBbODE3XSBub3JtYWwgICBzdXJwb2lkcyBzdXJwb2lkcyBub3JtYWwgICBzdXJwb2lkcyBzdXJwb2lkcyBzdXJwb2lkcyBvYsOpc2l0ZSAgc3VycG9pZHMgc3VycG9pZHMgc3VycG9pZHMgc3VycG9pZHNcbiBbODI5XSBzdXJwb2lkcyBzdXJwb2lkcyBzdXJwb2lkcyBzdXJwb2lkcyBvYsOpc2l0ZSAgb2LDqXNpdGUgIHN1cnBvaWRzIHN1cnBvaWRzIHN1cnBvaWRzIHN1cnBvaWRzIG5vcm1hbCAgIHN1cnBvaWRzXG4gWzg0MV0gbm9ybWFsICAgb2LDqXNpdGUgIG5vcm1hbCAgIHN1cnBvaWRzIG9iw6lzaXRlICBzdXJwb2lkcyBub3JtYWwgICBzdXJwb2lkcyBub3JtYWwgICBvYsOpc2l0ZSAgbm9ybWFsICAgc3VycG9pZHNcbiBbODUzXSBzdXJwb2lkcyBub3JtYWwgICBub3JtYWwgICBvYsOpc2l0ZSAgc3VycG9pZHMgc3VycG9pZHMgc3VycG9pZHMgbm9ybWFsICAgbm9ybWFsICAgbm9ybWFsICAgc3VycG9pZHMgc3VycG9pZHNcbiBbODY1XSBub3JtYWwgICBub3JtYWwgICBzdXJwb2lkcyBub3JtYWwgICBzdXJwb2lkcyBzdXJwb2lkcyBub3JtYWwgICBzdXJwb2lkcyBub3JtYWwgICBzdXJwb2lkcyBub3JtYWwgICBub3JtYWwgIFxuIFs4NzddIHN1cnBvaWRzIHN1cnBvaWRzIG5vcm1hbCAgIG5vcm1hbCAgIHN1cnBvaWRzIHN1cnBvaWRzIG5vcm1hbCAgIHN1cnBvaWRzIG5vcm1hbCAgIG5vcm1hbCAgIG5vcm1hbCAgIHN1cnBvaWRzXG4gWzg4OV0gbm9ybWFsICAgbm9ybWFsICAgc3VycG9pZHMgbm9ybWFsICAgbm9ybWFsICAgbm9ybWFsICAgbm9ybWFsICAgbm9ybWFsICAgbm9ybWFsICAgc3VycG9pZHMgbm9ybWFsICAgc3VycG9pZHNcbiBbOTAxXSBzdXJwb2lkcyBzdXJwb2lkcyBub3JtYWwgICBvYsOpc2l0ZSAgb2LDqXNpdGUgIG9iw6lzaXRlICBub3JtYWwgICBub3JtYWwgICBvYsOpc2l0ZSAgbm9ybWFsICAgc3VycG9pZHMgbm9ybWFsICBcbiBbOTEzXSBub3JtYWwgICBzdXJwb2lkcyBub3JtYWwgICBub3JtYWwgICBub3JtYWwgICBzdXJwb2lkcyBub3JtYWwgICBvYsOpc2l0ZSAgbm9ybWFsICAgbm9ybWFsICAgc3VycG9pZHMgc3VycG9pZHNcbiBbOTI1XSBzdXJwb2lkcyBzdXJwb2lkcyBub3JtYWwgICBzdXJwb2lkcyBzdXJwb2lkcyBvYsOpc2l0ZSAgbm9ybWFsICAgb2LDqXNpdGUgIHN1cnBvaWRzIHN1cnBvaWRzIHN1cnBvaWRzIHN1cnBvaWRzXG4gWzkzN10gc3VycG9pZHMgc3VycG9pZHMgbm9ybWFsICAgb2LDqXNpdGUgIHN1cnBvaWRzIHN1cnBvaWRzIG9iw6lzaXRlICBub3JtYWwgICBub3JtYWwgICBvYsOpc2l0ZSAgc3VycG9pZHMgbm9ybWFsICBcbiBbOTQ5XSBub3JtYWwgICBub3JtYWwgICBvYsOpc2l0ZSAgc3VycG9pZHMgbm9ybWFsICAgbm9ybWFsICAgc3VycG9pZHMgbm9ybWFsICAgc3VycG9pZHMgbm9ybWFsICAgbm9ybWFsICAgc3VycG9pZHNcbiBbOTYxXSBzdXJwb2lkcyBzdXJwb2lkcyBvYsOpc2l0ZSAgbm9ybWFsICAgbm9ybWFsICAgbm9ybWFsICAgbm9ybWFsICAgb2LDqXNpdGUgIG5vcm1hbCAgIG5vcm1hbCAgIHN1cnBvaWRzIHN1cnBvaWRzXG4gWzk3M10gc3VycG9pZHMgc3VycG9pZHMgbm9ybWFsICAgbm9ybWFsICAgc3VycG9pZHMgbm9ybWFsICAgc3VycG9pZHMgbm9ybWFsICAgc3VycG9pZHMgc3VycG9pZHMgc3VycG9pZHMgc3VycG9pZHNcbiBbOTg1XSBub3JtYWwgICBub3JtYWwgICBub3JtYWwgICBub3JtYWwgICBub3JtYWwgICBub3JtYWwgICBub3JtYWwgICBzdXJwb2lkcyBzdXJwb2lkcyBub3JtYWwgICBub3JtYWwgICBvYsOpc2l0ZSBcbiBbOTk3XSBzdXJwb2lkcyBub3JtYWwgICBzdXJwb2lkcyBub3JtYWwgIFxuIFsgcmVhY2hlZCBnZXRPcHRpb24oXCJtYXgucHJpbnRcIikgLS0gb21pdHRlZCA5MTU3IGVudHJpZXMgXVxuTGV2ZWxzOiBub3JtYWwgb2LDqXNpdGUgc3VycG9pZHNcbiJ9 -->
-<pre><code>   [1] normal   surpoids normal   obésite  surpoids normal   surpoids normal   normal   obésite  normal   surpoids
-  [13] normal   obésite  normal   normal   normal   surpoids normal   normal   obésite  surpoids obésite  surpoids
-  [25] surpoids obésite  surpoids obésite  normal   normal   surpoids normal   normal   normal   normal   normal  
-  [37] obésite  surpoids obésite  surpoids normal   normal   normal   surpoids surpoids normal   normal   normal  
-  [49] surpoids normal   surpoids normal   normal   normal   surpoids normal   normal   obésite  surpoids normal  
-  [61] normal   normal   normal   surpoids surpoids normal   surpoids surpoids surpoids normal   surpoids obésite 
-  [73] normal   surpoids surpoids surpoids surpoids normal   surpoids surpoids normal   normal   obésite  normal  
-  [85] normal   surpoids normal   surpoids normal   surpoids normal   surpoids normal   normal   surpoids surpoids
-  [97] normal   obésite  surpoids surpoids surpoids normal   surpoids surpoids normal   surpoids normal   normal  
- [109] surpoids obésite  surpoids surpoids surpoids normal   normal   surpoids surpoids surpoids surpoids surpoids
- [121] normal   normal   normal   surpoids normal   surpoids normal   surpoids surpoids normal   normal   obésite 
- [133] surpoids surpoids normal   surpoids surpoids surpoids surpoids surpoids normal   obésite  surpoids normal  
- [145] surpoids surpoids normal   obésite  surpoids normal   normal   normal   normal   normal   obésite  normal  
- [157] obésite  surpoids surpoids obésite  normal   surpoids normal   normal   surpoids surpoids surpoids surpoids
- [169] normal   normal   surpoids normal   normal   normal   normal   normal   obésite  normal   normal   surpoids
- [181] obésite  normal   surpoids normal   normal   surpoids normal   obésite  normal   surpoids normal   normal  
- [193] normal   obésite  normal   surpoids normal   normal   surpoids surpoids obésite  normal   surpoids normal  
- [205] normal   normal   normal   normal   normal   normal   surpoids surpoids surpoids surpoids surpoids normal  
- [217] obésite  normal   surpoids surpoids surpoids obésite  surpoids obésite  normal   normal   surpoids obésite 
- [229] normal   surpoids surpoids normal   normal   surpoids normal   surpoids surpoids surpoids obésite  obésite 
- [241] surpoids normal   normal   normal   normal   normal   surpoids normal   normal   normal   normal   normal  
- [253] normal   normal   surpoids surpoids normal   normal   normal   normal   normal   surpoids normal   surpoids
- [265] normal   obésite  normal   normal   surpoids normal   surpoids normal   normal   surpoids surpoids normal  
- [277] surpoids normal   surpoids surpoids surpoids surpoids surpoids normal   normal   surpoids surpoids obésite 
- [289] surpoids normal   surpoids normal   normal   obésite  surpoids normal   normal   normal   normal   surpoids
- [301] surpoids normal   normal   surpoids surpoids normal   normal   surpoids normal   normal   normal   normal  
- [313] obésite  obésite  normal   surpoids surpoids normal   surpoids surpoids normal   surpoids obésite  surpoids
- [325] normal   surpoids surpoids surpoids normal   normal   obésite  normal   normal   normal   surpoids normal  
- [337] surpoids obésite  normal   surpoids normal   surpoids normal   surpoids normal   surpoids normal   surpoids
- [349] surpoids normal   surpoids surpoids surpoids normal   surpoids surpoids normal   normal   obésite  obésite 
- [361] surpoids surpoids normal   normal   obésite  obésite  surpoids surpoids surpoids surpoids normal   obésite 
- [373] normal   normal   normal   surpoids normal   normal   normal   surpoids normal   obésite  normal   normal  
- [385] normal   normal   normal   normal   surpoids normal   normal   obésite  surpoids normal   surpoids normal  
- [397] surpoids surpoids surpoids normal   surpoids normal   normal   surpoids normal   normal   normal   obésite 
- [409] normal   normal   normal   normal   normal   normal   normal   normal   surpoids surpoids normal   surpoids
- [421] surpoids obésite  normal   normal   normal   surpoids normal   surpoids surpoids surpoids normal   surpoids
- [433] normal   normal   normal   normal   normal   surpoids surpoids surpoids obésite  surpoids normal   normal  
- [445] normal   surpoids obésite  surpoids obésite  surpoids surpoids surpoids surpoids normal   surpoids surpoids
- [457] surpoids surpoids normal   normal   obésite  normal   surpoids surpoids obésite  normal   normal   normal  
- [469] surpoids normal   surpoids normal   surpoids normal   normal   surpoids surpoids obésite  surpoids surpoids
- [481] surpoids normal   surpoids normal   surpoids surpoids surpoids normal   surpoids obésite  obésite  normal  
- [493] surpoids surpoids surpoids normal   normal   obésite  surpoids normal   surpoids surpoids surpoids normal  
- [505] normal   normal   obésite  surpoids surpoids surpoids surpoids normal   normal   surpoids surpoids surpoids
- [517] normal   surpoids normal   obésite  surpoids surpoids surpoids obésite  normal   normal   obésite  normal  
- [529] surpoids normal   surpoids normal   surpoids surpoids normal   surpoids obésite  surpoids normal   normal  
- [541] surpoids surpoids surpoids surpoids surpoids normal   normal   surpoids surpoids normal   surpoids surpoids
- [553] surpoids normal   normal   surpoids normal   surpoids normal   surpoids obésite  obésite  obésite  surpoids
- [565] surpoids surpoids surpoids surpoids surpoids surpoids surpoids surpoids obésite  normal   normal   obésite 
- [577] surpoids normal   surpoids surpoids surpoids surpoids obésite  surpoids surpoids normal   surpoids normal  
- [589] normal   normal   normal   normal   surpoids surpoids surpoids normal   normal   surpoids surpoids normal  
- [601] normal   surpoids normal   surpoids surpoids surpoids surpoids normal   surpoids normal   normal   normal  
- [613] normal   normal   surpoids normal   normal   normal   surpoids surpoids surpoids surpoids surpoids surpoids
- [625] surpoids surpoids normal   normal   normal   surpoids surpoids normal   normal   surpoids surpoids surpoids
- [637] obésite  normal   normal   obésite  obésite  normal   obésite  normal   surpoids surpoids normal   obésite 
- [649] surpoids surpoids normal   normal   surpoids normal   surpoids obésite  normal   surpoids surpoids normal  
- [661] surpoids normal   surpoids surpoids normal   normal   surpoids normal   normal   normal   normal   normal  
- [673] surpoids normal   normal   surpoids obésite  normal   surpoids surpoids surpoids surpoids surpoids surpoids
- [685] surpoids obésite  obésite  surpoids normal   surpoids surpoids surpoids normal   normal   normal   surpoids
- [697] normal   surpoids surpoids surpoids surpoids normal   normal   surpoids normal   surpoids surpoids surpoids
- [709] obésite  normal   normal   surpoids normal   normal   surpoids obésite  surpoids surpoids normal   surpoids
- [721] surpoids normal   obésite  surpoids normal   surpoids normal   surpoids surpoids surpoids normal   normal  
- [733] obésite  normal   normal   surpoids obésite  normal   normal   surpoids obésite  surpoids surpoids normal  
- [745] normal   normal   obésite  surpoids normal   normal   obésite  normal   surpoids surpoids normal   normal  
- [757] surpoids surpoids normal   surpoids normal   surpoids surpoids normal   surpoids obésite  surpoids normal  
- [769] surpoids surpoids normal   surpoids normal   surpoids normal   normal   normal   normal   normal   normal  
- [781] surpoids surpoids normal   surpoids normal   obésite  normal   surpoids obésite  normal   surpoids surpoids
- [793] surpoids normal   surpoids surpoids normal   normal   obésite  normal   surpoids normal   surpoids normal  
- [805] normal   surpoids normal   surpoids surpoids obésite  normal   surpoids normal   normal   normal   normal  
- [817] normal   surpoids surpoids normal   surpoids surpoids surpoids obésite  surpoids surpoids surpoids surpoids
- [829] surpoids surpoids surpoids surpoids obésite  obésite  surpoids surpoids surpoids surpoids normal   surpoids
- [841] normal   obésite  normal   surpoids obésite  surpoids normal   surpoids normal   obésite  normal   surpoids
- [853] surpoids normal   normal   obésite  surpoids surpoids surpoids normal   normal   normal   surpoids surpoids
- [865] normal   normal   surpoids normal   surpoids surpoids normal   surpoids normal   surpoids normal   normal  
- [877] surpoids surpoids normal   normal   surpoids surpoids normal   surpoids normal   normal   normal   surpoids
- [889] normal   normal   surpoids normal   normal   normal   normal   normal   normal   surpoids normal   surpoids
- [901] surpoids surpoids normal   obésite  obésite  obésite  normal   normal   obésite  normal   surpoids normal  
- [913] normal   surpoids normal   normal   normal   surpoids normal   obésite  normal   normal   surpoids surpoids
- [925] surpoids surpoids normal   surpoids surpoids obésite  normal   obésite  surpoids surpoids surpoids surpoids
- [937] surpoids surpoids normal   obésite  surpoids surpoids obésite  normal   normal   obésite  surpoids normal  
- [949] normal   normal   obésite  surpoids normal   normal   surpoids normal   surpoids normal   normal   surpoids
- [961] surpoids surpoids obésite  normal   normal   normal   normal   obésite  normal   normal   surpoids surpoids
- [973] surpoids surpoids normal   normal   surpoids normal   surpoids normal   surpoids surpoids surpoids surpoids
- [985] normal   normal   normal   normal   normal   normal   normal   surpoids surpoids normal   normal   obésite 
- [997] surpoids normal   surpoids normal  
- [ reached getOption(&quot;max.print&quot;) -- omitted 9157 entries ]
-Levels: normal obésite surpoids</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3VtbWFyeShiYXNlbGluZSRibWlDdXQpXG5cbmBgYCJ9 -->
-<pre class="r"><code>summary(baseline$bmiCut)
-</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3VtbWFyeShiYXNlbGluZSRibWlDdXQpXG5gYGAifQ== -->
+<pre class="r"><code>summary(baseline$bmiCut)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiICBub3JtYWwgIG9iw6lzaXRlIHN1cnBvaWRzIFxuICAgIDUyMDEgICAgICA5ODAgICAgIDM5NzYgXG4ifQ== -->
 <pre><code>  normal  obésite surpoids 

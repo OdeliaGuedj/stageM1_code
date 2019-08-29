@@ -15,13 +15,13 @@ baseline$avc = as.factor(baseline$Qm41)
 ```
 
 ```{r}
-database$Qm34 = as.factor(database$Qm34)
-database$Qm35 = as.factor(database$Qm35)
-database$Qm37 = as.factor(database$Qm37)
-database$Qm38 = as.factor(database$Qm38)
-database$Qm39 = as.factor(database$Qm39)
-database$Qm40 = as.factor(database$Qm40)
-database$Qm41 = as.factor(database$Qm41)
+#database$Qm34 = as.factor(database$Qm34)
+#database$Qm35 = as.factor(database$Qm35)
+#database$Qm37 = as.factor(database$Qm37)
+#database$Qm38 = as.factor(database$Qm38)
+#database$Qm39 = as.factor(database$Qm39)
+#database$Qm40 = as.factor(database$Qm40)
+#database$Qm41 = as.factor(database$Qm41)
 ```
 
 

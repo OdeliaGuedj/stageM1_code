@@ -264,10 +264,11 @@ $(document).ready(function () {
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYmFzZWxpbmUkRVBJQ0VDdXRbd2hpY2goYmFzZWxpbmUkZXBpY2UgPiAzMC4xNyldID0gXCJTaXR1YXRpb24gcHLDqWNhaXJlXCJcbmJhc2VsaW5lJEVQSUNFQ3V0W3doaWNoKGJhc2VsaW5lJGVwaWNlIDw9IDMwLjE3KV0gPSBcIlNpdHVhdGlvbiBub24gcHLDqWNhaXJlXCJcbmJhc2VsaW5lJEVQSUNFQ3V0W3doaWNoKGlzLm5hKGJhc2VsaW5lJGVwaWNlKSldID0gTkFcbmBgYCJ9 -->
-<pre class="r"><code>baseline$EPICECut[which(baseline$epice &gt; 30.17)] = &quot;Situation précaire&quot;
-baseline$EPICECut[which(baseline$epice &lt;= 30.17)] = &quot;Situation non précaire&quot;
-baseline$EPICECut[which(is.na(baseline$epice))] = NA</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYmFzZWxpbmUkRVBJQ0VDdXQgPSAgMFxuYmFzZWxpbmUkRVBJQ0VDdXRbd2hpY2goaXMubmEoYmFzZWxpbmUkZXBpY2UpKV0gPSBOQVxuYmFzZWxpbmUkRVBJQ0VDdXRbd2hpY2goYmFzZWxpbmUkZXBpY2UgPiAzMC4xNyldID0gXCJTaXR1YXRpb24gcHLDqWNhaXJlXCJcbmJhc2VsaW5lJEVQSUNFQ3V0W3doaWNoKGJhc2VsaW5lJGVwaWNlIDw9IDMwLjE3KV0gPSBcIlNpdHVhdGlvbiBub24gcHLDqWNhaXJlXCJcbmBgYCJ9 -->
+<pre class="r"><code>baseline$EPICECut =  0
+baseline$EPICECut[which(is.na(baseline$epice))] = NA
+baseline$EPICECut[which(baseline$epice &gt; 30.17)] = &quot;Situation précaire&quot;
+baseline$EPICECut[which(baseline$epice &lt;= 30.17)] = &quot;Situation non précaire&quot;</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-chunk-begin -->
@@ -289,7 +290,7 @@ baseline$EPICECut[which(is.na(baseline$epice))] = NA</code></pre>
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2siDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQpgYGB7cn0NCnN1bW1hcnkoYmFzZWxpbmUkZXBpY2UpDQpgYGANCg0KYGBge3J9DQpiYXNlbGluZSRlcGljZSA9IGFzLm51bWVyaWMoYmFzZWxpbmUkZXBpY2UpDQpgYGANCg0KYGBge3J9DQpiYXNlbGluZSRFUElDRUN1dFt3aGljaChiYXNlbGluZSRlcGljZSA+IDMwLjE3KV0gPSAiU2l0dWF0aW9uIHByw6ljYWlyZSINCmJhc2VsaW5lJEVQSUNFQ3V0W3doaWNoKGJhc2VsaW5lJGVwaWNlIDw9IDMwLjE3KV0gPSAiU2l0dWF0aW9uIG5vbiBwcsOpY2FpcmUiDQpiYXNlbGluZSRFUElDRUN1dFt3aGljaChpcy5uYShiYXNlbGluZSRlcGljZSkpXSA9IE5BDQpgYGANCmBgYHtyfQ0KYmFzZWxpbmUkRVBJQ0VDdXQgPSBhcy5mYWN0b3IoYmFzZWxpbmUkRVBJQ0VDdXQpDQpgYGANCg0KYGBge3J9DQpzdW1tYXJ5KGJhc2VsaW5lJEVQSUNFQ3V0KQ0KYGBgDQoNCg0K</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2siDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQpgYGB7cn0NCnN1bW1hcnkoYmFzZWxpbmUkZXBpY2UpDQpgYGANCg0KYGBge3J9DQpiYXNlbGluZSRlcGljZSA9IGFzLm51bWVyaWMoYmFzZWxpbmUkZXBpY2UpDQpgYGANCg0KDQpgYGB7cn0NCmJhc2VsaW5lJEVQSUNFQ3V0ID0gIDANCmJhc2VsaW5lJEVQSUNFQ3V0W3doaWNoKGlzLm5hKGJhc2VsaW5lJGVwaWNlKSldID0gTkENCmJhc2VsaW5lJEVQSUNFQ3V0W3doaWNoKGJhc2VsaW5lJGVwaWNlID4gMzAuMTcpXSA9ICJTaXR1YXRpb24gcHLDqWNhaXJlIg0KYmFzZWxpbmUkRVBJQ0VDdXRbd2hpY2goYmFzZWxpbmUkZXBpY2UgPD0gMzAuMTcpXSA9ICJTaXR1YXRpb24gbm9uIHByw6ljYWlyZSINCg0KYGBgDQpgYGB7cn0NCmJhc2VsaW5lJEVQSUNFQ3V0ID0gYXMuZmFjdG9yKGJhc2VsaW5lJEVQSUNFQ3V0KQ0KYGBgDQoNCmBgYHtyfQ0Kc3VtbWFyeShiYXNlbGluZSRFUElDRUN1dCkNCmBgYA0KDQoNCg==</div>
 
 
 
