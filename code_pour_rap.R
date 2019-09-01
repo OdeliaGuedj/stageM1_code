@@ -660,8 +660,8 @@ flowchart
 ###############################################################################################################################################
 
 #Diagnostique du modele
-plot(x = database$stress, y = logit , main = "Vérification de la linéarité du lien entre le logit et l'âge", xlab = "Stresse PSS4" ,
-     ylab = 'logit (1.05 - 0.19 Stresse)')
+plot(x = database$stress, y = logit , main = "Vérification de la linéarité du lien entre le logit et le stress", xlab = "Stress PSS4" ,
+     ylab = 'logit (1.05 - 0.19 Stress)')
 plot(model_final, 4)
 abline(h = 0.0004, col = "blue")
 
@@ -674,4 +674,26 @@ plot(model_final, 4)
 plot(model_final, 5)
 plot(model_final, 6)
 
+###################################################################################################################################
+ 
+## graphes pour pres
 
+plot(cah_activpro, choice = "3D.map")
+library(forestmodel)
+forest_model(model_final)
+
+
+library(broom)
+tmp <- tidy(model_final, conf.int = TRUE, exponentiate = TRUE)
+str(tmp)
+
+tmp$term = c("Intercepte", "Activité pro: Chômeurs" , "Activité pro: Inactifs" , "Activité pro: NSP", "Activité Pro: Retraités",
+             "Sexe: Femmes", "CSP: Basse", "CSP: Elevée", "CSP: Inactifs", "CSP: Sans Emplois", "Education: Analphabète",
+             "Education: Bac + 2 ", "Education: Baccalauréat", "Eduation: Licence/Maîtrise/+", "Education: Sans diplômes",
+             "Situattion Familiale; Famille", "Situation Familiale: Seul", "Activité Sportive: 2 fois par semaine", 
+             "Activité sportive: 3+ fois par semaine",  "IMC: Obésité", "IMC: surpoids", "Hypertension Arterielle: Oui", 
+             "Tabac: Anciens Fumeurs", "Tabac: Arrêt en cours", "Tabac: Fumeurs", "Depression: Oui", "Stress perçu")
+library(ggplot2)
+ggplot(tmp) + aes(x = estimate, y = term, xmin = conf.low, xmax = conf.high) + 
+  geom_vline(xintercept = 1) + geom_errorbarh() + geom_point() + 
+  scale_x_log10()
